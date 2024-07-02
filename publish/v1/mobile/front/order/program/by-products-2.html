@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="5" data-log="in" data-title="프로그램 별 예약"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section stepBox">
+          <p class="tit">체험할 차량 및 코스를<br>선택해 주세요.</p>
+          <ul class="icoStep ty1">
+            <li><i>1단계</i></li>
+            <li class="on"><i>2단계(활성화)</i></li>
+            <li><i>3단계</i></li>
+            <li><i>4단계</i></li>
+            <li><i>5단계</i></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="boxTab">
+            <ul class="tabTit">
+              <li class="on"><a href="javascript:;">BMW</a></li>
+              <li><a href="javascript:;">Mini</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <div class="slideTab">
+                <ul class="tabTit">
+                    <li class="on"><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li><a href="javascript:;">6</a></li>
+                    <li><a href="javascript:;">7</a></li>
+                    <li><a href="javascript:;">8</a></li>
+                    <li><a href="javascript:;">i</a></li>
+                    <li><a href="javascript:;">X</a></li>
+                    <li><a href="javascript:;">M</a></li>
+                    <li><a href="javascript:;">Z4</a></li>
+                </ul>
+              </div>
+
+              <div class="tabConWrap">
+                <div class="tabCon">
+                  <div class="slideWrap carInfo">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="imgBox">
+                          <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_car1.png" alt="">
+                        </div>
+    
+                        <div class="infoWarp">
+                          <div class="txtBox">
+                            <p class="tit">BMW 32Oi M Sport Package</p>
+                          </div>
+    
+                          <div class="infoBox">
+                            <h2 class="tit">차량 정보</h2>
+                            <ul class="infoIcoList">
+                              <li>
+                                <p class="tit">체험 가격</p>
+                                <p class="txt">80,000원</p>
+                              </li>
+                            </ul>
+                          </div>
+    
+                          <a href="#carInfoPop" class="moreView openPop">자세히보기</a>
+                        </div>
+                      </div><!-- //slide1 -->
+    
+                      <div class="swiper-slide">
+                        <div class="imgBox">
+                          <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_car1.png" alt="">
+                        </div>
+    
+                        <div class="infoWarp">
+                          <div class="txtBox">
+                            <p class="tit">BMW 32Oi M Sport Package 2</p>
+                          </div>
+    
+                          <div class="infoBox">
+                            <h2 class="tit">차량 정보</h2>
+                            <ul class="infoIcoList">
+                              <li>
+                                <p class="tit">체험 가격</p>
+                                <p class="txt">90,000원</p>
+                              </li>
+                            </ul>
+                          </div>
+    
+                          <a href="#carInfoPop" class="moreView openPop">자세히보기</a>
+                        </div>
+                      </div><!-- //slide2 -->
+    
+                      <div class="swiper-slide">
+                        <div class="imgBox">
+                          <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_car1.png" alt="">
+                        </div>
+    
+                        <div class="infoWarp">
+                          <div class="txtBox">
+                            <p class="tit">BMW 32Oi M Sport Package 3</p>
+                          </div>
+      
+                          <div class="infoBox">
+                            <h2 class="tit">차량 정보</h2>
+                            <ul class="infoIcoList">
+                              <li>
+                                <p class="tit">체험 가격</p>
+                                <p class="txt">100,000원</p>
+                              </li>
+                            </ul>
+                          </div>
+      
+                          <a href="#carInfoPop" class="moreView openPop">자세히보기</a>
+                        </div>
+                      </div><!-- //slide3 -->
+                    </div>
+    
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-prev"><span class="hidden">이전</span></div>
+                    <div class="swiper-button-next"><span class="hidden">다음</span></div>
+                  </div>
+
+                  <!-- 체험 차량 : 자가 차량 --><!-- 2023-05-24 수정 -->
+                  <div class="myCarBox" style="display:none">
+                    <h2 class="subTit">체험 차량</h2>
+                    <div class="imgBox">
+                      <img src="../../../../../../static/assets/v1/mobile/images/ico/img_mycar.png" alt="">
+                    </div>
+                    <P class="series">자가 차량</P>
+                    <p class="info">BMW / MINI / Rolls Royce</p>
+                  </div>
+                  <!-- //체험 차량 : 자가 차량 --><!-- //2023-05-24 수정 -->
+
+                  <div class="courseWarp">
+                    <div class="infoBox">
+                      <h2 class="tit">체험 코스</h2>
+                      <!-- 2023-05-08 코스 수정 -->
+                      <div class="imgBox courseImg">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course.png" alt="" class="bg">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course1.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course1_1.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course2.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course3.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course3_1.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course4.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course4_1.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course5.png" alt="">
+                        <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course5_1.png" alt="">
+                      </div>
+                      <!-- //2023-05-08 코스 수정 -->
+
+                      <ul class="courseList">
+                        <li class="color1">야외/트랙서킷</li>
+                        <li class="color2">다이나믹코스</li>
+                        <li class="color3">다목적 코스</li>
+                        <li class="color4">오프로드 코스</li>
+                        <li class="color5">서큘러 코스</li>
+                      </ul>
+                    </div>
+
+                    <a href="#courseInfoPop" class="moreView openPop">자세히보기</a>
+                  </div>
+                </div>
+                <div class="tabCon">TAB 4</div>
+                <div class="tabCon">TAB 5</div>
+                <div class="tabCon">TAB 6</div>
+                <div class="tabCon">TAB 7</div>
+                <div class="tabCon">TAB 8</div>
+                <div class="tabCon">TAB i</div>
+                <div class="tabCon">TAB X</div>
+                <div class="tabCon">TAB M</div>
+                <div class="tabCon">TAB Z4</div>
+              </div>
+            </div>
+            <div class="tabCon">Mini TAB</div>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <!-- 선택 정보 -->
+          <div class="foldWrap">
+            <div class="foldBox">
+              <a href="javascript:;" class="btnFold">열기</a>
+              <div class="foldTop">
+                <dl class="infoDetail">
+                  <dt>체험 프로그램</dt>
+                  <dd>Test Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive Test</dd>
+                </dl>
+              </div>
+
+              <div class="foldCon">
+                <dl class="infoDetail">
+                  <dt>체험 차량</dt>
+                  <dd>BMW 32Oi M Sport Package BMW 32Oi M Sport Package BMW 32Oi M Sport Package</dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 일정</dt>
+                  <dd><!-- 2023년 01월 08일(화)<br>오전 10:20 --></dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 인원</dt>
+                  <dd><!-- 3명 --></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <!-- //선택 정보 -->
+
+          <div class="btnWrap">
+            <button class="btn"><span>일정/인원 선택하기</span></button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 체험 차량 정보 팝업 -->
+    <div id="carInfoPop" class="popWrap">
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">체험 차량 정보</h1>
+        </div>
+        <div class="popCon">
+          <div class="mt15">
+            <div class="imgBox">
+              <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_car1.png" alt="">
+              <div class="flagWrap left">
+                <span class="flag">인기 예약 차종</span>
+                <span class="flag">NEW</span>
+              </div>
+            </div>
+
+            <div class="txtBox">
+              <p class="series">BMW 3series</p>
+              <p class="tit">BMW 32Oi M Sport Package</p>
+            </div>
+
+            <div class="dlInfoBoxWrap">
+              <div class="dlInfoBox ty2">
+                <dl>
+                  <dt>파워트레인</dt>
+                  <dd>트윈파워 직렬 4기통<br>가솔린 엔진</dd>
+                </dl>
+                <dl>
+                  <dt>배기랑</dt>
+                  <dd>1,988cc</dd>
+                </dl>
+                <dl>
+                  <dt>최고 출력</dt>
+                  <dd>184 PS / 4,000RPM</dd>
+                </dl>
+                <dl>
+                  <dt>최대 토크</dt>
+                  <dd>30.60kg.m<br>/1,400~4,2000 rpm</dd>
+                </dl>
+                <dl>
+                  <dt>가속력<br>(0-100km)</dt>
+                  <dd>7.4 s</dd>
+                </dl>
+                <dl>
+                  <dt>공차 중량</dt>
+                  <dd>1,635 kg</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //체험 차량 정보 팝업 -->
+
+    <!-- 체험 코스 정보 팝업 -->
+    <div id="courseInfoPop" class="popWrap">
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">체험 코스 정보</h1>
+        </div>
+        <div class="popCon">
+          <div class="slideTab">
+            <ul class="tabTit">
+              <li class="on"><a href="javascript:;">야외/트랙서킷</a></li>
+              <li><a href="javascript:;">다이나믹코스</a></li>
+              <li><a href="javascript:;">다목적 코스</a></li>
+              <li><a href="javascript:;">오프로드 코스</a></li>
+              <li><a href="javascript:;">서큘러 코스</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <!-- 2023-05-08 코스 수정 -->
+              <div class="imgBox courseImg">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course.png" alt="" class="bg">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course1.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course1_1.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course2.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course3.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course3_1.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course4.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course4_1.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course5.png" alt="">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/img_course5_1.png" alt="">
+              </div>
+              <!-- //2023-05-08 코스 수정 -->
+
+              <div class="txtBox">
+                <p class="subTit">폭 11m 총면적 1,440m 크기의 트랙으로 차량의 가속력 및 엔진 파워를 느껴 볼 수 있습니다.</p>
+
+                <p class="txt fwB">1. 가속 및 제동</p>
+                <p class="txt">직선 주행로에서 최대 200km까지 가속할 수 있는  이며, 굴곡로에서는 차량의 현기장치 엔진 파워를 느껴볼 수 있습니다.</p>
+
+                <p class="txt fwB">2. 핸들링</p>
+                <p class="txt">차량의 기본 조작 방법을 익히고 스티어링 적용, 제동과 엔진 파워 체험 등을 통해 드라이빙 적응도를 높이는 입니다.</p>
+              </div>
+            </div>
+            <div class="tabCon">TAB 2</div>
+            <div class="tabCon">TAB 3</div>
+            <div class="tabCon">TAB 4</div>
+            <div class="tabCon">TAB 5</div>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //체험 코스 정보 팝업 -->
+
+    <script>
+      var swiper_pop = new Swiper('.carInfo', {				
+        slidesPerView: 1,
+        spaceBetween: 7,
+        //effect: 'coverflow',
+        //loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },  
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+  </body>
+</html>

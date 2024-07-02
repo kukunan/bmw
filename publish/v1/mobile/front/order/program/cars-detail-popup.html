@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#carInfoPop" class="btn openPop">체험 차량 정보 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#carInfoPop').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 체험 차량 정보 팝업 -->
+    <div id="carInfoPop" class="popWrap">
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">체험 차량 정보</h1>
+        </div>
+        <div class="popCon">
+          <div class="mt15">
+            <div class="imgBox">
+              <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_car1.png" alt="">
+              <div class="flagWrap left">
+                <span class="flag">인기 예약 차종</span>
+                <span class="flag">NEW</span>
+              </div>
+            </div>
+
+            <div class="txtBox">
+              <p class="series">BMW 3series</p>
+              <p class="tit">BMW 32Oi M Sport Package</p>
+            </div>
+
+            <div class="dlInfoBoxWrap">
+              <div class="dlInfoBox ty2">
+                <dl>
+                  <dt>파워트레인</dt>
+                  <dd>트윈파워 직렬 4기통<br>가솔린 엔진</dd>
+                </dl>
+                <dl>
+                  <dt>배기랑</dt>
+                  <dd>1,988cc</dd>
+                </dl>
+                <dl>
+                  <dt>최고 출력</dt>
+                  <dd>184 PS / 4,000RPM</dd>
+                </dl>
+                <dl>
+                  <dt>최대 토크</dt>
+                  <dd>30.60kg.m<br>/1,400~4,2000 rpm</dd>
+                </dl>
+                <dl>
+                  <dt>가속력<br>(0-100km)</dt>
+                  <dd>7.4 s</dd>
+                </dl>
+                <dl>
+                  <dt>공차 중량</dt>
+                  <dd>1,635 kg</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //체험 차량 정보 팝업 -->
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../layout/header.html" data-headtype="4" data-log="in" data-title="모바일티켓"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section">
+          <div class="txtBox mb20">
+            <h2 class="tit">
+              이용자 정보를 입력해야만<br>
+              모바일 티켓 확인이 가능합니다.
+            </h2>
+            <p class="refMark">이용자 정보를 정확하게 기입해 주세요.</p>
+            <p class="refMark">이용자1은 반드시 예약자와 동일인이여야 합니다.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="formBoxWrap">
+            <div class="bdTopTit">이용자 정보1</div>
+
+            <div class="formBox">
+              <label for="ip_name1" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name1" value="박수용" disabled="disabled"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_email1" class="tit">이메일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="email" id="ip_email1" value="sysy@gsitm.com" disabled="disabled"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_phone1" class="tit">휴대폰 번호<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="tel" id="ip_phone1" value="01031720000" disabled="disabled"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_birth1" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth1" value="1900.00.00" disabled="disabled"></div>
+            </div>
+
+            <div class="fellowBox">
+              <p class="checkBox">
+                <input type="checkbox" name="" id="ip_chk1">
+                <label for="ip_chk1">동승자 탑승 여부</label>
+              </p>
+              
+              <div class="fellow">
+                <p class="txt">동승자</p>
+  
+                <div class="countNum">
+                  <button class="btnMinus">빼기</button>
+                  <p class="count">0</p>
+                  <button class="btnPlus">더하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="formBoxWrap">
+            <div class="bdTopTit">이용자 정보2</div>
+  
+            <div class="formBox">
+              <label for="ip_name2" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name2" placeholder="성명을 입력해 주세요(ex.홍길동)"></div>
+              <p class="txtError on">이용자 성명을 입력해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+  
+            <div class="formBox">
+              <label for="ip_email2" class="tit">이메일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="email" id="ip_email2" placeholder="이메일을 입력해 주세요."></div>
+              <p class="txtError">이메일 형식을 올바르게 입력해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+  
+            <div class="formBox">
+              <label for="ip_phone2" class="tit">휴대폰 번호<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="tel" id="ip_phone2" placeholder="휴대폰 번호를 입력해주세요.(- 제외)"></div>
+              <p class="txtError">숫자만 입력 가능합니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+  
+            <div class="formBox">
+              <label for="ip_birth2" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth2" placeholder="생년월일(8자리)을 입력해 주세요."></div>
+              <p class="txtError">숫자만 입력 가능합니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="fellowBox">
+              <p class="checkBox">
+                <input type="checkbox" name="" id="ip_chk2">
+                <label for="ip_chk2">동승자 탑승 여부</label>
+              </p>
+              
+              <div class="fellow">
+                <p class="txt">동승자</p>
+  
+                <div class="countNum">
+                  <button class="btnMinus">빼기</button>
+                  <p class="count">0</p>
+                  <button class="btnPlus">더하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <div class="btnWrap">
+            <button class="btn"><span>입력 완료</span></button>
+
+            <!-- 버튼 비활성화 시 
+            <button class="btn" disabled="disabled"><span>입력 완료</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 탑승 유의 사항 약관 동의 팝업 -->
+    <div id="programBoardingTermPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">탑승 유의 사항 약관 동의</h1>
+        </div>
+        <div class="popCon">
+          <div class="icoAgreeListWrap">
+            <ul class="icoAgreeList">
+              <li>
+                <h2 class="tit">본인 명의 운전 면허증 소지</h2>
+                <p class="refMark">실제 주행 프로그램에 참가자에 한합니다.</p>
+                <p class="refMark">외국 국적 참가자는 아래의 서류를 모두 지참 하셔야 합니다.</p>
+                <p class="txt">지참 서류 : 유효한 국제 운전면허증(Permit 1년), 자국 운전면허증, 여권</p>
+              </li>
+              <li>
+                <h2 class="tit">편안한 신발 착용</h2>
+                <p class="refMark">편한 운동화나 굽이 낮은 단화 착용을 적극 권장합니다.</p>
+                <p class="refMark">하이힐 등 굽이 높은 신발을 착용하는 경우 탑승이 제한 됩니다.</p>
+                <p class="txtError">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+              </li>
+              <li>
+                <h2 class="tit">프로그램 시작 20분전 체크인 완료</h2>
+                <p class="refMark">프로그램 시작 20분전 체크인을 완료하셔야 합니다.</p>
+                <p class="refMark">지각으로 인해 체크인 미완료 시 탑승이 제한 됩니다.</p>
+                <p class="txtError">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+              </li>
+            </ul>
+
+            <p class="checkBox fz15">
+              <input type="checkbox" name="" id="ip_chk3">
+              <label for="ip_chk3">약관 내용을 확인하였으며 이에 동의합니다.</label>
+            </p>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn" disabled="disabled"><span>동의하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //탑승 유의 사항 약관 동의 팝업 -->
+
+    <script>
+      $(function(){
+        //동승자 탑승 여부 체크 시 스텝퍼 노출
+        if ($('.fellowBox').length) {
+          $('.fellowBox').each(function(){
+            $(document).on('click','.fellowBox label',function(){
+              $this = $(this).siblings('input:checkbox');
+              if(!$this.is(":checked")){
+                $this.parent().next('.fellow').addClass('on');
+              } else {
+                $this.parent().next('.fellow').removeClass('on');
+              }
+            });
+          })
+        }
+      });
+    </script>
+  </body>
+</html>

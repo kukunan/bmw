@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="8" data-log="in" data-title="프로그램 별 예약"></header>
+      <!-- //헤더영역 --><!-- //2023-05-17 헤더 타입 수정 -->
+
+      <section id="container">
+        <div class="section stepBox">
+          <p class="tit">체험할 Driving 프로그램을<br>선택해 주세요.</p>
+          <ul class="icoStep ty1">
+            <li class="on"><i>1단계(활성화)</i></li>
+            <li><i>2단계</i></li>
+            <li><i>3단계</i></li>
+            <li><i>4단계</i></li>
+            <li><i>5단계</i></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="slideTab">
+            <ul class="tabTit">
+                <li class="on"><a href="javascript:;">Driving Experience</a></li>
+                <li><a href="javascript:;">Driving Training</a></li>
+                <li><a href="javascript:;">Driving Pleasure</a></li>
+                <li><a href="javascript:;">BMW Owner Program</a></li>
+                <li><a href="javascript:;">Voucher Program</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <div class="slideWrap programInfo">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="imgBox">
+                      <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_slide1.png" alt="">
+                      <div class="flagWrap">
+                        <span class="flag">추천 프로그램</span>
+                        <span class="flag">인기 프로그램</span>
+                        <span class="flag">신규 프로그램</span>
+                      </div>
+                    </div>
+
+                    <div class="infoWarp">
+                      <div class="txtBox">
+                        <p class="tit">Test Drive</p>
+                        <p class="txt lineClamp">원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램 원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램</p>
+                      </div>
+
+                      <div class="infoBox">
+                        <p class="tit">프로그램 정보</p>
+                        <ul class="infoIcoList">
+                          <li>
+                            <p class="tit">체험 시간</p>
+                            <p class="txt">30분</p>
+                          </li>
+                          <li>
+                            <p class="tit">체험 가격</p>
+                            <p class="txt">80,000 ~ 140,000</p>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <a href="#programInfoPop" class="moreView openPop">자세히보기</a>
+                    </div>
+                  </div><!-- //slide1 -->
+
+                  <div class="swiper-slide">
+                    <div class="imgBox">
+                      <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_slide1.png" alt="">
+                      <div class="flagWrap">
+                        <span class="flag">추천 프로그램</span>
+                        <span class="flag">신규 프로그램</span>
+                      </div>
+                      <span class="status">판매대기</span>
+                    </div>
+
+                    <div class="infoWarp">
+                      <div class="txtBox">
+                        <p class="tit">Test Drive22</p>
+                        <p class="txt lineClamp">원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램 원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램</p>
+                      </div>
+
+                      <div class="infoBox">
+                        <p class="tit">프로그램 정보</p>
+                        <ul class="infoIcoList">
+                          <li>
+                            <p class="tit">체험 시간</p>
+                            <p class="txt">30분</p>
+                          </li>
+                          <li>
+                            <p class="tit">체험 가격</p>
+                            <p class="txt">80,000 ~ 140,000</p>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <a href="#programInfoPop" class="moreView openPop">자세히보기</a>
+                    </div>
+                  </div><!-- //slide2 -->
+
+                  <div class="swiper-slide">
+                    <div class="imgBox">
+                      <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_slide1.png" alt="">
+                      <div class="flagWrap">
+                        <span class="flag">신규 프로그램</span>
+                      </div>
+                    </div>
+
+                    <div class="infoWarp">
+                      <div class="txtBox">
+                        <p class="tit">Test Drive33</p>
+                        <p class="txt lineClamp">원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램 원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램원하는 BMW 차량을 직접 선택하고 BMW Driving 센터의 트랙을 주행하는 프로그램</p>
+                      </div>
+  
+                      <div class="infoBox">
+                        <p class="tit">프로그램 정보</p>
+                        <ul class="infoIcoList">
+                          <li>
+                            <p class="tit">체험 시간</p>
+                            <p class="txt">30분</p>
+                          </li>
+                          <li>
+                            <p class="tit">체험 가격</p>
+                            <p class="txt">80,000 ~ 140,000</p>
+                          </li>
+                        </ul>
+                      </div>
+  
+                      <a href="#programInfoPop" class="moreView openPop">자세히보기</a>
+                    </div>
+                  </div><!-- //slide3 -->
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="tabCon">TAB 2</div>
+            <div class="tabCon">TAB 3</div>
+            <div class="tabCon">TAB 4</div>
+            <div class="tabCon">TAB 5</div>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <!-- 선택 정보 -->
+          <div class="foldWrap">
+            <div class="foldBox">
+              <a href="javascript:;" class="btnFold">열기</a>
+              <div class="foldTop">
+                <dl class="infoDetail">
+                  <dt>체험 프로그램</dt>
+                  <dd>Test Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive Test</dd>
+                </dl>
+              </div>
+
+              <div class="foldCon">
+                <dl class="infoDetail">
+                  <dt>체험 차량</dt>
+                  <dd><!-- BMW 32Oi M Sport Package BMW 32Oi M Sport Package --></dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 일정</dt>
+                  <dd><!-- 2023년 01월 08일(화)<br>오전 10:20 --></dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 인원</dt>
+                  <dd><!-- 3명 --></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <!-- //선택 정보 -->
+
+          <div class="btnWrap">
+            <button class="btn"><span>차량 선택하기</span></button>
+
+            <!-- 버튼 비활성화 시 
+            <button class="btn" disabled="disabled"><span>예약불가</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 프로그램 정보 팝업 -->
+    <div id="programInfoPop" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">프로그램 정보</h1>
+        </div>
+        <div class="popCon">
+          <div class="slideTab">
+            <ul class="tabTit">
+              <li class="on"><a href="javascript:;">프로그램 상세</a></li>
+              <li><a href="javascript:;">프로그램 유의사항</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <div class="imgBox">
+                <img src="../../../../../../static/assets/v1/mobile/images/sample/tmp_slide1.png" alt="">
+                <div class="flagWrap">
+                  <span class="flag">추천 프로그램</span>
+                </div>
+              </div>
+
+              <div class="txtBox">
+                <p class="tit">트랙 주행, 원하는 차량으로 직접 체험하세요!</p>
+                <p class="txt">Test Drive 프로그램은 BMW, MINI 전 모델 중 고객님께서 원하시는 모델을 직접 선택하여 트랙을 주행해 볼 수 있는 체험 프로그램입니다. 관심있던 모델부터 평소 경험하기 어려웠던 모델까지.합리적인 가격으로 BMW와 MINI를 직접 경험하세요.</p>
+                <p class="refMark">본 프로그램은 차량 내 비치된 무전기를 통해 교육이 진행되는 프로그램으로 예약 전 확인 부탁드립니다.</p>
+              </div>
+
+              <div class="dlInfoBoxWrap">
+                <div class="dlInfoBox ty1">
+                  <dl>
+                    <dt>프로그램 체험시간</dt>
+                    <dd>30분</dd>
+                  </dl>
+                  <dl>
+                    <dt>프로그램 체험가격</dt>
+                    <dd>80,000원~140,000원</dd>
+                  </dl>
+                  <dl>
+                    <dt>프로그램 이용대상</dt>
+                    <dd>
+                      만 18세 이상<br>
+                      운전면허증 보유자<br>
+                      운전 경력 1년 이상
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>프로그램<br>예약가능인원<br>(1회 주문 당)</dt>
+                    <dd>2명</dd>
+                  </dl>
+                  <dl>
+                    <dt>장소</dt>
+                    <dd>BMW 드라이빙센터</dd>
+                  </dl>
+                  <dl>
+                    <dt>동승자 탑승<br>가능여부</dt>
+                    <dd>가능 (예약자 외 2명)</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabCon">
+              <div class="txtBox">
+                <p class="subTit">[프로그램 유의 사항]</p>
+                <ul class="bulletList">
+                  <li>주니어 캠퍼스는 초등학생 대상의 프로그램으로 미취학 어린이 및 중고등학생은 수업에 참여할 수 없습니다.</li>
+                  <li>8세의 경우 티켓 발권시 나이증명서류를 확인 하오니 의료보험증, 주민등록등본, 가족관계증명서 등을 반드시  지참하여 주시기 바랍니다. (미지참시 입장 제한)</li>
+                  <li>주니어 캠퍼스는 과학 창의 교육 프로그램으로 실험실과 워크숍으로 구성되어 있습니다. 부모님 동반 없이 어린이만 입장하며 조별 활동(2~3인 1조)으로 진행되는 프로그램입니다.</li>
+                </ul>
+              </div>
+
+              <div class="txtBox">
+                <p class="subTit">[프로그램 이용 절차]</p>
+                <ol class="numList">
+                  <li><span class="num">1.</span>프로그램 시작 20분전까지 드라이빙 센터
+                    2층 도착 주니어 캠퍼스는 초등학생 대상의 프로그램으로 미취학 어린이 및 중고등학생은 수업에 참여할 수 없습니다.</li>
+                  <li><span class="num">2.</span>참가 대상 확인(지참 서류 확인)</li>
+                  <li><span class="num">3.</span>모바일 티켓을 통한 체크인 및 이용 동의 진행</li>
+                  <li><span class="num">4.</span>프로그램 이용</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //프로그램 정보 팝업 -->
+
+    <script>
+      var swiper_pop = new Swiper('.programInfo', {				
+        slidesPerView: 1,
+        spaceBetween: 7,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+      swiper_pop.on('slideChangeTransitionEnd',function(){
+        fn_pagination();
+        //slideChangeTransitionEnd
+        //transitionEnd
+      })
+    </script>
+  </body>
+</html>

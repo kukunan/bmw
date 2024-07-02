@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../layout/header.html" data-headtype="6" data-log="in" data-title="모바일티켓"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="ticketWrap">
+          <div class="slideWrap ticketInfo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="ticketInfoTxt">
+                  <h2 class="tit">On-Road</h2>
+                  <p class="txt">예매번호<span class="bar">20230103000000001</span></p>
+                </div>
+
+                <div class="ticketBox">
+                  <div class="left">
+                    <div class="qrBox">
+                      <i></i><i></i><i></i><i></i>
+                      
+                      <!-- QR Code 노출 영역 -->
+                      <div class="qrImg">
+                        <img src="../../../../../static/assets/v1/mobile/images/sample/tmp_qr1.png" alt="">
+                      </div>
+                      <!-- //QR Code 노출 영역 -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="shareBox">
+                      <a href="#sharePop" class="openPop">
+                        <i class="icoShare"></i>
+                        <span>티켓공유</span>
+                      </a>
+                    </div>
+                    <div class="shareBox">
+                      <a href="#guidancePop" class="openPop">
+                        <i class="icoNotice"></i>
+                        <span>유의사항</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ticketInfoBox">
+                  <dl>
+                    <dt>체험일시</dt>
+                    <dd>2023.01.04(월) 오전 09:40</dd>
+                  </dl>
+                  <dl>
+                    <dt>체험차량</dt>
+                    <dd>BMW 32Oi M Sport Package</dd>
+                  </dl>
+                </div>
+              </div><!-- //slide1 -->
+
+              <div class="swiper-slide">
+                <div class="ticketInfoTxt">
+                  <h2 class="tit">On-Road On-Road</h2>
+                  <p class="txt">예매번호<span class="bar">20230103000000001</span></p>
+                </div>
+
+                <div class="ticketBox">
+                  <div class="left">
+                    <div class="qrBox none"><!-- QR Code 없음 : none 클래스-->
+                      <i></i><i></i><i></i><i></i>
+
+                      <!-- QR Code 없음 -->
+                      <div class="qrNone">
+                        <i></i>
+                        <p>공유된 티켓입니다.</p><!-- //예외 케이스 안내메시지 -->
+
+                        <!-- 예외 케이스 안내메시지 종류 -->
+                        <!--
+                        <p>체험 당일<br>입장 가능합니다.</p>
+                        <p>체험일시가 지난<br>티켓입니다.</p>
+                        <p>취소 완료된 티켓입니다.</p>
+                        <p>공유된 티켓입니다.</p>
+                        <p>유효하지 않는<br>티켓입니다.</p>
+                        <p>체크인 완료된<br>티켓입니다.</p>
+                        -->
+                      </div>
+                      <!-- //QR Code 없음 -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="shareBox">
+                      <a href="javascript:;" class="openPop">
+                        <i class="icoShareCancle"></i>
+                        <span>공유취소</span>
+                      </a>
+                    </div>
+                    <div class="shareBox">
+                      <a href="#guidanceNonePop" class="openPop">
+                        <i class="icoNotice"></i>
+                        <span>유의사항</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shareInfo">
+                  <p class="state">공유완료</p>
+                  <p class="info">2023.01.02<span class="bar">홍길동</span><span class="bar">010-****-5678</span></p><!-- //2023-05-24 성명 추가 -->
+                </div>
+
+                <div class="ticketInfoBox">
+                  <dl>
+                    <dt>체험일시</dt>
+                    <dd>2023.01.04(월) 오전 09:40</dd>
+                  </dl>
+                  <dl>
+                    <dt>체험차량</dt>
+                    <dd>BMW 32Oi M Sport Package</dd>
+                  </dl>
+                </div>
+              </div><!-- //slide2 -->
+
+              <div class="swiper-slide">
+                <div class="ticketInfoTxt">
+                  <h2 class="tit">On-Road</h2>
+                  <p class="txt">예매번호<span class="bar">20230103000000001</span><span class="fcPoint2 ml5">취소완료</span></p><!-- //취소완료 -->
+                </div>
+
+                <div class="ticketBox">
+                  <div class="left">
+                    <div class="qrBox none"><!-- QR Code 없음 : none 클래스-->
+                      <i></i><i></i><i></i><i></i>
+                      
+                      <!-- QR Code 없음 -->
+                      <div class="qrNone">
+                        <i></i>
+                        <p>취소 완료된 티켓입니다.</p>
+                      </div>
+                      <!-- //QR Code 없음 -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="shareBox off"><!-- 비활성화 : off 클래스-->
+                      <a href="#sharePop" class="openPop">
+                        <i class="icoShare"></i>
+                        <span>티켓공유</span>
+                      </a>
+                    </div>
+                    <div class="shareBox">
+                      <a href="#guidanceNonePop" class="openPop">
+                        <i class="icoNotice"></i>
+                        <span>유의사항</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ticketInfoBox">
+                  <dl>
+                    <dt>체험일시</dt>
+                    <dd>2023.01.04(월) 오전 09:40</dd>
+                  </dl>
+                  <dl>
+                    <dt>체험차량</dt>
+                    <dd>BMW 32Oi M Sport Package</dd>
+                  </dl>
+                </div>
+              </div><!-- //slide3 -->
+
+              <div class="swiper-slide">
+                <div class="ticketInfoTxt">
+                  <h2 class="tit">주니어 캠퍼스 워크샵<i class="icoPackage">패키지</i></h2>
+                  <p class="txt">예매번호<span class="bar">20230103000000001</span></p>
+                </div>
+
+                <div class="ticketBox">
+                  <div class="left">
+                    <div class="qrBox">
+                      <i></i><i></i><i></i><i></i>
+                      
+                      <!-- QR Code 노출 영역 -->
+                      <div class="qrImg">
+                        <img src="../../../../../static/assets/v1/mobile/images/sample/tmp_qr1.png" alt="">
+                      </div>
+                      <!-- //QR Code 노출 영역 -->
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="shareBox off"><!-- 비활성화 : off 클래스-->
+                      <a href="javascript:;" class="openPop">
+                        <i class="icoShareDone"></i>
+                        <span>공유받은 티켓</span>
+                      </a>
+                    </div>
+                    <div class="shareBox">
+                      <a href="#guidancePop" class="openPop">
+                        <i class="icoNotice"></i>
+                        <span>유의사항</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ticketInfoBox">
+                  <dl>
+                    <dt>체험일시</dt>
+                    <dd>2023.01.04(월) 오전 09:40</dd>
+                  </dl>
+                  <dl>
+                    <dt>체험가격</dt>
+                    <dd>유가족(유공자/의사자)</dd>
+                  </dl>
+                </div>
+              </div><!-- //slide4 -->
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="marqueeBox">
+            <div class="marquee">
+              <p class="marqueeTxt">캡쳐화면은 입장에 제한될 수 있습니다.</p>
+              <p class="marqueeTxt">캡쳐화면은 입장에 제한될 수 있습니다.</p>
+              <p class="marqueeTxt">캡쳐화면은 입장에 제한될 수 있습니다.</p>
+              <p class="marqueeTxt">캡쳐화면은 입장에 제한될 수 있습니다.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- 2023-05-24 수정 -->
+    <!-- 공유하기(휴대폰 입력) 팝업 -->
+    <div id="sharePop" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">모바일티켓</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="subTit mt20">휴대폰 번호</h2>
+
+          <div class="radioBox mt15">
+            <input type="radio" id="radio1_1" name="radio1" disabled><!-- //선택불가 -->
+            <label for="radio1_1">이용자 | 01012345678</label>
+          </div>
+          <div class="radioBox mt15">
+            <input type="radio" id="radio1_2" name="radio1">
+            <label for="radio1_2">비엠유 | 01098765432</label>
+          </div>
+          <div class="radioBox mt15">
+            <input type="radio" id="radio1_3" name="radio1">
+            <label for="radio1_3">홍길동 | 01098765432</label>
+          </div>
+          <div class="radioBox mt15">
+            <input type="radio" id="radio1_4" class="ip_direct" name="radio1">
+            <label for="radio1_4">직접입력</label>
+          </div>
+          <!-- <div class="formBox mt10 pl25">
+            <div class="inputBox"><input type="tel" id="ip_phone" placeholder="휴대폰 번호를 입력해주세요.(- 제외)" disabled="disabled"></div>
+            <p class="txtError">숫자만 입력 가능합니다.</p>
+          </div> -->
+          <div class="formBoxWrap mt15 ipDirectBox" style="display:none;">
+            <div class="formBox">
+              <label for="ip_name1" class="tit">성명</label>
+              <div class="inputBox"><input type="text" id="ip_name1" placeholder="성명을 입력해 주세요(ex.홍길동)"></div>
+              <p class="txtError">이용자 성명을 입력해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_email1" class="tit">이메일</label>
+              <div class="inputBox"><input type="email" id="ip_email1" placeholder="이메일을 입력해 주세요."></div>
+              <p class="txtError">이메일 형식을 올바르게 입력해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_phone1" class="tit">휴대폰 번호</label>
+              <div class="inputBox"><input type="tel" id="ip_phone1" placeholder="휴대폰 번호를 입력해주세요.(- 제외)"></div>
+              <p class="txtError">숫자만 입력 가능합니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_birth1" class="tit">생년월일</label>
+              <div class="inputBox"><input type="text" id="ip_birth1" placeholder="생년월일(8자리)을 입력해 주세요."></div>
+              <p class="txtError">이용자 생년월일을 입력해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+          </div>
+        </div>
+        
+        <div class="btnWrap">
+          <button class="btn" disabled="disabled"><span>모바일티켓 공유하기</span></button>
+
+          <!-- 버튼 활성화 시 
+            <button class="btn"><span>모바일티켓 공유하기</span></button>
+            -->
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //공유하기(휴대폰 입력) 팝업 -->
+    <!-- //2023-05-24 수정 -->
+
+    <!-- 유의사항 안내 팝업 -->
+    <div id="guidancePop" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">유의사항 안내</h1>
+        </div>
+        <div class="popCon">
+          <div class="txtBox">
+            <p class="subTit">[프로그램 유의 사항]</p>
+            <ul class="bulletList">
+              <li>주니어 캠퍼스는 초등학생 대상의 프로그램으로 미취학 어린이 및 중고등학생은 수업에 참여할 수 없습니다.</li>
+              <li>8세의 경우 티켓 발권시 나이증명서류를 확인 하오니 의료보험증, 주민등록등본, 가족관계증명서 등을 반드시  지참하여 주시기 바랍니다. (미지참시 입장 제한)</li>
+              <li>주니어 캠퍼스는 과학 창의 교육 프로그램으로 실험실과 워크숍으로 구성되어 있습니다. 부모님 동반 없이 어린이만 입장하며 조별 활동(2~3인 1조)으로 진행되는 프로그램입니다.</li>
+            </ul>
+          </div>
+
+          <div class="txtBox">
+            <p class="subTit">[프로그램 이용 절차]</p>
+            <ol class="numList">
+              <li><span class="num">1.</span>프로그램 시작 20분전까지 드라이빙 센터
+                2층 도착</li>
+              <li><span class="num">2.</span>참가 대상 확인(지참 서류 확인)</li>
+              <li><span class="num">3.</span>모바일 티켓을 통한 체크인 및 이용 동의 진행</li>
+              <li><span class="num">4.</span>프로그램 이용</li>
+            </ol>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //유의사항 안내 팝업 -->
+
+    <!-- 유의사항 안내 팝업 : 유의사항 없음 -->
+    <div id="guidanceNonePop" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">유의사항 안내</h1>
+        </div>
+        <div class="popCon">
+          <div class="msgBox full">
+            <i class="icoMsgNone"></i>
+            <p class="tit">유의사항이 존재하지 않습니다.</p>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //유의사항 안내 팝업 : 유의사항 없음 -->
+
+    <script>
+      $(function () {
+        //모바일 티켓 슬라이드
+        var swiper_ticket = new Swiper('.ticketInfo', {				
+          slidesPerView: 1,
+          spaceBetween: 20,
+          //loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          }
+        });
+      
+        
+        //직접입력 선택 시 입력창 영역 노출 (2023-05-24 추가)
+        $(document).on('click','.radioBox input[type=radio]',function(e){ 
+          if($(this).hasClass('ip_direct')){
+            if ($(this).is(':checked')) {
+              $(this).parent().next('.ipDirectBox').css('display','block');
+            }
+          }
+          else{
+            $(this).parent().siblings().next('.ipDirectBox').css('display','none');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

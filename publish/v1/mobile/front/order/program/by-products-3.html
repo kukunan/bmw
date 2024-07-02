@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="5" data-log="in" data-title="프로그램 별 예약"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section stepBox">
+          <p class="tit">체험 일정 및 인원을<br>선택해 주세요.</p>
+          <ul class="icoStep ty1">
+            <li><i>1단계</i></li>
+            <li><i>2단계</i></li>
+            <li class="on"><i>3단계(활성화)</i></li>
+            <li><i>4단계</i></li>
+            <li><i>5단계</i></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">체험 일정</h2>
+
+          <div class="calendarWrap">
+            <!-- 주간달력 -->
+            <div class="weeklyCalendar on">
+              <div class="calendarTop">
+                <p class="year">2023.01</p>
+              </div>
+              
+              <ul class="weekDay">
+                <li>
+                  <span>Mon</span>
+                  <p><button class="on">10</button></p>
+                </li>
+                <li>
+                  <span>Tue</span>
+                  <p><button>11</button></p>
+                </li>
+                <li>
+                  <span>Wed</span>
+                  <p><button disabled="disabled">12</button></p>
+                </li>
+                <li>
+                  <span>Thu</span>
+                  <p><button disabled="disabled">13</button></p>
+                </li>
+                <li>
+                  <span>Fri</span>
+                  <p><button>14</button></p>
+                </li>
+                <li>
+                  <span>Sat</span>
+                  <p><button>15</button></p>
+                </li>
+                <li>
+                  <span>Sun</span>
+                  <p><button>16</button></p>
+                </li>
+  
+                <li>
+                  <span>Mon</span>
+                  <p><button>17</button></p>
+                </li>
+                <li>
+                  <span>Tue</span>
+                  <p><button disabled="disabled">18</button></p>
+                </li>
+                <li>
+                  <span>Wed</span>
+                  <p><button>19</button></p>
+                </li>
+                <li>
+                  <span>Thu</span>
+                  <p><button>20</button></p>
+                </li>
+                <li>
+                  <span>Fri</span>
+                  <p><button disabled="disabled">21</button></p>
+                </li>
+                <li>
+                  <span>Sat</span>
+                  <p><button>22</button></p>
+                </li>
+                <li>
+                  <span>Sun</span>
+                  <p><button>23</button></p>
+                </li>
+
+                <li>
+                  <span>Mon</span>
+                  <p><button>24</button></p>
+                </li>
+                <li>
+                  <span>Tue</span>
+                  <p><button>25</button></p>
+                </li>
+                <li>
+                  <span>Wed</span>
+                  <p><button>26</button></p>
+                </li>
+                <li>
+                  <span>Thu</span>
+                  <p><button disabled="disabled">27</button></p>
+                </li>
+                <li>
+                  <span>Fri</span>
+                  <p><button>28</button></p>
+                </li>
+                <li>
+                  <span>Sat</span>
+                  <p><button>29</button></p>
+                </li>
+                <li>
+                  <span>Sun</span>
+                  <p><button>30</button></p>
+                </li>
+
+                <li>
+                  <span>Mon</span>
+                  <p><button>31</button></p>
+                </li>
+              </ul>
+  
+              <!-- <a href="javascript:;" class="btnCalChg">월간 달력 보기</a>  -->
+            </div>
+            <!-- //주간달력 -->
+  
+            <!-- 월간달력 -->
+            <div class="monthlyCalendar">
+              <div class="calendarTop">
+                <a href="javascript:;" class="btnPrev">이전 달</a>
+                <p class="year">2023.01</p>
+                <a href="javascript:;" class="btnNext">다음 달</a>
+              </div>
+              <div class="calendar">
+                <ul class="weekDay">
+                  <li><span>Mon</span></li>
+                  <li><span>Tue</span></li>
+                  <li><span>Wed</span></li>
+                  <li><span>Thu</span></li>
+                  <li><span>Fri</span></li>
+                  <li><span>Sat</span></li>
+                  <li><span>Sun</span></li>
+                </ul>
+
+                <ul class="dateGrid">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li><button disabled="disabled">01</button></li>
+                  <li><button disabled="disabled">02</button></li>
+                  <li><button disabled="disabled">03</button></li>
+                  <li><button disabled="disabled">04</button></li>
+                  <li><button disabled="disabled">05</button></li>
+                  <li><button disabled="disabled">06</button></li>
+                  <li><button disabled="disabled">07</button></li>
+                  <li><button disabled="disabled">08</button></li>
+                  <li><button disabled="disabled">09</button></li>
+                  <li><button class="on">10</button></li>
+                  <li><button>11</button></li>
+                  <li><button disabled="disabled">12</button></li>
+                  <li><button disabled="disabled">13</button></li>
+                  <li><button>14</button></li>
+                  <li><button>15</button></li>
+                  <li><button>16</button></li>
+                  <li><button>17</button></li>
+                  <li><button disabled="disabled">18</button></li>
+                  <li><button>19</button></li>
+                  <li><button>20</button></li>
+                  <li><button disabled="disabled">21</button></li>
+                  <li><button>22</button></li>
+                  <li><button>23</button></li>
+                  <li><button>24</button></li>
+                  <li><button>25</button></li>
+                  <li><button>26</button></li>
+                  <li><button disabled="disabled">27</button></li>
+                  <li><button>28</button></li>
+                  <li><button>29</button></li>
+                  <li><button>30</button></li>
+                  <li><button>31</button></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+  
+              <!-- <a href="javascript:;" class="btnCalChg">주간 달력 보기</a> -->
+            </div>
+            <!-- //월간달력 -->
+
+            <a href="javascript:;" class="btnCalChg">달력 전환</a>
+
+            <ul class="calendarInfo">
+              <li>예약가능</li>
+              <li>예약불가</li>
+            </ul>
+          </div>
+          <!-- <ul class="calendarInfo">
+            <li>예약가능</li>
+            <li>예약불가</li>
+          </ul> -->
+
+          <!-- 체험시간 -->
+          <div class="timeListWrap">
+            <p class="timeListTop">
+              <span>체험시간</span>
+              <span>잔여석</span>
+            </p>
+            <ul class="timeList">
+              <li class="on">
+                <a href="javascript:;">
+                  <span>09:10 ~ 09:40</span>
+                  <span>2석</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>10:20 ~ 10:50</span>
+                  <span>2석</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>11:10 ~ 11:50</span>
+                  <span>2석</span>
+                </a>
+              </li>
+              <li class="soldOut">
+                <a href="javascript:;">
+                  <span>13:40 ~ 14:10</span>
+                  <span>0석/매진</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>14:20 ~ 15:00</span>
+                  <span>2석</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>15:50 ~ 16:20</span>
+                  <span>2석</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //체험시간 -->
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">체험 인원</h2>
+          <p class="txt timeAfter">체험 인원 선택을 위해 체험 시간 선택해 주세요.</p>
+
+          <div class="countNum timeAfter">
+            <button class="btnMinus">빼기</button>
+            <p class="count">0</p>
+            <button class="btnPlus">더하기</button>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <!-- 선택 정보 -->
+          <div class="foldWrap">
+            <div class="foldBox">
+              <a href="javascript:;" class="btnFold">열기</a>
+              <div class="foldTop">
+                <dl class="infoDetail">
+                  <dt>체험 프로그램</dt>
+                  <dd>Test Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive TestTest Drive Test Drive Test Drive Test Drive Test</dd>
+                </dl>
+              </div>
+
+              <div class="foldCon">
+                <dl class="infoDetail">
+                  <dt>체험 차량</dt>
+                  <dd>BMW 32Oi M Sport Package BMW 32Oi M Sport Package</dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 일정</dt>
+                  <dd>2023년 01월 08일(화)<br>오전 10:20</dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 인원</dt>
+                  <dd>3명</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <!-- //선택 정보 -->
+
+          <div class="btnWrap">
+            <button class="btn"><span>예약하기</span></button>
+
+            <!-- 버튼 비활성화 시 
+            <button class="btn" disabled="disabled"><span>예약하기</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      $(function(){
+      //체험시간 선택 시 체험인원 스텝퍼 노출
+        if ($('.timeListWrap').length) {
+          $('.timeAfter.countNum').removeClass('on');
+
+          $(document).on('click','.timeList a',function(){
+            let $this = $(this).parent();
+            if($this.hasClass('soldOut')){
+              return false;
+            } else {
+              $('.timeAfter.txt').hide();
+              $('.timeAfter.countNum').addClass('on');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

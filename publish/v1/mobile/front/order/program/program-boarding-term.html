@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#programBoardingTermPopup" class="btn openPop">탑승 유의 사항 약관 동의 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#programBoardingTermPopup').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 탑승 유의 사항 약관 동의 팝업 -->
+    <div id="programBoardingTermPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">탑승 유의 사항 약관 동의</h1>
+        </div>
+        <div class="popCon">
+          <div class="icoAgreeListWrap">
+            <ul class="icoAgreeList">
+              <li>
+                <h2 class="tit">본인 명의 운전 면허증 소지</h2>
+                <p class="refMark">실제 주행 프로그램에 참가자에 한합니다.</p>
+                <p class="refMark">외국 국적 참가자는 아래의 서류를 모두 지참 하셔야 합니다.</p>
+                <p class="txt">지참 서류 : 유효한 국제 운전면허증(Permit 1년), 자국 운전면허증, 여권</p>
+              </li>
+              <li>
+                <h2 class="tit">편안한 신발 착용</h2>
+                <p class="refMark">편한 운동화나 굽이 낮은 단화 착용을 적극 권장합니다.</p>
+                <p class="refMark">하이힐 등 굽이 높은 신발을 착용하는 경우 탑승이 제한 됩니다.</p>
+                <p class="txtError">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+              </li>
+              <li>
+                <h2 class="tit">프로그램 시작 20분전 체크인 완료</h2>
+                <p class="refMark">프로그램 시작 20분전 체크인을 완료하셔야 합니다.</p>
+                <p class="refMark">지각으로 인해 체크인 미완료 시 탑승이 제한 됩니다.</p>
+                <p class="txtError">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+              </li>
+            </ul>
+
+            <p class="checkBox fz15">
+              <input type="checkbox" name="" id="ip_chk3">
+              <label for="ip_chk3">약관 내용을 확인하였으며 이에 동의합니다.</label>
+            </p>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn" disabled="disabled"><span>동의하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //탑승 유의 사항 약관 동의 팝업 -->
+  </body>
+</html>

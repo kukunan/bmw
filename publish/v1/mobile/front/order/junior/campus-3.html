@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="5" data-log="in" data-title="주니어 캠퍼스 예약"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section stepBox">
+          <p class="tit">체험 인원을<br>선택해 주세요.</p>
+          <ul class="icoStep ty4">
+            <li><i>1단계</i></li>
+            <li><i>2단계</i></li>
+            <li class="on"><i>3단계(활성화)</i></li>
+            <li><i>4단계</i></li>
+            <li><i>5단계</i></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="txtBox">
+            <h2 class="subTit">체험 인원</h2>
+            <p class="fcGray666">
+              의사자, 국가유공자 유가족일 경우 50%할인<br>
+              할인 권종 예약 시 증빙서류 지참 필수
+            </p>
+            <a href="#evidenceDocumentPopup" class="moreView openPop">할인 대상 및 증빙 서류 안내</a>
+          </div>
+
+          <div class="dlInfoBoxWrap mt20">
+            <div class="bdTopTit">
+              <p class="tit">주니어 캠퍼스 실험실</p>
+            </div>
+
+            <div class="dlInfoBox sm">
+              <dl>
+                <dt>
+                  <p>일반</p>
+                  <p class="fcGray666">10,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">10,000원</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p>과학동아기자단</p>
+                  <p class="fcGray666">8,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">8,000원</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p>유가족(유공자/의사자)</p>
+                  <p class="fcGray666">5,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">5,000원</p>
+                </dd>
+              </dl>
+            </div>
+
+            <p class="total">합계 : <span class="won">23,000원</span></p>
+          </div>
+
+          <div class="dlInfoBoxWrap mt20">
+            <div class="bdTopTit">
+              <p class="tit">주니어 캠퍼스 워크샵<i class="icoPackage">패키지</i></p>
+            </div>
+
+            <div class="dlInfoBox sm">
+              <dl>
+                <dt>
+                  <p>일반</p>
+                  <p class="fcGray666">10,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">10,000원</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p>과학동아기자단</p>
+                  <p class="fcGray666">8,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">8,000원</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p>유가족(유공자/의사자)</p>
+                  <p class="fcGray666">5,000원</p>
+                </dt>
+                <dd>
+                  <div class="countNum">
+                    <button class="btnMinus">빼기</button>
+                    <p class="count">0</p>
+                    <button class="btnPlus">더하기</button>
+                  </div>
+                  <p class="fcGray666">5,000원</p>
+                </dd>
+              </dl>
+            </div>
+
+            <p class="total">합계 : <span class="won">23,000원</span></p>
+          </div>
+
+          <h2 class="subTit mt15 mb10">예상 결제 금액</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl>
+                <dt>프로그램 이용료 합계</dt>
+                <dd>46,000원</dd>
+              </dl>
+              <dl>
+                <dt>
+                  패키지 할인 합계
+                  <a href="#discountDetailPopup" class="btnR mt10 openPop"><span>할인 상세 내역</span></a>
+                </dt>
+                <dd><span class="fcPoint1">-10,000원</span></dd>
+              </dl>
+            </div>
+
+            <p class="total">예상 결제 금액 : <span class="won fz18">36,000원</span></p>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <!-- 선택 정보 -->
+          <div class="foldWrap">
+            <div class="foldBox">
+              <a href="javascript:;" class="btnFold">열기</a>
+              <div class="foldTop">
+                <dl class="infoDetail">
+                  <dt>체험 프로그램</dt>
+                  <dd>주니어캠퍼스 실험실<br>주니어캠퍼스 워크샵<i class="icoPackage">패키지</i></dd>
+                </dl>
+              </div>
+
+              <div class="foldCon">
+                <dl class="infoDetail">
+                  <dt>체험 일정</dt>
+                  <dd>2023년 01월 08일(화)<br>오전 10:20 | 오전 9:20<i class="icoPackage">패키지</i></dd>
+                </dl>
+                <dl class="infoDetail">
+                  <dt>체험 인원</dt>
+                  <dd>3명<br>2명<i class="icoPackage">패키지</i></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <!-- //선택 정보 -->
+
+          <div class="btnWrap">
+            <button class="btn"><span>예약하기</span></button>
+
+            <!-- 버튼 비활성화 시 
+            <button class="btn" disabled="disabled"><span>예약하기</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 무료/할인 대상 및 증빙 서류 안내 팝업 -->
+    <div id="evidenceDocumentPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">무료/할인 대상 및 증빙 서류 안내</h1>
+        </div>
+        <div class="popCon">
+          <div class="txtBox">
+            <p class="txt">
+              장애인, 기초생활수급자, 국가유공자 및 독립유공자 유가족 등 할인 대상자의 경우, 이용 당일 관련 증빙서류를 지참하셔야 합니다.<br>
+              입장시 증빙서류 확인을 요청합니다.<br>
+              (증빙서류 미 지참시 정상가 결제)
+            </p>
+          </div>
+
+          <h2 class="subTit mt20 mb10">무료입장 대상</h2>
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">대상</th>
+                  <th scope="col">증빙서류</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>기초생활 수급자</td>
+                  <td>본인</td>
+                  <td>국민기초생활수급자<br>증명서 또는 보험증서</td>
+                </tr>
+                <tr>
+                  <td>중증 장애인</td>
+                  <td rowspan="2">본인</td>
+                  <td rowspan="2">장애인 증명서 또는<br>복지카드</td>
+                </tr>
+                <tr>
+                  <td>경증 장애인</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="subTit mt15 mb10">할인 대상</h2>
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">대상</th>
+                  <th scope="col">할인율</th>
+                  <th scope="col">증빙서류</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>국가/독립<br>유공자<br>유가족</td>
+                  <td rowspan="2">직계 가족<br>2대까지 적용<br>(본인 자녀에<br>한함)</td>
+                  <td rowspan="2">50%</td>
+                  <td>유공자 증</td>
+                </tr>
+                <tr>
+                  <td>의사자<br>유가족</td>
+                  <td>의사자<br>유족 증명서</td>
+                </tr>
+                <tr>
+                  <td>과학 아동<br>기자단</td>
+                  <td>본인</td>
+                  <td>20%</td>
+                  <td>과학동아기자단<br>기자증</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 버튼 노출 시 -->
+        <div class="btnWrap">
+          <button class="btn"><span>확인</span></button>
+        </div>
+        <!-- //버튼 노출 시 -->
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //무료/할인 대상 및 증빙 서류 안내 팝업 -->
+
+    <!-- 할인 내역 상세 팝업 -->
+    <div id="discountDetailPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">할인 내역 상세</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="subTit mt20 mb10">주니어캠퍼스 실험실</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>프로그램 이용료 합계</dt>
+                <dd>23,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반<br>(10,000원x1)</dt>
+                <dd>10,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>(8,000원x1)</dt>
+                <dd>8,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>(5,000원x1)</dt>
+                <dd>5,000원</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">주니어캠퍼스 워크샵<i class="icoPackage">패키지</i></h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>프로그램 이용료 합계</dt>
+                <dd>23,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반<br>(10,000원x1)</dt>
+                <dd>10,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>(8,000원x1)</dt>
+                <dd>8,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>(5,000원x1)</dt>
+                <dd>5,000원</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">패키지 할인</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>패키지 할인 합계</dt>
+                <dd>-12,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반 패키지 할인</dt>
+                <dd>-6,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>패키지 할인</dt>
+                <dd>-4,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>일반 패키지 할인</dt>
+                <dd>-2,000원</dd>
+              </dl>
+            </div>
+
+            <div class="dlInfoBox total">
+              <dl>
+                <dt>총 결제 예정 금액</dt>
+                <dd>36,000원</dd>
+              </dl>
+            </div>
+          </div>
+        </div><!-- //popCon -->
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //할인 내역 상세 팝업 -->
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#packageDiscountPopup" class="btn openPop">패키지 할인 적용 안내 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#packageDiscountPopup').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 패키지 할인 적용 안내 팝업 -->
+    <div id="packageDiscountPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">패키지 할인 적용 안내</h1>
+        </div>
+        <div class="popCon">
+          <ul class="bulletList">
+            <li>선택하신 시간을 기준으로 연달아 이어지는 실험실 or 워크숍을 선택하시면 패키지 할인이 자동 적용 됩니다.</li>
+            <li>패키지 할인이 가능한 시간대만 노출됩니다. 연달아 이어지지 않도록 프로그램 예약을 원하시는 경우 주문을 2번 수행해 주세요.</li>
+            <li>동일한 시간대로 패키지 할인 적용은 불가능합니다.</li>
+            <li>패키지 예약 완료 이후에는 부분 취소가 불가능합니다.</li>
+          </ul>
+        </div>
+        <div class="btnWrap">
+          <button class="btn"><span>확인</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //패키지 할인 적용 안내 팝업 -->
+  </body>
+</html>

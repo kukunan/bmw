@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#addVouchersPopup" class="btn openPop">체험 코스 정보 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#addVouchersPopup').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 할인 수단 적용 팝업 -->
+    <div id="addVouchersPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">할인 수단 적용</h1>
+        </div>
+        <div class="popCon">
+          <div class="lineTab">
+            <ul class="tabTit">
+              <li class="on"><a href="javascript:;">임직원 할인</a></li>
+              <li><a href="javascript:;">바우처 할인</a></li>
+              <li><a href="javascript:;">Vantage 및<br>Coin 할인</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <div class="discountBoxWrap">
+                <div class="discountBox">
+                  <p class="tit">
+                    <span class="right">50% 할인</span>
+                  </p>
+                  <div class="formBox">                  
+                    <div class="inputBox right"><input type="text" id="" value="90,000" disabled="disabled"><span class="unit">원</span></div><!-- //2023-05-09 단위 추가 -->
+                  </div>
+                </div>
+              </div>
+            </div><!-- //임직원 할인 -->
+
+            <div class="tabCon">
+              <div class="discountBoxWrap">
+                <div class="discountBox">
+                  <p class="tit">
+                    <span class="left">바우처 할인</span><!-- //2023-05-04 텍스트 수정 -->
+                  </p>
+                  <div class="formBox flex">                  
+                    <div class="inputBox"><input type="text" id="" placeholder="바우처 번호를 입력해주세요."></div>
+                    <button class="btnR w70">등록</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="voucherBox">
+                <div class="txtBox">
+                  <p class="subTit">Test Drive</p>
+                  <p class="txt">BMW 32Oi M Sport Package</p>
+                  <p class="txt">2023년 1월 27일(일) | 오전 9:40</p>
+                </div>
+  
+                <div class="selectContBox">
+                  <a href="javascript:;">바우처를 선택해 주세요</a>
+                  <div class="view">
+                    <!-- 2023-05-08 수정 : 바우처 적용 안함 추가 -->
+                    <a href="javascript:;" class="reset">
+                      <p class="tit ellipsis">바우처 적용 안함</p>
+                    </a>
+                    <!-- //2023-05-08 수정 : 바우처 적용 안함 추가 -->
+                    <!-- 비활성화 상태 표시 -->
+                    <a href="javascript:;" class="disabled">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">10% 할인</span></p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <!-- //비활성화 상태 표시 -->
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">20% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">30% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">40% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="voucherBox">
+                <div class="txtBox">
+                  <p class="subTit">Test Drive</p>
+                  <p class="txt">BMW 32Oi M Sport Package</p>
+                  <p class="txt">2023년 1월 27일(일) | 오전 9:40</p>
+                </div>
+    
+                <div class="selectContBox">
+                  <a href="javascript:;" class="disabled">적용 가능한 바우처가 없습니다.</a><!-- 비활성화 : disabled 클래스-->
+                  <div class="view">
+                    <!-- 비활성화 상태 표시 -->
+                    <a href="javascript:;" class="disabled">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">10% 할인</span></p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <!-- //비활성화 상태 표시 -->
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">20% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">30% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                    <a href="javascript:;">
+                      <p class="tit ellipsis">Test Drive 할인 바우처</p>
+                      <p><span class="fcPoint1">40% 할인</span> </p>
+                      <p class="term">사용 기한 | 2023.02.28 ~ 2023.03.31</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="colorBox">
+                <p class="refMark fcBasic mt0">바우처 번호를 보유하신 경우 화면상단 [등록] 버튼을 통해 바우처를 등록해 주세요.</p>
+                <p class="refMark fcBasic">바우처 등록이 완료되더라도 사용조건에 맞지 않는 바우처는 노출되지 않습니다.</p>
+                <p class="refMark fcBasic">바우처 상세 사용 조건은 My page > 나의 바우처에서 확인 가능합니다.</p>
+              </div>
+            </div><!-- //바우처 할인 -->
+
+            <div class="tabCon">
+              <div class="discountBoxWrap">
+                <div class="discountBox">
+                  <p class="tit">
+                    <span class="left">Vantage등급</span>
+                    <span class="right">(블랙 등급 30% 할인)</span>
+                  </p>
+                  <div class="formBox">                  
+                    <div class="inputBox right"><input type="text" id="" value="0" disabled="disabled"><span class="unit">원</span></div><!-- //2023-05-09 단위 추가 -->
+                  </div>
+                  <p class="txtError" style="display:none;">등급이 존재하지 않습니다.</p>
+                </div>
+
+                <div class="discountBox">
+                  <p class="tit">
+                    <span class="left">BMW Coin</span>
+                    <span class="right">보유 Coin 100,000원</span>
+                  </p>
+                  <div class="formBox flex">                  
+                    <div class="inputBox right"><input type="text" id="" value="0"><span class="unit">원</span></div><!-- //2023-05-09 단위 추가 -->
+                    <button class="btnR w70">전액사용</button>
+                  </div>
+                  <p class="mt5">결제금액의 50% 사용 가능합니다.</p>
+                </div>
+              </div>
+            </div><!-- //Vantage등급 및 BMW Coin 할인 -->
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn"><span>90,000원 할인 적용하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //할인 수단 적용 팝업 -->
+  </body>
+</html>

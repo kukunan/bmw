@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="5" data-log="in" data-title="주니어 캠퍼스 예약"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section stepBox">
+          <p class="tit">예약자 및 이용자 정보를<br>입력해 주세요.</p>
+          <ul class="icoStep ty4">
+            <li><i>1단계</i></li>
+            <li><i>2단계</i></li>
+            <li><i>3단계</i></li>
+            <li class="on"><i>4단계(활성화)</i></li>
+            <li><i>5단계</i></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">예약자 정보</h2>
+          <div class="dlInfoList">
+            <dl>
+              <dt>성명</dt>
+              <dd>박수용</dd>
+            </dl>
+            <dl>
+              <dt>이메일</dt>
+              <dd>sysy@gsitm.com</dd>
+            </dl>
+            <dl>
+              <dt>휴대폰 번호</dt>
+              <dd>01031720000</dd>
+            </dl>
+            <dl>
+              <dt>생년월일</dt>
+              <dd>YYYY.MM.DD</dd>
+            </dl>
+          </div>
+
+          <div class="txtBox mt20">
+            <h2 class="subTit">인솔자 정보</h2>
+            <p class="refMark">인솔자 정보를 정확하게 기입해 주세요.</p>
+            <p class="refMark"><span class="ess ml0 mr5">필수</span> 항목은 필수 입력 항목입니다.</p>
+          </div>
+          
+          <div class="formBoxWrap">
+            <p class="checkBox mt15">
+              <input type="checkbox" name="" id="ip_chk1">
+              <label for="ip_chk1">예약자 정보와 동일</label>
+            </p>
+
+            <div class="formBox">
+              <label for="ip_name1" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name1" value="박수용"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_email1" class="tit">이메일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="email" id="ip_email1" value="sysy@gsitm.com"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_phone1" class="tit">휴대폰 번호<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="tel" id="ip_phone1" value="01031720000"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_birth1" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth1" value="1900.00.00"></div>
+            </div>
+          </div>
+
+          <div class="txtBox mt20">
+            <h2 class="subTit">이용자 정보</h2>
+            <p class="refMark">이용자 정보를 정확하게 기입해 주세요.</p>
+            <p class="refMark"><span class="ess ml0 mr5">필수</span> 항목은 필수 입력 항목입니다.</p>
+          </div>
+
+          <div class="formBoxWrap">
+            <div class="bdTopTit">이용자 정보1 (일반)</div><!-- //2023-05-24 텍스트 추가 -->
+
+            <div class="formBox">
+              <label for="ip_name2" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name2" placeholder="성명을 입력해 주세요(ex.홍길동)"></div>
+              <p class="txtError on">필수 입력 항목입니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_birth2" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth2" placeholder="생년월일(8자리)을 입력해 주세요."></div>
+              <p class="txtError">숫자만 입력 가능합니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <p class="tit">성별<span class="ess">필수</span></p>
+              <div class="toggleRadio">
+                <input type="radio" id="radio1_1" name="radio1">
+                <label for="radio1_1">남아</label>
+                <input type="radio" id="radio1_2" name="radio1">
+                <label for="radio1_2">여아</label>
+              </div>
+              <p class="txtError">성별을 선택해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <p class="tit">주니어 캠퍼스 체험 유무<span class="ess">필수</span></p>
+              <div class="toggleRadio">
+                <input type="radio" id="radio2_1" name="radio2">
+                <label for="radio2_1">체험 이력 없음</label>
+                <input type="radio" id="radio2_2" name="radio2">
+                <label for="radio2_2">체험 이력 있음</label>
+              </div>
+              <p class="txtError">체험 유무를 선택해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+          </div>
+
+          <div class="formBoxWrap">
+            <div class="bdTopTit">이용자 정보2 (과학아동기자단)</div><!-- //2023-05-24 텍스트 추가 -->
+
+            <div class="formBox">
+              <label for="ip_name2" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name2" placeholder="성명을 입력해 주세요(ex.홍길동)"></div>
+              <p class="txtError on">필수 입력 항목입니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_birth2" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth2" placeholder="생년월일(8자리)을 입력해 주세요."></div>
+              <p class="txtError">숫자만 입력 가능합니다.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <p class="tit">성별<span class="ess">필수</span></p>
+              <div class="toggleRadio">
+                <input type="radio" id="radio3_1" name="radio3">
+                <label for="radio3_1">남아</label>
+                <input type="radio" id="radio3_2" name="radio3">
+                <label for="radio3_2">여아</label>
+              </div>
+              <p class="txtError">성별을 선택해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <p class="tit">주니어 캠퍼스 체험 유무<span class="ess">필수</span></p>
+              <div class="toggleRadio">
+                <input type="radio" id="radio4_1" name="radio4">
+                <label for="radio4_1">체험 이력 없음</label>
+                <input type="radio" id="radio4_2" name="radio4">
+                <label for="radio4_2">체험 이력 있음</label>
+              </div>
+              <p class="txtError">체험 유무를 선택해주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">이용 유의 사항 확인 및 동의</h2>
+
+          <div class="agreePopCheckBox">
+            <!-- 활성화 : on 클래스-->
+            <a href="#juniorBoardingPopup" class="openPop on">
+              <span class="agree">동의</span>
+              <p class="lineClamp">주니어캠퍼스 준비 사항을 확인 및 숙지 하였습니다. (필수)</p>
+            </a>
+            <a href="#juniorBoardingPopup" class="openPop">
+              <span class="agree">동의</span>
+              <p class="lineClamp">개인정보 수집 및 이용 동의 (필수)</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <div class="btnWrap">
+            <button class="btn"><span>결제하기</span></button>
+
+            <!-- 버튼 비활성화 시 
+            <button class="btn" disabled="disabled"><span>결제하기</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 주니어 캠퍼스 이용/준비 사항 동의 팝업 -->
+    <div id="juniorBoardingPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">주니어 캠퍼스 이용/준비 사항 동의</h1>
+        </div>
+        <div class="popCon">
+          <!-- 2023-05-08 수정 : 에디터 영역 개발 요청으로 변경 -->
+          <div class="editBox mt20">
+            에디터 영역입니다.
+          </div>
+
+          <!-- <div class="txtBox">
+            <p class="subTit">참여 대상</p>
+            
+            <ul class="bulletList">
+              <li>8세 ~ 13세 초등학생</li>
+              <li>주니어 캠퍼스는 초등학생 대상의 프로그램으로 미취학 어린이 및 중고등학생은 수업에 참여할 수 없습니다.</li>
+              <li class="fcPoint2">8세의 경우 티켓 발권시 나이증명서류를 확인 하오니 의료보험증, 주민등록등본, 가족관계증명서 등을 반드시 지참하여 주시기 바랍니다.(미 지참시 입장 제한)</li>
+            </ul>
+          </div>
+
+          <div class="txtBox bdTopLine pt20">
+            <p class="subTit">프로그램 시작 20분전 체크인 완료</p>
+            
+            <p class="refMark fcBasic fz14">프로그램 시작 20분전 체크인을 완료하셔야 합니다.</p>
+            <p class="refMark fcBasic fz14">지각으로 인해 체크인 미완료 시 탑승이 제한 됩니다.  </p>
+            <p class="fcPoint2 mt5 ml15">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+          </div> -->
+          <!-- //2023-05-08 수정 : 에디터 영역 개발 요청으로 변경 -->
+
+          <p class="checkBox fz15 bdTopLine mt20 pt20">
+            <input type="checkbox" name="" id="ip_chk3">
+            <label for="ip_chk3">약관 내용을 확인하였으며 이에 동의합니다.</label>
+          </p>
+        </div>
+        <div class="btnWrap">
+          <button class="btn" disabled="disabled"><span>동의하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //주니어 캠퍼스 이용/준비 사항 동의 팝업 -->
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#discountDetailPopup" class="btn openPop">무료/할인 대상 및 증빙 서류 안내 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#discountDetailPopup').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 할인 내역 상세 팝업 -->
+    <div id="discountDetailPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">할인 내역 상세</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="subTit mt20 mb10">주니어캠퍼스 실험실</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>프로그램 이용료 합계</dt>
+                <dd>23,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반<br>(10,000원x1)</dt>
+                <dd>10,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>(8,000원x1)</dt>
+                <dd>8,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>(5,000원x1)</dt>
+                <dd>5,000원</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">주니어캠퍼스 워크샵<i class="icoPackage">패키지</i></h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>프로그램 이용료 합계</dt>
+                <dd>23,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반<br>(10,000원x1)</dt>
+                <dd>10,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>(8,000원x1)</dt>
+                <dd>8,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>(5,000원x1)</dt>
+                <dd>5,000원</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">패키지 할인</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl class="fwB">
+                <dt>패키지 할인 합계</dt>
+                <dd>-12,000원</dd>
+              </dl>
+              <dl>
+                <dt>일반 패키지 할인</dt>
+                <dd>-6,000원</dd>
+              </dl>
+              <dl>
+                <dt>과학동아기자단<br>패키지 할인</dt>
+                <dd>-4,000원</dd>
+              </dl>
+              <dl>
+                <dt>유가족(유공자/의사자)<br>일반 패키지 할인</dt>
+                <dd>-2,000원</dd>
+              </dl>
+            </div>
+
+            <div class="dlInfoBox total">
+              <dl>
+                <dt>총 결제 예정 금액</dt>
+                <dd>36,000원</dd>
+              </dl>
+            </div>
+          </div>
+        </div><!-- //popCon -->
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //할인 내역 상세 팝업 -->
+  </body>
+</html>

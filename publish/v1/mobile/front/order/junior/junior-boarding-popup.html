@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#juniorBoardingPopup" class="btn openPop">주니어 캠퍼스 이용/준비 사항 동의 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#juniorBoardingPopup').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 주니어 캠퍼스 이용/준비 사항 동의 팝업 -->
+    <div id="juniorBoardingPopup" class="popWrap">
+      <!-- <div class="dim"></div> -->
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">주니어 캠퍼스 이용/준비 사항 동의</h1>
+        </div>
+        <div class="popCon">
+          <!-- 2023-05-08 수정 : 에디터 영역 개발 요청으로 변경 -->
+          <div class="editBox mt20">
+            에디터 영역입니다.
+          </div>
+
+          <!-- <div class="txtBox">
+            <p class="subTit">참여 대상</p>
+            
+            <ul class="bulletList">
+              <li>8세 ~ 13세 초등학생</li>
+              <li>주니어 캠퍼스는 초등학생 대상의 프로그램으로 미취학 어린이 및 중고등학생은 수업에 참여할 수 없습니다.</li>
+              <li class="fcPoint2">8세의 경우 티켓 발권시 나이증명서류를 확인 하오니 의료보험증, 주민등록등본, 가족관계증명서 등을 반드시 지참하여 주시기 바랍니다.(미 지참시 입장 제한)</li>
+            </ul>
+          </div>
+
+          <div class="txtBox bdTopLine pt20">
+            <p class="subTit">프로그램 시작 20분전 체크인 완료</p>
+            
+            <p class="refMark fcBasic fz14">프로그램 시작 20분전 체크인을 완료하셔야 합니다.</p>
+            <p class="refMark fcBasic fz14">지각으로 인해 체크인 미완료 시 탑승이 제한 됩니다.  </p>
+            <p class="fcPoint2 mt5 ml15">고객 과실로 인한 탑승 제한 시 환불은 불가합니다.</p>
+          </div> -->
+          <!-- //2023-05-08 수정 : 에디터 영역 개발 요청으로 변경 -->
+
+          <p class="checkBox fz15 bdTopLine mt20 pt20">
+            <input type="checkbox" name="" id="ip_chk3">
+            <label for="ip_chk3">약관 내용을 확인하였으며 이에 동의합니다.</label>
+          </p>
+        </div>
+        <div class="btnWrap">
+          <button class="btn" disabled="disabled"><span>동의하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //주니어 캠퍼스 이용/준비 사항 동의 팝업 -->
+  </body>
+</html>
