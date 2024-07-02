@@ -1,0 +1,137 @@
+<!-- 헤더영역 -->
+<div id="header">
+  <a href="javascript:;" class="home">메인 페이지로 이동</a>
+  <a href="javascript:;" class="back">이전 페이지로 이동</a>
+  <h1 class="logo"><a href="javascript:;">Driving center</a></h1>
+  <h1 class="title"></h1>
+  <a href="javascript:;" class="lang">언어 변경</a><!-- 영문 변경시 : 클래스 en 추가 -->
+  <a href="javascript:;" class="menu">메뉴 열기</a>
+  <a href="javascript:;" class="close">닫기</a> 
+</div>
+
+<!-- 모바일 메뉴 -->
+<div class="menuWrap">
+  <div class="dim"></div>
+  <div class="menuZone">
+    <div class="topWrap">
+      <div class="top">
+        <p class="txt out">로그인 해주세요.</p>
+        <button class="btnLog out">로그인</button>
+  
+        <p class="userName in"><span>SYSY</span>님,</p>
+        <p class="txt in">BMW Driving Center에 오신 것을 환영합니다.</p>
+        <button class="btnLog in">로그아웃</button>
+      </div>
+    </div>
+    <div class="gnbWrap">
+      <ul class="gnb">
+        <!-- 2023-05-08 수정 : 추후 오픈 예정 -->
+        <!-- <li><a href="javascript:;">BMW Driving Center</a>
+          <ul>
+            <li><a href="javascript:;">프로그램 운영 정보</a></li>
+            <li><a href="javascript:;">체험 차량 정보</a></li>
+            <li><a href="javascript:;">드라이빙 트랙 정보</a></li>
+          </ul>
+        </li> -->
+        <!-- //2023-05-08 수정 : 추후 오픈 예정 -->
+        <li><a href="javascript:;">Driving 프로그램 예약</a>
+          <ul><!-- 메뉴 활성화 시 li에 class명 on추가 -->
+            <li><a href="javascript:;">프로그램 별 예약</a></li>
+            <li><a href="javascript:;">차량 별 예약</a></li>
+            <li><a href="javascript:;">일자 별 예약</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">주니어 캠퍼스 예약</a>
+          <ul>
+            <li><a href="javascript:;">주니어 캠퍼스 실험실 예약</a></li>
+            <li><a href="javascript:;">주니어 캠퍼스 워크샵 예약</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">Driving Center 대관 신청</a>
+          <ul>
+            <li><a href="javascript:;">대관 신청</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">마이 페이지</a>
+          <ul>
+            <li><a href="javascript:;">프로그램 예약 내역</a></li>
+            <li><a href="javascript:;">프로그램 이수 내역</a></li>
+            <li><a href="javascript:;">Driving 배지 미션</a></li>
+            <li><a href="javascript:;">BMW 바우처</a></li>
+            <li><a href="javascript:;">회원 정보 관리</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">이용정보</a>
+          <ul>
+            <li><a href="javascript:;">프로그램 이용 요금</a></li>
+            <li><a href="javascript:;">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:;">고객 센터</a>
+          <ul>
+            <li><a href="javascript:;">FAQ</a></li>
+            <li><a href="javascript:;">뉴스</a></li><!-- //2023-05-10 텍스트 수정 -->
+            <li><a href="javascript:;">이벤트</a></li><!-- //2023-05-08 텍스트 수정 -->
+          </ul>
+        </li>
+      </ul><!-- //gnb -->
+    </div>
+    <a href="javascript:;" class="menuClose">메뉴닫기</a>
+  </div>
+</div>
+<!-- //모바일 메뉴 -->
+
+<script>
+  $(function(){
+    const target = '#headerWrap'; //텍스트로 담기
+    if($(target).data('headtype')){
+      const typeCheck = ['.logo,.lang','.logo,.close','.logo','.back,.title','.back,.title,.menu','.title,.close','.home,.title,.lang','.home,.title,.menu'];
+      const type = $(target).data('headtype') - 1;
+      const title = $(target).data('title');
+      $(typeCheck[type]).show().siblings().not(typeCheck[type]).remove();
+      $(target).find('#header .title').text(title);
+    };
+
+    //메뉴 top 로그인아웃
+    if($(target).data('log')){
+      //console.log('in');
+      // const log = $('#headerWrap').data('log').split(',');
+      // $.each(log,function(i,j){
+      //   if(j == 'in') {
+      //     console.log('in');
+      //     $('.menuWrap .top .in').show();
+      //     $('.menuWrap .top .out').remove();
+      //   };
+      //   if(j == 'out') {
+      //     $('.menuWrap .top .out').show();
+      //     $('.menuWrap .top .in').remove();
+      //   };
+      // });
+
+      let log =  $('#headerWrap').data('log');
+      log == 'in' || log == 'out' ? log : log = 'out';
+
+      let logText = '.menuWrap .top .' + log;
+      
+      $(logText).show().siblings().not(logText).remove();
+    };
+  })
+
+  //햄버거 메뉴(gnb)
+  $(function(){
+    $('#header .menu').on('click', function(){
+      $('.menuWrap').show();
+      //$('.menuWrap .menuZone').stop().animate({'right':'0'},'fast');
+      $('.menuWrap .menuZone').stop().animate({'right':'0'},'fast');
+    });
+
+    $('.menuClose').on('click', function(){
+      $('.menuZone').stop().animate({'right':'-100%'},'fast').parent().fadeOut('400');
+    });
+
+    $('.dim').on('click', function(){
+      $('.menuZone').stop().animate({'right':'-100%'},'fast').parent().fadeOut('400');
+    });
+  })
+</script>
+<!-- //헤더영역 -->

@@ -1,0 +1,24 @@
+<!-- 하단 네비게이션 영역 -->
+<div id="nav">
+  <ul><!-- 메뉴 활성화 시 li에 class명 on추가 -->
+    <li><a href="javascript:;"><i></i>홈</a></li>
+    <li><a href="javascript:;" class="allMenu"><i></i>전체 메뉴</a></li>
+    <li><a href="javascript:;"><i></i>예약하기</a></li>
+    <li><a href="javascript:;"><i></i>마이페이지</a></li>
+  </ul>
+
+  <p class="ticket"> 
+    <a href="javascript:;">모바일 티켓</a>
+  </p>
+</div>
+
+<script>
+  $(function(){
+    $('#nav .allMenu').on('click', function(){
+      $('.menuWrap').show();
+      $('.menuWrap .menuZone').stop().animate({'right':'0'},'fast');
+      //$('.menuWrap .menuZone').css('right','0').fadeIn();
+    });
+
+  })
+</script>
