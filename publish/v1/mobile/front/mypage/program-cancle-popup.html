@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#programCanclePop" class="btn openPop">예약 내역 취소 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#programCanclePop').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 예약 내역 취소 팝업 -->
+    <div id="programCanclePop" class="popWrap">
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">예약 취소</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="subTit mt15">취소 대상 예약 정보</h2>
+          <div class="dlInfoList ty2">
+            <dl>
+              <dt>체험 프로그램</dt>
+              <dd>Test Drive</dd>
+            </dl>
+            <dl>
+              <dt>체험 일시</dt>
+              <dd>2023.01.04(월) 오전 09:40</dd>
+            </dl>
+            <dl>
+              <dt>체험 차량</dt>
+              <dd>BMW 32Oi M Sport Package</dd>
+            </dl>
+            <dl>
+              <dt>체험 인원</dt>
+              <dd>2명</dd>
+            </dl>
+          </div>
+
+          <h2 class="subTit mt15 mb10">취소 사유 선택</h2>
+          <div class="formBox pb15 bdBotLine">
+            <div class="selectBox">
+              <select title="취소 사유">
+                <option value="" selected>취소 사유를 선택해주세요.</option>
+                <option value="">1일</option>
+                <option value="">2일</option>
+                <option value="">3일</option>
+              </select>
+            </div>
+
+            <p class="txtError on">취소 사유를 설정해 주세요.</p><!-- 활성화 : on 클래스-->
+          </div>
+
+          <h2 class="subTit mt15 mb10">취소 및 환불 예상 정보</h2>
+          <div class="dlInfoBoxWrap">
+            <div class="dlInfoBox">
+              <dl>
+                <dt>프로그램 이용료 합계</dt>
+                <dd>160,000원</dd>
+              </dl>
+              <dl>
+                <dt>예상 취소 수수료</dt>
+                <dd>0원</dd>
+              </dl>
+              <dl class="fwB">
+                <dt>총 결제 금액</dt>
+                <dd><span class="fcPoint1">160,000원</span></dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">취소/환불 규정 안내</h2>
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width:50%;">
+                <col style="width:50%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">기간</th>
+                  <th scope="col">취소 수수료율</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>프로그램 이용일 10일 전</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td>프로그램 이용일<br>9일전 ~ 3일전</td>
+                  <td>프로그램 이용료의 30%</td>
+                </tr>
+                <tr>
+                  <td>프로그램 이용일<br>2일전 ~ 1일전</td>
+                  <td>프로그램 이용료의 50%</td>
+                </tr>
+                <tr>
+                  <td>프로그램 이용일 당일<br>및 프로그램 시작 이후</td>
+                  <td>취소 및 환불 불가</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- 2023-05-03 수정 -->
+            <div class="editBox mt10">
+              에디터 영역입니다.
+            </div>
+            <!-- <ul class="icoChkList">
+              <li>악천후 및 천재지변으로 인해 프로그램이 갑작스레 취소될 수 있으며, 예약 비용은 환불 처리됩니다.</li>
+              <li>고객 귀책사유로 인한 취소 진행 시 탑승/이용일을 기준으로 아래와 같이 취소 수수료가 작동 적용 됩니다.</li>
+            </ul> -->
+            <!-- //2023-05-03 수정 -->
+
+            <div class="formBox mt25">
+              <p class="checkBox">
+                <input type="checkbox" name="" id="ip_chk1">
+                <label for="ip_chk1">BMW Driving Center 취소 환불 규약에 동의합니다.</label>
+              </p>
+
+              <p class="txtError ml25 on">취소 환불 약관에 동의를 진행해 주세요.</p><!-- 활성화 : on 클래스-->
+            </div>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn"><span>예약 취소하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //예약 내역 취소 팝업 -->
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#programHistoryPop" class="btn openPop">날짜 선택 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#programHistoryPop').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 날짜 선택 팝업 -->
+    <div id="programHistoryPop" class="popWrap">
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">날짜 선택</h1>
+        </div>
+        <div class="popCon">
+          <div class="calendarWrap sked mt20">
+            <!-- 월간달력 -->
+            <div class="monthlyCalendar">
+              <div class="calendarTop">
+                <a href="javascript:;" class="btnPrev">이전 달</a>
+                <p class="year">2023.01</p>
+                <a href="javascript:;" class="btnNext">다음 달</a>
+              </div>
+              <div class="calendar">
+                <ul class="weekDay">
+                  <li><span>Mon</span></li>
+                  <li><span>Tue</span></li>
+                  <li><span>Wed</span></li>
+                  <li><span>Thu</span></li>
+                  <li><span>Fri</span></li>
+                  <li><span>Sat</span></li>
+                  <li><span>Sun</span></li>
+                </ul>
+  
+                <ul class="dateGrid">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li><button disabled="disabled">01</button></li>
+                  <li><button disabled="disabled">02</button></li>
+                  <li><button disabled="disabled">03</button></li>
+                  <li><button disabled="disabled">04</button></li>
+                  <li><button disabled="disabled">05</button></li>
+                  <li><button disabled="disabled">06</button></li>
+                  <li><button disabled="disabled">07</button></li>
+                  <li><button disabled="disabled">08</button></li>
+                  <li><button disabled="disabled">09</button></li>
+                  <li><button class="on">10</button></li>
+                  <li><button>11</button></li>
+                  <li><button disabled="disabled">12</button></li>
+                  <li><button disabled="disabled">13</button></li>
+                  <li><button>14</button></li>
+                  <li><button>15</button></li>
+                  <li><button>16</button></li>
+                  <li><button>17</button></li>
+                  <li><button disabled="disabled">18</button></li>
+                  <li><button>19</button></li>
+                  <li><button>20</button></li>
+                  <li><button disabled="disabled">21</button></li>
+                  <li><button>22</button></li>
+                  <li><button>23</button></li>
+                  <li><button>24</button></li>
+                  <li><button>25</button></li>
+                  <li><button>26</button></li>
+                  <li><button disabled="disabled">27</button></li>
+                  <li><button>28</button></li>
+                  <li><button>29</button></li>
+                  <li><button>30</button></li>
+                  <li><button>31</button></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+            <!-- //월간달력 -->
+
+            <ul class="calendarInfo">
+              <li>예약가능</li>
+              <li>예약불가</li>
+            </ul>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn"><span>확인</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //날짜 선택 팝업 -->
+  </body>
+</html>

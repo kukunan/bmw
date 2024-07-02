@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#programParticipationPop" class="btn openPop">프로그램 참여증 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#programParticipationPop').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 프로그램 참여증 팝업 -->
+    <div id="programParticipationPop" class="popWrap">
+      <div class="layerPop full">
+        <div class="popTit">
+          <h1 class="tit">프로그램 참여증</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="txtLogo mt15 mb10"><i class="ico_logo1">Driving Center</i>Certificate</h2>
+          <div class="imgBox mb10">
+            <img src="../../../../../static/assets/v1/mobile/images/sample/tmp_slide1.png" alt="">
+          </div>
+
+          <div class="dlInfoBoxWarp">
+            <div class="dlInfoBox">
+              <dl>
+                <dt>No.</dt>
+                <dd>1234567</dd>
+              </dl>
+              <dl>
+                <dt>성명[Name]</dt>
+                <dd>박수용</dd>
+              </dl>
+              <dl>
+                <dt>프로그램[Program]</dt>
+                <dd>M Drift II</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="txtBox">
+            <p class="txt">위 사람은 BMW Driving Center의 M Drift II 프로그램을 참여 완료 하였으므로 이에 증서를 드립니다.</p>
+            <p class="fcGray888">This Driver has particifated M Drift II Program at the BMW Driving Center</p>
+            <p class="txt">YYYY.MM.DD</p>
+          </div>
+
+          <div class="signBox">
+            <div class="info">
+              <p class="tit">박센터 ParkCenter</p>
+              <p class="txt">드라이빙 인스트럭터 Driving Instructor</p>
+            </div>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button class="btn"><span>저장하기</span></button>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //프로그램 참여증 팝업 -->
+  </body>
+</html>

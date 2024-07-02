@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <!-- 컨텐츠 영역 -->
+    <div id="wrap">
+      <section id="container">
+        <div class="btnWrap" style="margin-top:2rem;">
+          <a href="#vouchersDetailPop" class="btn openPop">바우처 상세 팝업</a>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        $('#vouchersDetailPop').addClass('on').removeClass('off');
+      })
+    </script>
+    <!-- //컨텐츠 영역 -->
+
+    <!-- 바우처 상세 팝업 -->
+    <div id="vouchersDetailPop" class="popWrap">
+      <div class="layerPop">
+        <div class="popTit">
+          <h1 class="tit">바우처 상세</h1>
+        </div>
+        <div class="popCon">
+          <h2 class="subTit mt15 mb10">바우처 정보</h2>
+          <div class="dlInfoBoxWarp">
+            <div class="dlInfoBox">
+              <dl>
+                <dt>바우처 번호</dt>
+                <dd>0000000000000</dd>
+              </dl>
+              <dl>
+                <dt>바우처 명</dt>
+                <dd>Starter pack 할인 바우처</dd>
+              </dl>
+              <dl>
+                <dt>할인 금액</dt>
+                <dd>30% 할인</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h2 class="subTit mt15 mb10">바우처 사용 조건</h2>
+          <div class="dlInfoBoxWarp">
+            <div class="dlInfoBox">
+              <dl>
+                <dt>최대 할인 금액</dt>
+                <dd>240,000원</dd>
+              </dl>
+              <dl>
+                <dt>최소 주문 금액</dt>
+                <dd>50,000원</dd>
+              </dl>
+              <dl>
+                <dt>사용처</dt>
+                <dd>전체</dd>
+              </dl>
+              <dl>
+                <dt>사용 기한</dt>
+                <dd>yyyy.mm.dd ~ yyyy.mm.dd</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <p class="btnClosePop"><a href="javascript:;">닫기</a></p>
+      </div>
+    </div>
+    <!-- //바우처 상세 팝업 -->
+  </body>
+</html>

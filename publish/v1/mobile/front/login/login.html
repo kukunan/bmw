@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../layout/header.html" data-headtype="2" data-log="in" data-title=""></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="loginBox">
+          <div class="greet">
+            <h2 class="tit">BMW Driving Center에<br>오신 것을 환영합니다.</h2>
+            <p class="icoTxt">BMW ID 등록 후 고객님을 위한<br>서비스와 혜택을 이용해 보세요.</p>
+  
+            <ul class="icoChkList">
+              <li>탑승을 희망하는 BMW/MINI 차량을<br>예약해보세요.</li>
+              <li>회원에게 전용 발급되는 Driving<br>바우처를 이용해보세요.</li>
+              <li>예약 내역 관리와 함께 프로그램<br>이수 내역을 확인해 보세요.</li>
+            </ul>
+          </div>
+
+          <div class="btnWrap">
+            <a href="javascript:;" class="btn"><span>로그인</span></a>
+            <a href="javascript:;" class="btn ty3"><span>회원가입</span></a>
+          </div>
+        </div>        
+      </section>
+    </div>
+  </body>
+</html>

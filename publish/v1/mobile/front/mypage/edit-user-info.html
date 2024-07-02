@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../layout/header.html" data-headtype="4" data-log="in" data-title="회원정보 수정"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section">
+          <div class="txtBox mb20">
+            <p class="tit fz18">Driving Center 회원정보를<br>확인 및 관리해 보세요.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">회원 정보</h2>
+
+          <div class="formBoxWrap mt15">
+            <!-- 2023-06-23 수정 -->
+            <div class="formBox">
+              <label for="ip_id1" class="tit">BMW ID<span class="ess">필수</span></label>
+
+              <!-- ID 수정 전 -->
+              <div class="inputBox">
+                <input type="email" id="ip_id1" value="sysy@gsitm.com" disabled="disabled">
+                <button class="btnR w75 flex00">변경</button>
+              </div>
+              <!-- //ID 수정 전 -->
+
+              <!-- ID 수정 중 -->
+              <div class="idBox" style="display:none;">
+                <div class="inputBox">
+                  <input type="email" id="" value="sysy@gsitm.com">
+                </div>
+                <p class="txtError on">이메일을 입력해 주세요.</p><!-- 활성화 : on 클래스 Please enter your email.-->
+                <div class="btnWrap mt10">
+                  <button class="btnR ty1 w75 mla"><span>취소</span></button>
+                  <button class="btnR w75"><span>저장</span></button>
+                </div>
+              </div>
+              <!-- //ID 수정 중 -->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_pw1" class="tit">비밀번호<span class="ess">필수</span></label>
+
+              <!-- 비밀번호 수정 전 -->
+              <div class="inputBox">
+                <input type="password" id="ip_pw1" value="password1234" disabled="disabled">
+                <button class="btnR w75 flex00">변경</button>
+              </div>
+              <!-- //비밀번호 수정 전 -->
+
+              <!-- 비밀번호 수정 중 -->
+              <div class="pwdBox" style="display:none;">
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="기존 비밀번호를 입력해 주세요.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+                <p class="txtError on">기존 비밀번호를 입력해 주세요.</p><!-- 활성화 : on 클래스 -->
+  
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="새 비밀번호를 입력해 주세요.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+  
+                <ul class="pwChkList">
+                  <li class="success">최소 10~40자</li>
+                  <li class="fail">소문자(a-z) 최소 한 개</li>
+                  <li class="success">대문자(A-Z) 최소 한 개</li>
+                  <li class="success">최소 하나의 숫자 (0-9)</li>
+                  <li class="success">다음 특수 문자 중 하나 이상: - . / ' , ; & @ # * ) ( _ + : "~</li>
+                </ul>
+
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="새 비밀번호를 한 번 더 입력해 주세요.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+                <p class="txtError on">새 비밀번호를 한 번 더 입력해 주세요.</p><!-- 활성화 : on 클래스 -->
+
+                <div class="btnWrap mt10">
+                  <button class="btnR ty1 w75 mla"><span>취소</span></button>
+                  <button class="btnR w75"><span>저장</span></button>
+                </div>
+              </div>
+              <!-- //비밀번호 수정 중 -->
+            </div>
+            <!-- //2023-06-23 수정 -->
+
+            <div class="formBox">
+              <label for="ip_name1" class="tit">성명<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name1" value="박**" disabled="disabled"></div>
+            </div>
+
+            <!-- 2023-05-24 추가 -->
+            <div class="formBox">
+              <label for="ip_gender1" class="tit">성별<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_gender1" value="여성" disabled="disabled"></div>
+            </div>
+            <!-- //2023-05-24 추가 -->
+            
+            <div class="formBox">
+              <label for="ip_birth1" class="tit">생년월일<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_birth1" value="1900.00.00" disabled="disabled"></div>
+            </div>
+
+            <div class="formBox">
+              <label for="ip_phone1" class="tit">휴대폰 번호<span class="ess">필수</span></label>
+              <div class="inputBox">
+                <input type="tel" id="ip_phone1" value="010******21" disabled="disabled">
+                <button class="btnR w75 flex00">수정</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="formBoxWrap bdTopLine">
+            <h2 class="subTit mt15 mb10">직업 정보</h2>
+            <div class="formBox">
+              <p class="mb5">직업군</p>
+              <div class="selectBox">
+                <select title="직업군 선택">
+                  <option value="">직업군을 선택해 주세요.</option>
+                  <option value="" selected>회사원1</option>
+                  <option value="">회사원2</option>
+                  <option value="">회사원3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="formBoxWrap bdTopLine">
+            <h2 class="subTit mt15 mb10">보유 차량 정보</h2>
+            <div class="formBox">
+              <p class="mb5">브랜드</p>
+              <div class="selectBox">
+                <select title="브랜드 선택">
+                  <option value="" selected>브랜드를 선택해 주세요.</option>
+                  <option value="">브랜드1</option>
+                  <option value="">브랜드2</option>
+                  <option value="">브랜드3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formBox">
+              <p class="mb5">차종</p>
+              <div class="selectBox">
+                <select title="차종 선택" disabled>
+                  <option value="" selected>차종을 선택해 주세요</option>
+                  <option value="">차종1</option>
+                  <option value="">차종2</option>
+                  <option value="">차종3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="formBoxWrap bdTopLine">
+            <h2 class="subTit mt15 mb10">BMW 관심 차량</h2>
+            <div class="formBox">
+              <p class="mb5">브랜드</p>
+              <div class="selectBox">
+                <select title="브랜드 선택">
+                  <option value="">브랜드를 선택해 주세요.</option>
+                  <option value="" selected>브랜드1</option>
+                  <option value="">브랜드2</option>
+                  <option value="">브랜드3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formBox">
+              <p class="mb5">시리즈</p>
+              <div class="selectBox">
+                <select title="시리즈 선택">
+                  <option value="">시리즈를 선택해 주세요</option>
+                  <option value="" selected>시리즈1</option>
+                  <option value="">시리즈2</option>
+                  <option value="">시리즈3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formBox">
+              <p class="mb5">모델</p>
+              <div class="selectBox">
+                <select title="모델 선택">
+                  <option value="">모델을 선택해 주세요</option>
+                  <option value="" selected>모델1</option>
+                  <option value="">모델2</option>
+                  <option value="">모델3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="formBoxWrap bdTopLine">
+            <h2 class="subTit mt15 mb10">주소 정보</h2>
+            <div class="formBox">
+              <p class="tit">주소<span class="ess">필수</span></p>
+              <div class="inputBox">
+                <input type="text" id="" placeholder="우편번호" disabled="disabled">
+                <button class="btnR w75 flex00">주소찾기</button>
+              </div>
+              <div class="inputBox mt5">
+                <input type="text" id="" placeholder="주소" disabled="disabled">
+              </div>
+              <div class="inputBox mt5">
+                <input type="text" id="" placeholder="상세 주소">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">마케팅 정보 수신 설정</h2>
+          <div class="checkBoxWrap">
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk1">
+              <label for="ip_chk1">E-mail</label>
+            </p>
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk2">
+              <label for="ip_chk2">SMS</label>
+            </p>
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk3">
+              <label for="ip_chk3">DM</label>
+            </p>
+          </div>
+        </div>
+
+        <div class="bottomWrap">
+          <div class="btnWrap">
+            <button class="btn ty4"><span>취소</span></button>
+            <button class="btn"><span>저장</span></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

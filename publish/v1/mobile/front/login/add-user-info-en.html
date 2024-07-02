@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../layout/header.html" data-headtype="4" data-log="in" data-title="DC 서비스 이용"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section">
+          <div class="txtBox mb20">
+            <h2><i class="ico_logo1">Driving Center</i></h2>
+            <h3 class="tit fz18">Membership information<br>(Driving Center)</h3>
+            <p class="txt fcGray666">For the use of the Driving Center, you can use it after proceeding with the consent to use the service.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="txtBox">
+            <h4 class="subTit">Membership information</h4>
+            <p class="fcGray666">Please enter additional membership information to use the Driving Center.</p>
+          </div>
+
+          <div class="formBoxWrap mt15">
+            <!-- 2023-06-23 추가 -->
+            <div class="formBox">
+              <label for="ip_id1" class="tit">BMW ID<span class="ess">필수</span></label>
+
+              <!-- ID 수정 전 -->
+              <div class="inputBox">
+                <input type="email" id="ip_id1" value="sysy@gsitm.com" disabled="disabled">
+                <button class="btnR w75 flex00">Modify</button>
+              </div>
+              <!-- //ID 수정 전 -->
+
+              <!-- ID 수정 중 -->
+              <div class="idBox" style="display:none;">
+                <div class="inputBox">
+                  <input type="email" id="" value="sysy@gsitm.com">
+                </div>
+                <p class="txtError on">Please enter your email.</p><!-- 활성화 : on 클래스 -->
+                <div class="btnWrap mt10">
+                  <button class="btnR ty1 w75 mla"><span>Cancel</span></button>
+                  <button class="btnR w75"><span>Save</span></button>
+                </div>
+              </div>
+              <!-- //ID 수정 중 -->
+            </div>
+
+            <div class="formBox">
+              <label for="ip_pw1" class="tit">Password<span class="ess">필수</span></label>
+
+              <!-- 비밀번호 수정 전 -->
+              <div class="inputBox">
+                <input type="password" id="ip_pw1" value="password1234" disabled="disabled">
+                <button class="btnR w75 flex00">Modify</button>
+              </div>
+              <!-- //비밀번호 수정 전 -->
+
+              <!-- 비밀번호 수정 중 -->
+              <div class="pwdBox" style="display:none;">
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="Please enter your old password.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+                <p class="txtError on">Please enter your old password.</p><!-- 활성화 : on 클래스 -->
+  
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="Please enter a new password.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+  
+                <ul class="pwChkList">
+                  <li class="success">Length between 10 and 40 characters.</li>
+                  <li class="fail">Minimum of one lowercase Letter (a-z).</li>
+                  <li class="success">Minimum of one uppercase Letter (A-Z).</li>
+                  <li class="success">Minimum of one Number (0-9).</li>
+                  <li class="success">Minimum of one of the following special characters: - . / ' , ; & @ # * ) ( _ + : "~</li>
+                </ul>
+
+                <div class="inputBox">
+                  <input type="password" id="" placeholder="Please enter the new password one more time.">
+                  <a href="#" class="btnPwdShow">보기</a>
+                </div>
+                <p class="txtError on">Please enter the new password one more time.</p><!-- 활성화 : on 클래스 -->
+
+                <div class="btnWrap mt10">
+                  <button class="btnR ty1 w75 mla"><span>Cancel</span></button>
+                  <button class="btnR w75"><span>Save</span></button>
+                </div>
+              </div>
+              <!-- //비밀번호 수정 중 -->
+            </div>
+            <!-- //2023-06-23 추가 -->
+
+            <div class="formBox">
+              <label for="ip_name1" class="tit">Name<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="text" id="ip_name1" placeholder="Please enter your name"></div>
+
+              <p class="txtError on">Please enter your name.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <!-- 2023-06-23 삭제 -->
+            <!-- <div class="formBox">
+              <label for="ip_email1" class="tit">E-mail<span class="ess">필수</span></label>
+              <div class="inputBox"><input type="email" id="ip_email1" value="sysy@gsitm.com" disabled="disabled"></div>
+            </div> -->
+            <!-- 2023-06-23 삭제 -->
+            
+            <div class="formBox">
+              <label for="ip_phone1" class="tit">Mobile<span class="ess">필수</span></label>
+              <div class="inputBox">
+                <input type="tel" id="ip_phone1" placeholder="Enter Only Numbers (excluding -)">
+              </div>
+
+              <p class="txtError on">Please enter your mobile number.</p><!-- 활성화 : on 클래스-->
+            </div>
+
+            <div class="formBox">
+              <p class="mb5">Nationality<span class="ess">필수</span></p>
+              <div class="selectBox">
+                <select title="직업군 선택">
+                  <option value="" selected>Nationality Select</option>
+                  <option value="">Nationality1</option>
+                  <option value="">Nationality2</option>
+                  <option value="">Nationality3</option>
+                </select>
+              </div>
+
+              <p class="txtError on">Please set the country information.</p><!-- 활성화 : on 클래스-->
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="subTit">Settings to receive<br>marketing information</h2>
+          <div class="checkBoxWrap">
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk1" checked>
+              <label for="ip_chk1">E-mail</label>
+            </p>
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk2" checked>
+              <label for="ip_chk2">SMS</label>
+            </p>
+            <p class="checkBox">
+              <input type="checkbox" name="" id="ip_chk3" checked>
+              <label for="ip_chk3">DM</label>
+            </p>
+          </div>
+        </div>
+        
+        <div class="bottomWrap">
+          <div class="btnWrap">
+            <button class="btn" disabled="disabled"><span>서비스 이용하기</span></button>
+
+            <!-- 버튼 활성화 시 
+            <button class="btn"><span>서비스 이용하기</span></button>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
