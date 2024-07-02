@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=yes,viewport-fit=cover,target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>BMW Driving Center</title>
+    <link href="../../../../../../static/assets/v1/mobile/css/swiper.min.css" rel="stylesheet" />
+    <link href="../../../../../../static/assets/v1/mobile/css/common.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/swiper.js"></script>
+    <script type="text/javascript" src="../../../../../../static/assets/v1/mobile/js/ui.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더영역 -->
+      <!--
+        헤더 타입 종류
+        data-headtype= 숫자 (1~8)
+        1 : 로고, 언어
+        2 : 로고, 닫기
+        3 : 로고
+        4 : 이전, 타이틀
+        5 : 이전, 타이틀, 메뉴
+        6 : 타이틀, 닫기
+        7 : 홈, 타이틀, 언어
+        8 : 홈, 타이틀, 메뉴
+
+        메뉴 로그인아웃
+        data-log= in / out
+        in : 로그인 상태
+        out : 로그아웃 상태
+      -->
+      <header id="headerWrap" data-include="../../../layout/header.html" data-headtype="4" data-log="in" data-title="프로그램 이용 요금"></header>
+      <!-- //헤더영역 -->
+
+      <section id="container">
+        <div class="section">
+          <div class="txtBox mb20">
+            <p class="tit fz18">프로그램 이용 요금</p>
+            <p class="txt fcGray666">프로그램 별 상세 요금 정보 확인이 가능하며 프로그램 운영 일정은 예고없이 변경될 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="slideTab">
+            <ul class="tabTit">
+                <li class="on"><a href="javascript:;">Driving 프로그램</a></li>
+                <li><a href="javascript:;">주니어캠퍼스</a></li>
+            </ul>
+          </div>
+
+          <div class="tabConWrap">
+            <div class="tabCon">
+              <h2 class="subTit mt20 mb10">Experience Program</h2>              
+              <div class="tableWrap row">
+                <table>
+                  <colgroup>
+                    <col style="width:40%;">
+                    <col style="width:60%;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="3">Test Drive</th>
+                      <td>30분</td>
+                    </tr>
+                    <tr>
+                      <td>80,000 ~ 140,000</td>
+                    </tr>
+                    <tr>
+                      <td>전 모델 체험 가능</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Off-Road</th>
+                      <td>40분</td>
+                    </tr>
+                    <tr>
+                      <td>50,000</td>
+                    </tr>
+                    <tr>
+                      <td>X5 xDrive 40i M Sport</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Taxi</th>
+                      <td>10분 ~ 20분</td>
+                    </tr>
+                    <tr>
+                      <td>40,000 ~ 60,000</td>
+                    </tr>
+                    <tr>
+                      <td>M5 Competition(Track),<br>M4 Competition M xDrive Convertible(Track),<br>MINI JCW Clubman ALL4(Track),<br>X5 xDrive 40i M Sport(Off-road)</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">i Drive</th>
+                      <td>2시간 10분</td>
+                    </tr>
+                    <tr>
+                      <td>120,000</td>
+                    </tr>
+                    <tr>
+                      <td>i4 / iX / i7<br>*최신 i 모델을 순환하며 체험합니다.</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Night Drive</th>
+                      <td>1시간 20분</td>
+                    </tr>
+                    <tr>
+                      <td>100,000 ~ 170,000</td>
+                    </tr>
+                    <tr>
+                      <td>BMW, BMW M, MINI, MINI JCW</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Scenic Drive</th>
+                      <td>1시간 40분</td>
+                    </tr>
+                    <tr>
+                      <td>100,000 ~ 160,000</td>
+                    </tr>
+                    <tr>
+                      <td>전 모델 체험 가능</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">On-Road</th>
+                      <td>1시간 20분</td>
+                    </tr>
+                    <tr>
+                      <td>80,000 ~ 150,000</td>
+                    </tr>
+                    <tr>
+                      <td>BMW, BMW M, MINI, MINI JCW</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">X-Bus</th>
+                      <td>15분</td>
+                    </tr>
+                    <tr>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td>X-Range</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="colorBox mt10">
+                <p class="fwB">이용 유의사항</p>
+                <p class="refMark fcBasic mt5">프로그램은 주중(화~금), 주말 및 공휴일에 체험 가능합니다.</p>
+                <p class="refMark fcBasic mt5">Night Drive, On-Road를 제외한 체험 프로그램은 동승자 탑승이 가능한 프로그램입니다.</p>
+                <p class="refMark fcBasic mt5">체험 차량의 모델별 가격이 상이하며, 운영 상황에 따라 일부 모델은 선택이 불가할 수 있습니다.</p>
+              </div>
+
+              <h2 class="subTit mt20 mb10">Training Program</h2>
+              <div class="tableWrap row">
+                <table>
+                  <colgroup>
+                    <col style="width:40%;">
+                    <col style="width:60%;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="3">Starter Pack</th>
+                      <td>3시간 40분</td>
+                    </tr>
+                    <tr>
+                      <td>160,000 ~ 200,000</td>
+                    </tr>
+                    <tr>
+                      <td>BMW, BMW M, MINI, MINI JCW</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">M Core</th>
+                      <td>4시간</td>
+                    </tr>
+                    <tr>
+                      <td>500,000 ~ 600,000</td>
+                    </tr>
+                    <tr>
+                      <td>M2 ~ M4</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Intensive</th>
+                      <td>9시간</td>
+                    </tr>
+                    <tr>
+                      <td>700,000 ~ 900,000</td>
+                    </tr>
+                    <tr>
+                      <td>BMW M, MINI</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">M/JCW Intensive</th>
+                      <td>9시간</td>
+                    </tr>
+                    <tr>
+                      <td>900,000 ~ 1,300,000	</td>
+                    </tr>
+                    <tr>
+                      <td>BMW M, MINI JCW</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">M Drift Ⅰ</th>
+                      <td>4시간</td>
+                    </tr>
+                    <tr>
+                      <td>700,000</td>
+                    </tr>
+                    <tr>
+                      <td>M3, M4</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">M Drift Ⅱ</th>
+                      <td>4시간</td>
+                    </tr>
+                    <tr>
+                      <td>900,000</td>
+                    </tr>
+                    <tr>
+                      <td>M3, M4</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">M Drift Ⅲ</th>
+                      <td>4시간</td>
+                    </tr>
+                    <tr>
+                      <td>2,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>M3, M4</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="colorBox mt10">
+                <p class="fwB">이용 유의사항</p>
+                <p class="refMark fcBasic mt5">프로그램은 주중(화~금), 주말 및 공휴일에 체험 가능합니다.</p>
+                <p class="refMark fcBasic mt5">해당 프로그램은 동승자 탑승이 불가능한 프로그램입니다.</p>
+              </div>
+
+              <h2 class="subTit mt20 mb10">Owner Program</h2>
+              <div class="tableWrap row">
+                <table>
+                  <colgroup>
+                    <col style="width:40%;">
+                    <col style="width:60%;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="3">Owners<br>Track Day</th>
+                      <td>60분</td>
+                    </tr>
+                    <tr>
+                      <td>30,000</td>
+                    </tr>
+                    <tr>
+                      <td>Owners' Car<br>(BMW, MINI Only)</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" rowspan="3">Owners<br>Drift Day</th>
+                      <td>1시간 20분</td>
+                    </tr>
+                    <tr>
+                      <td>50,000</td>
+                    </tr>
+                    <tr>
+                      <td>Owners' Car<br>(BMW, MINI Only)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="colorBox mt10">
+                <p class="fwB">이용 유의사항</p>
+                <p class="refMark fcBasic mt5">프로그램은 주중(화~금), 주말 및 공휴일에 체험 가능합니다.</p>
+                <p class="refMark fcBasic mt5">Owners Track Day 프로그램은 동승자 탑승이 가능한 프로그램입니다.</p>
+                <p class="refMark fcBasic mt5">Owners 프로그램의 경우 프로그램 정상 이용 시 100% 환불이 진행됩니다.</p>
+              </div>
+            </div>
+
+            <div class="tabCon">
+              <h2 class="subTit mt20 mb10">주니어캠퍼스 실험실</h2>
+              <div class="dlInfoBoxWarp">
+                <div class="dlInfoBox">
+                  <dl>
+                    <dt>운행 시간</dt>
+                    <dd>70분</dd>
+                  </dl>
+                  <dl>
+                    <dt>일반</dt>
+                    <dd>10,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>과학동아기자단</dt>
+                    <dd>8,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>유가족 (유공자/의사자)</dt>
+                    <dd>5,000</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <h2 class="subTit mt20 mb10">주니어캠퍼스 워크샵</h2>
+              <div class="dlInfoBoxWarp">
+                <div class="dlInfoBox">
+                  <dl>
+                    <dt>운행 시간</dt>
+                    <dd>70분</dd>
+                  </dl>
+                  <dl>
+                    <dt>일반</dt>
+                    <dd>10,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>과학동아기자단</dt>
+                    <dd>8,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>유가족 (유공자/의사자)</dt>
+                    <dd>5,000</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <h2 class="subTit mt20 mb10">패키지 예약 시 할인</h2>
+              <div class="dlInfoBoxWarp">
+                <div class="dlInfoBox">
+                  <dl>
+                    <dt>일반</dt>
+                    <dd>8,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>과학동아기자단</dt>
+                    <dd>6,000</dd>
+                  </dl>
+                  <dl>
+                    <dt>유가족 (유공자/의사자)</dt>
+                    <dd>4,000</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="colorBox mt10">
+                <p class="fwB">이용 유의사항</p>
+                <p class="refMark fcBasic mt5">과학아동기자단 예약 시 이용 당일 기자단증 지참 필수</p>
+                <p class="refMark fcBasic mt5">의사자, 국가/독립 유공자 유가족일 경우 정상가에서 50%할인</p>
+                <p class="refMark fcBasic mt5">이용일 당일 증빙서류 지참 필수(미지참 시 정상가 결제)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
