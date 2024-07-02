@@ -1,0 +1,1326 @@
+@charset "UTF-8";
+@import url('font.css');
+@import url('layout.css');
+
+/* reset element */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:0; padding:0;
+}
+h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:inherit;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, 
+menu, nav, section {display:block;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote::before, blockquote::after, q::before, q::after {content:''; content:none;}
+
+/* align, border, input */
+img, fieldset, a {border:none;}
+img {vertical-align:middle;}
+table, thead, tbody, tfoot {border-collapse:collapse; border-spacing:0; border:0 none;}
+ul, ol, li {list-style:none;}
+address, em {font-style:normal;}
+input, select, textarea, button, form img, label {vertical-align:middle;}
+button, input[type="submit"] {cursor:pointer;}
+input:focus, button:focus, select:focus, textarea:focus {outline:0;}
+button::-moz-focus-inner {border:0 none; padding:0;}
+
+/* anchor */
+a {text-decoration:none;}
+a:link {color:#262626;}
+a:visited {color:#262626;}
+a:hover {color:#262626;}
+a:focus {color:#262626;}
+
+:root {
+	--main-color: #1c69d4;
+	--font-color: #262626;
+}
+
+
+/* common */
+* {-webkit-text-size-adjust:none; text-shadow:0 0 0 transparent;}
+html {font-size:62.5%;}
+html, body, #wrap {height:100%;}
+body {font:1.4rem 'bmwTypeNextWeb','bmwTypeNextKr',Arial,Helvetica,"Noto Sans CJK KR","Noto Sans",sans-serif; font-weight:normal; color:var(--font-color); white-space:normal; word-wrap:break-word; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+#wrap {width:100%; overflow-x:hidden; overflow-y:auto;} 
+/* #wrap {width:100%; -ms-overflow-style:none; scrollbar-width:none;} ie,파폭 
+#wrap::-webkit-scrollbar {display:none; z-index:5;} 크롬,사파리,오페라,엣지  */
+
+input, select, textarea {box-sizing:border-box; border-radius:0; margin:0; padding:0; font:inherit; color:var(--font-color); -webkit-appearance:none; vertical-align:middle;}
+/* button {border:0 none; background:none; letter-spacing:-0.1rem; font-size:0;} */
+button {margin:0; padding:0; border:0; font:inherit; color:inherit; background:transparent; overflow:visible; cursor:pointer; line-height:1; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+img {width:100%;}
+/* p {line-height:1.4;} */
+.hidden, legend {font-size:0; width:0; height:0; line-height:0; text-indent:-999rem; overflow:hidden; visibility:hidden; position:absolute; top:0; left:0;}
+caption {font-size:0; width:0; height:0; line-height:0; text-indent:-999rem; overflow:hidden; visibility:hidden;}
+.clear::after {content:""; display:block; clear:both; }
+
+/* global */
+/* .blind {position:absolute;top:-99992rem;visibility:hidden;width:0;height:0;font-size:1%;line-height:0} */
+.show {display:block}
+.hide {display:none}
+.ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;} /* 1줄 말줄임 */
+.lineClamp {-webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; overflow:hidden; text-overflow:ellipsis;} /* 2줄 말줄임 */
+.fz13 {font-size:1.3rem !important;}
+.fz14 {font-size:1.4rem !important;}
+.fz15 {font-size:1.5rem !important;}
+.fz16 {font-size:1.6rem !important;}
+.fz18 {font-size:1.8rem !important;}
+.fz19 {font-size:1.9rem !important;}
+.fwB {font-weight:bold !important;}
+.fcPoint1 {color:#1c69d3 !important;}
+.fcPoint2 {color:#d20000 !important;}
+.fcPoint3 {color:#3db014 !important;}
+.fcBasic {color:var(--font-color) !important;}
+.fcGraybbb {color:#bbb !important;}
+.fcGray999 {color:#999 !important;}
+.fcGray888 {color:#888 !important;}
+.fcGray666 {color:#666 !important;}
+
+
+/* checkbox button design */
+.checkBox {display:flex; align-items:center;}
+input[type=checkbox] {overflow:hidden; position:absolute; left:-100rem; width:.1rem; height:.1rem;}
+input[type=checkbox] + label {display:inline-block; position:relative; padding-left:2.5rem; font-size:1.4rem; cursor:pointer; line-height:1.4; text-align:left; word-break:keep-all;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+input[type=checkbox] + label::before {content:''; display:inline-block; position:absolute; top:.1rem; left:0; width:1.7rem; height:1.7rem; margin-right:.7rem; border:.1rem solid #bbb; border-radius:.2rem; background:#fff url('../images/common/ico_check.png') no-repeat top center / 1.1rem auto; box-sizing:border-box; transition:all .2s ease;}
+input[type=checkbox]:checked + label::before {border-color:#262626; background:#262626 url('../images/common/ico_check.png') no-repeat center center / 1.1rem auto;}
+
+
+/* radio button design */
+.radioBox input[type=radio] {overflow:hidden; position:absolute; left:-100rem; width:.1rem; height:.1rem;}
+.radioBox input[type=radio] + label {display:inline-block; position:relative; padding-left:2.5rem; font-size:1.4rem; cursor:pointer; line-height:1.4; text-align:left; word-break:keep-all;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.radioBox input[type=radio] + label::before {content:''; display:inline-block; position:absolute; top:.1rem; left:0; width:1.7rem; height:1.7rem; margin-right:1rem; border:.1rem solid #bbb; border-radius:50%; box-sizing:border-box; transition:all .3s ease;}
+.radioBox input[type=radio]:checked + label::before {background:#262626; border-color:#262626;}
+.radioBox input[type=radio] + label::after {content:''; display:inline-block; position:absolute; top:.6rem; left:.5rem; width:.7rem; height:.7rem; background:#fff; border-radius:50%; box-sizing:border-box; transition:all .3s ease; transform:scale(0);}
+.radioBox input[type=radio]:checked + label::after {transform:scale(1);}
+.radioBox input[type=radio]:disabled + label::before, .radioBox input[type=radio].disabled + label::before {background:#ddd;}
+
+
+/* placeholder color */
+input::-ms-input-placeholder {color:#888888; font-weight:normal;}
+input::-webkit-input-placeholder {color:#888888; font-weight:normal;}
+input::-moz-placeholder {color:#888888; font-weight:normal;}
+textarea::-ms-input-placeholder {color:#888888; font-weight:normal;}
+textarea::-webkit-input-placeholder {color:#888888; font-weight:normal;}
+textarea::-moz-placeholder {color:#888888; font-weight:normal;}
+
+
+/* input_style */
+.inputBox {display:flex; justify-content:center; align-items:center; flex:1 1 auto; position:relative; width:100%;}
+.inputBox input {flex: 1 1 auto; width:100%; height:4.8rem; margin:0; padding:0 1.5rem; background:#fff; border:.1rem solid #bbb; border-radius:.3rem; outline:none; color:var(--font-color); font-size:1.4rem; box-sizing:border-box; transition:border .3s ease;}
+.inputBox input:focus{border:.1rem solid #4d4d4d;}
+.inputBox input:disabled, .inputBox input:read-only {background:#f2f2f2; color:#888;}
+.inputBox input:read-only:focus {border:.1rem solid #bbb;}
+.inputBox.right input {text-align:right;}
+
+.inputBox .unit {position:absolute; right:1rem;}
+.inputBox input:disabled + .unit, .inputBox input:read-only + .unit {color:#888;}
+
+/* select_style */
+select {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
+select::-ms-expand {display:none;}
+.selectBox {display:flex; justify-content:center; align-items:center; flex:1 1 auto; position:relative; width:100%;}
+.selectBox select {width:100%; height:4.8rem; padding:0 4rem 0 1.5rem; border:.1rem solid #bbb; border-radius:.3rem; line-height:4.8rem; font-size:1.4rem; background:#fff url('../images/common/ico_select.png') no-repeat right 1.5rem center / 1.2rem auto; box-sizing:border-box;}
+.selectBox select:disabled, .selectBox select.disabled {background-color:#f2f2f2; color:#888 !important; opacity:1;}
+/* .selectBox select option[value=""][disabled] {display:none;} */
+.selectBox select option:first-child {color:#888;}
+.selectBox.clear select, .selectBox.clear select option:first-child {color:#262626 !important;}
+
+
+/* btn_style */
+.btnWrap {display:flex;}
+.btnWrap.lineTop {padding-top:1.5rem; border-top:.1rem solid #dadada;}
+
+button.btn, a.btn {display:inline-flex; justify-content:center; align-items:center; width:100%; height:5.5rem; padding:0 2rem; background:var(--main-color); line-height:1.3; color:#fff; font-size:1.6rem; text-align:center; box-sizing:border-box;} /* 기본 파랑 */
+.btn.ty1 {background:#262626; color:#fff;}
+.btn.ty2 {background:#fff; border:.1rem solid #262626; color:var(--font-color);}
+.btn.ty3 {background:rgba(0, 0, 0, 0); color:#fff; border:.1rem solid #fff;}
+.btn.ty4 {background:#fff; border-top:.1rem solid #262626; border-bottom:.1rem solid #fff;  color:var(--font-color);}
+.btn.disabled, .btn:disabled, .btnR.disabled, .btnR:disabled {background:#ddd; color:#666; border:.1rem solid #ddd;}
+
+button.btn.mid, a.btn.mid {height:3.5rem; font-size:1.3rem;}
+button.btn.big, a.btn.big {height:4.8rem; font-size:1.5rem;}
+
+button.btnR, a.btnR {display:inline-flex; justify-content:center; align-items:center; width:fit-content; min-width:auto; height:3.5rem; padding:0 .5rem; background:#262626; border-radius:.4rem; line-height:1.3; color:#fff; font-size:1.3rem; text-align:center; box-sizing:border-box;} /* 기본 검정 */
+.btnR.ty1 {background:#fff; border:.1rem solid #262626; color:var(--font-color);}
+.btnR.ty2 {background:#fff; border:.1rem solid #bbb; color:#666;}
+.btnR.ty3 {background:var(--main-color); color:#fff;}
+
+.btnR.mid {height:4.8rem; font-size:1.4rem;}
+.btnR.full {width:100%;}
+
+button.btnR.arrow, a.btnR.arrow::after {content:''; display:inline-block; width:.6rem; height:.9rem; margin-left:.8rem; background:url('../images/ico/ico_arrow3.png') no-repeat center center / .6rem auto;}
+
+.formBox .btnR {height:4.8rem; margin-left:.5rem;}
+.formBox.flex .btnR {flex:0 0 auto;}
+.btnWrap .btnR + .btnR {margin-left:.5rem;}
+
+/* .btns.two button {width:50%; vertical-align:top;} */ /* 버튼 2개인 경우 :사이간격X */
+/* .btns.bot {position:fixed; left:0; bottom:0; width:100%;}  *//* 버튼 하단고정 */
+
+/* .btn_top {display:inline-block; position:fixed; bottom:902rem; right:152rem; width:502rem; height:502rem; padding-top:102rem; border-radius:50%; background:rgba(0, 0, 0, 0.7) url('../img/btn_top.png') no-repeat center 132rem / 112rem 62rem; color:#fff; font-family:'Roboto', sans-serif; font-size:142rem; font-weight:bold; z-index:10;} */
+
+
+/* 레이어 팝업 */
+.popWrap {position:fixed; top:0; left:0; width:100%; height:100%; padding:0 !important; background:rgba(0,0,0,0.4); box-sizing:border-box; z-index:1400; visibility:hidden; transition:all .3s ease;}
+/* .popWrap .dim {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4);} */
+.popWrap.noDim {background:none;}
+.layerPop {display:flex; flex-direction:column; position:absolute; bottom:0; left:0; width:100%; height:100%; max-height:calc(100% - 7rem); background:#fff; box-sizing:border-box; animation-duration:.3s; transition:all .3s ease .2s; transform:translateY(100%);}
+
+.popWrap.on {visibility:visible; opacity:1;}
+.popWrap.on .layerPop {transform:translateY(0%);}
+.popWrap.off {visibility:hidden; opacity:0; transition:all .3s ease .2s;}
+.popWrap.off .layerPop {transition:all .3s ease;}
+
+.popTit {display:flex; align-items:center; position:absolute; top:0; left:0; width:100%; height:auto; min-height:6rem; padding:1rem 5rem 1rem 2rem; background:#fff; border-bottom:.1rem solid #bbb; box-sizing:border-box; color:var(--font-color); font-size:1.7rem; font-weight:bold; z-index:5;}
+.popTit .tit {color:var(--font-color); font-size:1.7rem; font-weight:bold;}
+.popCon {overflow-x:hidden; overflow-y:auto; width:100%; height:100%; padding:0 2rem 2rem 2rem; box-sizing:border-box;}
+.popTit + .popCon {padding-top:6rem;}
+.btnClosePop a {position:absolute; top:1rem; right:.9rem; width:4rem; height:4rem; background:url('../images/common/ico_closePop.png') no-repeat center center / 1.7rem auto; text-indent:-999rem; z-index:10;}
+
+.layerPop.full {position:absolute; top:0; left:0; max-height:100%; background:#fff; transform:translateY(20%);} /* transition:all .3s ease; transform:translateY(0%); */
+.layerPop.full .popTit {justify-content:center; padding:1rem 4rem;}
+
+/* .popWrap .layerPop.noti {top:50%; bottom:auto; left:2rem; width:calc(100% - 4rem); height:auto; max-height:42.4rem; transform:translateY(-50%);} */
+.popWrap .layerPop.noti {bottom:auto; top:50%; left:50%; width:32rem; height:41.2rem; transform:translate(-50%, -50%);}
+.layerPop.noti .notiCon {padding-top:2rem;}
+.layerPop.noti .btnWrap {flex-direction:column; height:15.2rem; padding:1.5rem 2rem; border-top:.1rem solid #dadada; box-sizing:border-box;}
+.layerPop.noti .dayClose {margin-top:1.5rem; text-align:center;}
+.layerPop.noti .dayClose a {color:#666; text-decoration:underline;}
+.layerPop.noti.img .popCon {padding:0;}
+.layerPop.noti.img .imgBox {margin-bottom:0; padding-top:92.18%;} /* size 640*590 */
+.layerPop.noti.img .imgBox img {width:100%; height:100%; object-fit:cover;}
+
+
+/* header */
+#headerWrap {position:sticky; top:0; left:0; z-index:500;} /* z-index:100; */
+#header {display:flex; align-items:center; position:relative; width:100%; height:6rem; background:#000; color:#fff; box-sizing:border-box;}
+#header > a {position:absolute; width:4rem; height:4rem; color:#fff; text-indent:-999rem; box-sizing:border-box;}
+#header .home {left:1.2rem; background:url('../images/common/ico_home.png') no-repeat center center / 2.4rem 2.4rem;}
+#header .back {left:.8rem; background:url('../images/common/ico_back.png') no-repeat left 1.2rem center / 1.1rem auto;} /* width:1.1rem; height:2rem; */ 
+#header .lang {right:1.2rem; background:url('../images/common/ico_lang_en.png') no-repeat center center / 2.4rem 2.7rem;}
+#header .lang.en {right:1.2rem; background:url('../images/common/ico_lang_ko.png') no-repeat center center / 2.4rem 2.7rem;}
+
+#header .menu {right:1rem; background:url('../images/common/ico_menu.png') no-repeat right 1rem center / 2rem auto;} /* width:2rem; height:1.7rem; */
+#header .close {right:.9rem; background:url('../images/common/ico_close.png') no-repeat right 1.1rem center / 1.7rem auto;}
+#header > h1 {display:none;}
+#header .logo {position:absolute; left:2rem; width:22.6rem; height:3rem; }
+#header .logo a {display:inline-block; width:100%; height:100%; background:url('../images/common/logo.png') no-repeat left center / 100% auto; text-indent:-999rem;}
+#header .title {width:100%; padding:0 6rem; font-size:1.7rem; text-align:center;}
+
+.menuWrap {display:none; position:fixed; left:0; top:0; overflow-x:hidden; width:100%; height:100%; z-index:200;}/* display:none; */
+.menuWrap .dim {display:block; position:absolute; bottom:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
+.menuWrap .menuZone {display:flex; flex-direction:column; position:relative; right:-100%; top:0; width:100%; height:100%; overflow-y:auto; background:#151515;}/* right:0% -100%; */
+.menuZone .top {min-height:6rem; padding:2.5rem 4rem 2.5rem 2rem; background:#000; color:#fff; text-align:left;}
+.menuZone .top .txt {margin-bottom:1.8rem;}
+.menuZone .top .userName{margin-bottom:1rem; font-size:1.6rem; font-weight:bold;}
+.menuZone .btnLog {width:6.8rem; height:3rem; border:.1rem solid #999; border-radius:5rem; color:#fff; font-size:1.3rem; text-align:center;}
+
+.menuZone .gnbWrap {overflow-y:auto; padding:2.5rem 2rem;}
+.gnb > li + li {margin-top:3rem;}
+.gnb li li + li {margin-top:2.5rem;}
+.gnb > li > a {display:inline-block; margin-bottom:3rem; color:#fff; font-size:1.6rem;}
+.gnb li li a {color:#999; font-size:1.5rem;}
+.gnb li li a::after {content:''; display:inline-block; width:.8rem; height:1.2rem; margin-left:1.4rem; background:url('../images/common/ico_gnb_arrow.png') no-repeat center center / 100% auto;}
+.gnb li li.on a {color:#dde8f9;}
+.gnb li li.on a::after {background:url('../images/common/ico_gnb_arrow_on.png') no-repeat center center / 100% auto;}
+/* .gnb li li a:hover::after {filter: invert(90%) sepia(8%) saturate(467%) hue-rotate(183deg) brightness(101%) contrast(95%);} */
+
+/* .menuZone .menuClose {display:inline-block; position:absolute; top:2.5rem; right:2rem; width:1.6rem; height:1.6rem; background:url('../images/common/ico_close.png') no-repeat right center / 1.6rem auto; text-indent:-999rem;} */
+.menuZone .menuClose {display:inline-block; position:absolute; top:1.3rem; right:.8rem; width:4rem; height:4rem; background:url('../images/common/ico_close.png') no-repeat center center / 1.6rem auto; text-indent:-999rem;}
+
+
+/* common */
+#container {position:relative;}
+#container > div {padding-left:2rem; padding-right:2rem;}
+.section + .section {padding-bottom:3rem; border-top:.5rem solid #efefef;}
+
+/* 스크롤 탑 버튼 */
+.scrollTop {display:inline-block; position:fixed; bottom:2rem; right:1rem; width:4.6rem; height:4.6rem; background:#292929 url('../images/common/ico_scrollTop.png') no-repeat center 1.6rem / 1.9rem auto; border-radius:5rem; text-indent:-999rem; transition:transform .3s ease; z-index:10;}
+
+
+/* 하단 네비게이션 메뉴 */
+#navWrap {position:fixed; bottom:0; left:0; width:100%; height:6.1rem; background:#fff; border-top:.1rem solid #bbb; box-sizing:border-box; z-index:10; transition:all .3s ease;}
+#navWrap.off {bottom:-7.8rem;} /* bottom:-7.5rem; */
+#nav {display:flex; position:relative; width:100%; height:100%; padding:0 10rem 0 2rem; box-sizing:border-box;}
+#nav ul {display:flex; justify-content:space-around; align-items:center; flex:100%; height:100%;}
+#nav li {display:inline-block; min-width:4.5rem;}
+/* #nav li + li {margin-left:1.5rem;} */
+#nav li a {display:inline-block; width:100%; color:#666; font-size:1.1rem; text-align:center;}
+#nav li i {display:inline-block; width:100%; min-width:2.5rem; height:2.5rem;}
+#nav li:first-child i {background:url('../images/ico/ico_nav1.png') no-repeat center center / 2.5rem auto;}
+#nav li:nth-child(2) i {background:url('../images/ico/ico_nav2.png') no-repeat center center / 2.4rem auto;}
+#nav li:nth-child(3) i {background:url('../images/ico/ico_nav3.png') no-repeat center center / 2.5rem auto;}
+#nav li:last-child i {background:url('../images/ico/ico_nav4.png') no-repeat center center / 2.4rem auto;}
+
+#nav li.on a, #nav li:hover a {color:var(--main-color);}
+#nav li:first-child.on a i, #nav li:first-child a:hover i {background:url('../images/ico/ico_nav1_on.png') no-repeat center center / 2.5rem auto;}
+#nav li:nth-child(2).on a i, #nav li:nth-child(2) a:hover i {background:url('../images/ico/ico_nav2_on.png') no-repeat center center / 2.4rem auto;}
+#nav li:nth-child(3).on a i, #nav li:nth-child(3) a:hover i {background:url('../images/ico/ico_nav3_on.png') no-repeat center center / 2.5rem auto;}
+#nav li:last-child.on a i, #nav li:last-child a:hover i {background:url('../images/ico/ico_nav4_on.png') no-repeat center center / 2.4rem auto;}
+/* #nav li.on a {color:var(--main-color); filter: invert(30%) sepia(86%) saturate(1293%) hue-rotate(194deg) brightness(95%) contrast(95%);} */
+
+#nav .ticket {display:inline-block; position:absolute; right:2rem; bottom:1.5rem; width:6rem; height:6rem; background:var(--main-color); border-radius:6rem; box-shadow:.1rem .1rem .5rem .1rem rgba(0, 0, 0, .3);}
+#nav .ticket a {display:inline-block; width:100%; height:100%; background:url('../images/ico/ico_ticket.png') no-repeat center 2.1rem / 3rem auto; text-indent:-999rem;}
+#nav .ticket.on, #nav .ticket:hover {background:#0d4fab;}
+#nav .ticket.on a, #nav .ticket:hover a {opacity:.7;}
+
+
+/* loading */
+.layerPopWrap.loadingWrap {visibility:hidden; display:flex; justify-content: center; align-items:center; position:fixed; top:0; left:0; width:100%; height:100%; padding:2rem 0 !important; z-index:9999; opacity:0; transition:all .2s ease; background:rgba(255,255,255,0.8);}
+.layerPopWrap.on { visibility:visible; opacity:1;}
+.layerPopWrap.on .layerPopCont{ animation:fadeInDown .4s ease-in-out forwards;}
+.loadingBox {}
+.loadingBox .text {margin-top:30px; color:#000; font-size:1.8rem; letter-spacing: -0.027rem; line-height:1.5; text-align:center}
+.loadingBox .loading{position:relative; width: 8rem; height: 8rem; margin:0 auto; transform:rotate(-45deg); animation:loading-ani1_1 2.5s ease-in-out infinite; border-radius:50%; background:#fff;}
+.loadingBox .loading:after {content:''; position:absolute; top:50%; left:50%; width:10rem; height:10rem; border:1px solid #d1d4db; box-sizing: border-box; border-radius: 50%; transform: translate(-50%, -50%); /* animation: loading-ani1_4 2.5s ease infinite; */ background:#fff;}
+.loadingBox .loading:before {content:''; position:absolute; top:50%; left:50%; width:5rem; height:5rem; z-index:2; box-sizing: border-box; border-radius: 50%; transform: translate(-50%, -50%); background:#fff; animation: loading-ani1_5 2.5s ease infinite both;}
+.loadingBox .loading i{width: 0; height: 0; border:4rem solid transparent; display: inline-block; border-radius: 50%; position:absolute; z-index:1;}
+.loadingBox .loading i:nth-child(1){border-color: transparent transparent #1c69d3 transparent;}
+.loadingBox .loading i:nth-child(2){border-color: #1c69d3 transparent transparent transparent;}
+
+@keyframes loading-ani1_1{
+		0%,40%{
+				transform:rotate(-45deg); 
+		}
+		80%,100%{
+				transform:rotate(315deg);
+		}
+}
+@keyframes loading-ani1_5{
+		0%,20%,100%{
+				transform: translate(-50%, -50%) scale(0); 
+		}
+		40%,80%{
+				transform: translate(-50%, -50%) scale(1); 
+		}
+}
+
+
+/* 프로그램 별 예약_프로그램 선택 MO_04-0201 */
+.stepBox {padding-top:2rem; padding-bottom:2rem;}
+.stepBox .tit {color:var(--font-color); font-size:1.8rem; line-height:2.7rem; font-weight:bold; word-break:keep-all;}
+.stepBox .txt {margin-top:1rem; color:var(--font-color); font-size:1.4rem; word-break:keep-all;}
+.icoStep {display:flex; justify-content:flex-end; margin-top:.6rem;}
+.icoStep li {display:inline-block; position:relative; width:2.5rem; height:2.5rem;}
+.icoStep li + li {padding-left:1.7rem;}
+.icoStep li + li::before {content:''; position:absolute; top:0; left:0; display:inline-block; width:1.7rem; height:100%; background:url('../images/ico/ico_step_dot.png') no-repeat center center / 1.5rem .3rem;}
+.icoStep li i {display:inline-block; width:100%; height:100%; vertical-align: middle; line-height:0; font-size:0; background-repeat:no-repeat; background-size: 100% 100%; background-position:center center;}
+.icoStep li:first-child i, .icoStep.ty2 li:nth-child(2) i, .icoStep.ty3 li:nth-child(2) i {background-image:url('../images/ico/ico_step1.png');}
+.icoStep li:nth-child(2) i, .icoStep.ty2 li:first-child i, .icoStep.ty3 li:nth-child(3) i {background-image:url('../images/ico/ico_step2.png');}
+.icoStep li:nth-child(3) i, .icoStep.ty3 li:nth-child(4) i, .icoStep.ty4 li:nth-child(2) i {background-image:url('../images/ico/ico_step3.png');}
+.icoStep li:nth-child(4) i, .icoStep.ty3 li:nth-child(5) i {background-image:url('../images/ico/ico_step4.png');}
+.icoStep li:last-child i {background-image:url('../images/ico/ico_step5.png');}
+.icoStep.ty3 li:first-child i {background-image:url('../images/ico/ico_step6.png');}
+.icoStep.ty4 li:first-child i {background-image:url('../images/ico/ico_step7.png');}
+.icoStep.ty4 li:nth-child(3) i {background-image:url('../images/ico/ico_step8.png');}
+
+.icoStep li:first-child.on i, .icoStep.ty2 li:nth-child(2).on i, .icoStep.ty3 li:nth-child(2).on i {background-image:url('../images/ico/ico_step1_on.png');}
+.icoStep li:nth-child(2).on i, .icoStep.ty2 li:first-child.on i, .icoStep.ty3 li:nth-child(3).on i {background-image:url('../images/ico/ico_step2_on.png');}
+.icoStep li:nth-child(3).on i, .icoStep.ty3 li:nth-child(4).on i, .icoStep.ty4 li:nth-child(2).on i {background-image:url('../images/ico/ico_step3_on.png');}
+.icoStep li:nth-child(4).on i, .icoStep.ty3 li:nth-child(5).on i {background-image:url('../images/ico/ico_step4_on.png');}
+.icoStep li:last-child.on i {background-image:url('../images/ico/ico_step5_on.png');}
+.icoStep.ty3 li:first-child.on i {background-image:url('../images/ico/ico_step6_on.png');}
+.icoStep.ty4 li:first-child.on i {background-image:url('../images/ico/ico_step7_on.png');}
+.icoStep.ty4 li:nth-child(3).on i {background-image:url('../images/ico/ico_step8_on.png');}
+
+.tabConWrap .tabCon {display:none;}
+.tabConWrap .tabCon:first-child {display:block;}
+
+.slideTab {width:100%; -ms-overflow-style:none; scrollbar-width:none;}/* ie,파폭 */
+.slideTab ul.tabTit::-webkit-scrollbar {display:none; z-index:5;}/* 크롬,사파리,오페라,엣지 */
+.slideTab {position:relative; width:calc(100% + 4rem); margin-bottom:1rem; background:#fff; transform:translateX(-2rem);} /* margin-left:-2rem */
+.slideTab::before, .slideTab::after {content:''; display:none; width:2rem; height:100%; position:absolute; top:0; z-index:1;}
+.slideTab.before::before {display:inline-block; left:0rem; background: linear-gradient(to right, #fff, #fff 20%, transparent);} /* background:linear-gradient(to right, rgba(225,225,225,1) 10%, ); */
+.slideTab.after::after {display:inline-block; right:0rem; background: linear-gradient(to left, #fff, #fff 20%, transparent)}
+
+.slideTab ul.tabTit {display:flex; overflow-x:auto;} /* height:4.8rem; */
+.slideTab li {display:inline-flex; transition:all .5s ease;}
+.slideTab li + li {margin-left:.4rem;}
+.slideTab li:first-child {margin-left:2rem;}
+.slideTab li:last-child {margin-right:2rem;}
+.slideTab li a {display:inline-flex; align-items:center; width:max-content; height:auto; min-height:3.7rem; padding:1.25rem 1rem ; color:#666; font-size:1.5rem; font-weight:bold; border-bottom:.3rem solid #eee; box-sizing:border-box;}
+.slideTab li.on a {border-bottom:.3rem solid #444; color:var(--font-color); font-weight:bold;}
+
+
+/* 프로그램 정보 슬라이드 */
+.slideWrap {position:relative; height:auto;}
+.swiper-pagination {display:flex; justify-content:center; align-items:center;}
+/* .programInfo.swiper-container-horizontal>.swiper-pagination-bullets {bottom:17rem;} */
+.slideWrap .swiper-pagination {bottom:auto;}
+.slideWrap .swiper-pagination-bullet {width:.6rem;
+height:.6rem; margin:0.1rem 0.5rem 0; font-size: 0; background: #a2a2a2; opacity:1; transition:all .3s ease;}
+.slideWrap .swiper-pagination-bullet-active {width:.9rem; height:.9rem; background:#262626;}
+.swiper-button-next::after, .swiper-button-prev::after {display: none;}
+
+
+.infoWarp {transition:all .3s ease;}
+/* .slideWrap .swiper-slide.swiper-slide-prev .infoWarp,
+.slideWrap .swiper-slide.swiper-slide-next .infoWarp {display:none;} */
+.slideWrap .swiper-slide.swiper-slide-prev .infoWarp,
+.slideWrap .swiper-slide.swiper-slide-next .infoWarp {opacity:0;}
+.slideWrap .infoWarp > .txtBox > .tit, 
+.slideWrap .infoWarp > .txtBox > .txt, 
+.slideWrap .infoBox > .tit, 
+.slideWrap .infoBox > .infoIcoList, 
+.slideWrap .infoWarp .moreView, 
+.slideWrap .infoBox .infoIcoList li,
+.slideWrap .infoBox .tit + .dlInfoBoxWrap {transform:translateY(1rem); opacity:0; transition:all .7s ease .3s;}
+.slideWrap .swiper-slide-active .infoWarp > .txtBox > .tit, 
+.slideWrap .swiper-slide-active .infoBox > .tit, 
+.slideWrap .swiper-slide-active .infoWarp > .txtBox > .txt, 
+.slideWrap .swiper-slide-active .infoBox > .infoIcoList, 
+.slideWrap .swiper-slide-active .infoWarp .moreView, 
+.slideWrap .swiper-slide-active .infoBox .infoIcoList li,
+.slideWrap .swiper-slide-active .infoBox .tit + .dlInfoBoxWrap {transform:translateY(0); opacity:1;}
+
+.imgBox {overflow:hidden; display:block; position:relative; width:100%; height:0; margin-bottom:2rem; padding-top:50.56%;} /* 비율 180:91, 2:1 50%, 1:2 200%, 4:3 75%, 16:9 56.26% */
+.imgBox img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:all .3s ease;}
+.imgBox .flagWrap {position:absolute; top:0; right:0; width:max-content;}
+.imgBox .flagWrap.left {left:0;}
+.imgBox .flag {display:block; padding:1rem 1.9rem; background:#666; color:#fff; font-size:1.2rem; text-align:center;} /* height:3.5rem */
+.imgBox .flag + .flag {margin-top:.3rem;}
+
+.imgBox .status {display:flex; justify-content:center; align-items:center; position:absolute; top:0; right:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.7); color:#fff; font-size:1.7rem; text-align:center;}
+
+.slideWrap .txtBox {padding-bottom:1.8rem;} /* padding-bottom:4.5rem; */
+.slideWrap .txtBox .tit {font-size:1.8rem; font-weight:bold;}
+.slideWrap .txtBox .txt {font-size:1.4rem;}
+.slideWrap .txtBox .txt.lineClamp {height:3.8rem;} /* 두줄 말줄임 높이 고정 */
+
+.infoBox {margin-top:2.7rem; border-top:.1rem solid #dadada; color:var(--font-color);}
+.infoBox > .tit {padding-top:2rem; font-size:1.6rem; font-weight:bold;}
+
+.section > .infoBox:first-child {margin-top:0; border-top:none;}
+
+.infoIcoList {margin-top:1.5rem;}
+.infoIcoList li {display:flex; align-items:flex-start; color:var(--font-color);}
+.infoIcoList li + li {margin-top:1rem;}
+.infoIcoList li::before {content:''; display:inline-block; width:2.1rem; height:2.1rem; margin-right:.8rem; background:url('../images/ico/ico_info1.png') no-repeat center center / 100% 100%;}
+.infoIcoList li:last-child::before {background:url('../images/ico/ico_info2.png') no-repeat center center / 100% 100%;}
+.infoIcoList li .tit {width:9rem;}
+.infoIcoList li .txt {position:relative; flex:1; padding-left:1rem;}
+.infoIcoList li .txt::before {content:''; display:inline-block; position:absolute; left:0; top:.4rem; width:.1rem; height:1.1rem; background:#262626;}
+
+.moreView {display:inline-block; margin-top:2rem;}
+.moreView::after {content:''; display:inline-block; width:.6rem; height:.9rem; margin-left:.7rem; background:url('../images/ico/ico_arrow1.png') no-repeat center center / contain;}
+/* .moreView.underLine {text-decoration:underline;} */
+.moreView .line {border-bottom:.1rem solid #262626;}
+
+
+/* 하단 슬라이드 업 영역 */
+#container > .bottomWrap {position:fixed; bottom:0; left:0; width:100%; padding-left:0; padding-right:0; z-index:200;}
+.foldBox {padding:1rem 2rem; background:#121212;}
+.foldBox .btnFold {position:absolute; top:-1.9rem; left:50%; display:inline-block; width:5.2rem; height:1.9rem; background:#121212 url('../images/ico/ico_fold_arrow.png') no-repeat center .7rem / 1.9rem auto; border-top-right-radius:1rem; border-top-left-radius:1rem; text-indent:-999rem; transform:translateX(-50%);}
+.foldBox .btnFold.on {background:#121212 url('../images/ico/ico_fold_arrow_on.png') no-repeat center .7rem / 1.9rem auto;}
+
+.infoDetail {display:flex; justify-content:space-between; padding:0.7rem 0; font-size:1.4rem;}
+.infoDetail dt {position:relative; width:10.6rem; padding-left:1.4rem; color:#bbb;}
+.infoDetail dt::before {content:''; position:absolute; top:.8rem; left:0; display:inline-block; width:.3rem; height:.3rem; background:#bbb; border-radius:50%;}
+.infoDetail dt::after {content:''; position:absolute; top:.4rem; right:0; display:inline-block; width:.1rem; height:1.2rem; background:#bbb;}
+.infoDetail dd {flex:1; padding-left:1.5rem; color:#fff; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; overflow:hidden; text-overflow:ellipsis;}
+
+.foldCon {display:none; /* transition:all 3s ease; */}
+/* .foldCon.off {height:0;} */
+
+
+/* 프로그램 정보 팝업 MO_04-0201_01 */
+/* .slideTab {position: sticky; top:0; z-index: 1;} */
+.txtBox {color:var(--font-color);}
+.txtBox .tit {font-size:1.7rem; font-weight:bold;}
+.txtBox .txt {margin-top:1rem; font-size:1.4rem;}
+.txtBox .txt + .txt.fwB {margin-top:2rem;}
+.txtBox .fcGray666 {word-break:keep-all;}
+.txtBox .series {color:#666; font-size:1.4rem; font-weight:bold;}
+.refMark {display:flex; margin-top:1rem; color:#777; font-size:1.3rem; word-break:keep-all;}
+.refMark::before {content:'※'; display:inline-block; flex:0 0 auto; width:1.5rem;}/* padding-right:.5rem; */
+.refMark + .refMark {margin-top:.5rem;}
+
+.txtBox + .dlInfoBoxWrap {margin-top:1rem;}
+.dlInfoBox {border-top:.1rem solid #bbb;}
+.dlInfoBox.noBt {border-top:none;}
+.dlInfoBox dl {display:flex; border-bottom:.1rem solid #dadada;}
+.dlInfoBox dt, .dlInfoBox dd {width:50%; padding:1.5rem 1rem; box-sizing:border-box;}
+.dlInfoBox dt {display:flex; flex-direction:column; justify-content:center; flex-wrap:wrap; flex:0 0 auto; background:#f6f6f6; color:var(--font-color); text-align:left;} /* align-items:center; */ 
+.dlInfoBox dd {color:#666; align-self:center; padding:1.5rem 1rem 1.5rem .5rem; text-align:right;}
+
+.dlInfoBox.sm dt, .dlInfoBox.sm dd {padding:1rem 1rem;}
+
+.dlInfoBox .dark dt {margin-bottom:-0.1rem; background:#262626; color:#fff;}
+.dlInfoBox .dark dd {color:var(--font-color);}
+
+.dlInfoBox.ty1 dt {width:45%;}
+.dlInfoBox.ty1 dd {width:55%;}
+
+.dlInfoBox.ty2 dt {width:40%;}
+.dlInfoBox.ty2 dd {width:60%;}
+
+.txtBox + .txtBox {margin-top:2rem;}
+.subTit {margin-bottom:1.5rem; font-size:1.6rem; font-weight:bold;}
+
+.bulletList {color:var(--font-color);}
+.bulletList li {padding-left:1rem; text-indent:-1rem; word-break:keep-all;}
+.bulletList li + li {margin-top:1.5rem;}
+.bulletList li::before {content:''; display:inline-block; width:.3rem; height:.3rem; margin-right:.7rem; background:#262626; border-radius:50%; vertical-align:middle; transform:translateY(-0.2rem);}
+
+.bulletTxt {font-size:1.3rem;}
+.bulletTxt::before {content:''; display:inline-block; width:.25rem; height:.25rem; margin-right:.7rem; background:#262626; border-radius:50%; vertical-align:middle; transform:translateY(-0.2rem);}
+
+.numList {color:var(--font-color);}
+.numList li {display:inline-flex; word-break:keep-all;}
+/* .numList li {list-style-type:decimal;} */
+.numList li + li {margin-top:.5rem; }
+.numList .num {margin-right:.5rem;}
+
+
+/* 프로그램 별 예약_차량/코스 선택 MO_04-0202 */
+.boxTab {margin-top:1.5rem; padding-bottom:1rem;}
+.boxTab .tabTit {display:flex; background:#efefef; border-radius:.3rem;}
+.boxTab .tabTit li {width:100%; height:4.7rem;}
+.boxTab .tabTit li a {display:inline-flex; justify-content:center; align-items:center; width:100%; height:100%; border-radius:.3rem; font-size:1.4rem; color:#666; font-weight:bold; box-sizing:border-box;}
+.boxTab .tabTit li.on a {background:#fff; border:.1rem solid #d8d8d8; color:var(--font-color); box-shadow:0 0 0.4rem rgba(0,0,0,.2);}
+
+/* 차량 정보 슬라이드 */
+.slideWrap .swiper-button-next, .slideWrap .swiper-button-prev {width:3rem; height:3rem; background-color:rgba(0,0,0,.7); background-repeat:no-repeat; background-position:center center; background-size:1.1rem auto; transform:translateY(-50%);}
+.slideWrap .swiper-button-next {background-image:url('../images/ico/ico_slide_next.png'); right:-1rem;}
+.slideWrap .swiper-button-prev {background-image:url('../images/ico/ico_slide_prev.png'); left:-1rem;}
+.slideWrap .swiper-button-next.swiper-button-disabled, .slideWrap .swiper-button-prev.swiper-button-disabled {background-color:rgba(0,0,0,.2); opacity:1;}
+
+.courseWarp .courseImg {margin:1.5rem 0 1rem;}
+.courseImg img {z-index:1;}
+.courseImg .bg {z-index:0;}
+.courseList {display:flex; flex-wrap:wrap;}
+.courseList li {display:inline-flex; align-items:center; margin:0 .5rem; font-size:1.3rem;}
+/* .courseList li + li {margin-left:1rem;} */
+.courseList li::before {content:''; display:inline-block; width:1rem; height:1rem; margin-right:.4rem; border-width:.3rem; border-style:solid; border-radius:50%; box-sizing:border-box;}
+.courseList li.color1::before {border-color:#ac1640;}
+.courseList li.color2::before {border-color:#bd4e1c;}
+.courseList li.color3::before {border-color:#508130;}
+.courseList li.color4::before {border-color:#65513e;}
+.courseList li.color5::before {border-color:#009a97;}
+
+/* 자가 차량 */
+.myCarBox {padding-top:2rem;}
+.myCarBox .series {color:#666; font-size:1.4rem; font-weight:bold;}
+.myCarBox .info {font-size:1.8rem; font-weight:bold;}
+
+
+/* 프로그램 별 예약_차량/코스 선택 MO_04-0202 */
+.section > .subTit:first-child {margin-top:2rem;}
+
+/* 주간달력 */
+.calendarWrap {}
+/* .calendarWrap {border-bottom:.1rem solid #dadada;} */
+.weeklyCalendar {display:none; width:calc(100% + 4rem); margin-left:-2rem;}
+.weeklyCalendar.on {display:block;}
+.weekDay {display:flex; overflow-x:auto; -ms-overflow-style:none; scrollbar-width:none;} /* IE and Edge, Firefox */
+.weekDay::-webkit-scrollbar {display:none;} /* Chrome, Safari, Opera */
+.weekDay li {flex:1 0 auto; width:calc((100% - 4rem) / 7); font-size:1.3rem; text-align:center;}
+.weekDay li > span {display:inline-flex; justify-content:center; align-items:center; position:relative; width:100%; height:4rem; background:#f5f5f5; border-top:.1rem solid #bbb; border-bottom:.1rem solid #bbb; box-sizing:border-box; color:var(--font-color);}
+.weekDay li + li > span::before {content:''; display:inline-block; position:absolute; top:50%; left:0; width:.1rem; height:1.1rem; background:#bbb; transform:translateY(-50%);}
+.weekDay li:first-child {margin-left:2rem;}
+.weekDay li:last-child {margin-right:2rem;}
+.weekDay li:first-child span {border-left:.1rem solid #bbb;}
+.weekDay li:last-child span {border-right:.1rem solid #bbb;}
+.weekDay li > p {display:inline-flex; justify-content:center; align-items:center; height:5.2rem;}
+.weekDay li > p > button {display:inline-block; width:3.5rem; height:3.5rem; border-radius:50%; line-height:3.5rem; color:var(--font-color); font-size:1.3rem; text-align:center; transition:all .3s ease;}
+.weekDay li > p > button:disabled {color:#999;}
+.weekDay li > p > button.on {background:var(--main-color); color:#fff;}
+
+/* 월간달력 */
+.monthlyCalendar {display:none;}
+.monthlyCalendar.on {display:block;}
+.calendarTop {display:flex; justify-content:center; align-items:center; margin-bottom:1.5rem;}
+.calendarTop .btnPrev, .calendarTop .btnNext {display:inline-block; width:2rem; height:2rem; background-repeat:no-repeat; background-position:center center; background-size:.8rem 1.2rem; text-indent:-999rem;}
+.calendarTop .btnPrev {background-image:url('../images/ico/ico_calendar_prev.png');}
+.calendarTop .btnNext {background-image:url('../images/ico/ico_calendar_next.png');}
+.calendarTop .year {height:2rem; margin:0 2rem; font-size:1.4rem; font-weight:bold;}
+
+.calendar {}
+.calendar .weekDay li:first-child {margin-left:0;}
+.calendar .weekDay li:last-child {margin-right:0;}
+.dateGrid {display:grid; grid-template-columns:repeat(7, 1fr);} /* grid-template-rows:repeat(5, 4rem); */
+.dateGrid li {display:flex; justify-content:center; align-items:center; height:4rem; }
+.dateGrid li button {display:inline-block; width:3.5rem; height:3.5rem; border-radius:50%; line-height:3.5rem; color:var(--font-color); font-size:1.3rem; text-align:center; transition:all .3s ease;}
+.dateGrid li button:disabled {color:#999;}
+.dateGrid li button.on {background:var(--main-color); color:#fff;}
+
+.btnCalChg {display:block; position:relative; width:6rem; height:2rem; margin:.5rem auto; text-indent:-999rem;}
+.btnCalChg::before {content:''; display:inline-block; position:absolute; top:50%; left:50%; width:1.2rem; height:.8rem; background:url('../images/ico/ico_calendar_fold.png') no-repeat center center / 1.2rem auto; transform:translate(-50%,-50%); transition:all .3s ease;}
+.btnCalChg.on::before {transform:rotate(180deg) translate(.6rem, 0.4rem);}
+
+.calendarInfo {display:flex; justify-content:flex-end; padding-top:.5rem; border-top:.1rem solid #dadada;}
+.calendarInfo li {position:relative; padding-left:1rem; color:var(--font-color); font-size:1.3rem;}
+.calendarInfo li + li {margin-left:1rem; color:#9a9a9a;}
+.calendarInfo li::before {content:''; display:inline-block; position:absolute; top:50%; left:0; width:.4rem; height:.4rem; border-radius:50%; background:#262626; transform:translateY(-50%);}
+.calendarInfo li + li::before {background:#9a9a9a;}
+
+.timeListWrap {margin-top:3.3rem;}
+.timeListTop {display:flex; align-items:center; height:4rem; padding-left:2rem; background:#f6f6f6; border-top:.1rem solid #bbb; border-bottom:.1rem solid #eee; box-sizing:border-box;}
+.timeListTop > span {flex:1; text-align:center;}
+.timeList {}
+.timeList li {height:4rem;}
+.timeList li > a {display:flex; align-items:center; position:relative; height:100%; padding-left:2rem; border-bottom:.1rem solid #eee; box-sizing:border-box; color:var(--font-color); font-size:1.4rem;}
+.timeList li a::before {content:''; display:inline-block; position:absolute; top:50%; left:1.5rem; width:1.5rem; height:1.1rem; background:url('../images/ico/ico_timeList_chk.png') center center / 100% auto; transform:translateY(-50%); transition:all .2s ease; opacity:0;}
+.timeList li > a::after {content:''; display:inline-block; position:absolute; top:0; left:0; width:100%; height:calc(100% + .1rem); border:.2rem solid #4d4d4d; box-sizing:border-box; transition:all .2s ease; opacity:0;}
+.timeList li.on > a::before, .timeList li.on > a::after {opacity:1;}
+.timeList li.soldOut > a {border-bottom:.1rem solid #999; background:#999; color:#fff;}
+.timeList li > a > span {flex:1; text-align:center;}
+
+.countNum {display:inline-flex; align-items:center;}
+.countNum button {display:inline-block; position:relative; width:3.5rem; height:3.5rem; border:.1rem solid #bbb; text-indent:-999rem; box-sizing:border-box;}
+.countNum button::before {content:''; display:inline-block; position:absolute; top:50%; left:50%; width:1.5rem; height:.1rem; background:#292929; transform:translate(calc(-50% + 0.05rem), calc(-50% + 0.05rem));}
+.countNum .btnPlus::after {content:''; display:inline-block; position:absolute; top:50%; left:50%; width:.1rem; height:1.5rem; background:#292929; transform:translate(calc(-50% + 0.05rem), calc(-50% + 0.05rem));}
+
+.countNum .count {display:flex; justify-content:center; align-items:center; width:4.5rem; height:3.5rem; font-size:1.4rem; color:var(--font-color);}
+.countNum.timeAfter {overflow:hidden; display:none;}
+.countNum.timeAfter.on {display:flex;}
+
+
+/* 프로그램 별 예약_에러 */
+.msgBox {padding:3rem 0; text-align:center;}
+.msgBox.full {padding:0; margin-top:calc((100vh / 2) - 6rem); transform:translateY(-50%);}
+.msgBox.mid {padding:0; margin-top:calc((100vh / 2) - 18rem); transform:translateY(-50%);}
+
+.stepBox + .section>.msgBox:first-child,
+.stepBox + .msgBox {margin-top:calc((100vh / 2) - 18rem);}
+.msgBox i {position:relative; display:inline-block; width:4.5rem; height:4.5rem; padding:2.75rem 0;}
+.msgBox i::after {content:''; display:block; width:100%; height:100%; background-repeat:no-repeat; background-position:center center; background-size:100% auto; animation:msgBoxIco 1s ease .3s;}
+.icoMsgNone::after {background-image:url('../images/ico/ico_msg_none.png');}
+.icoMsgFail::after {background-image:url('../images/ico/ico_msg_fail.png');}
+.icoMsgSuccess::after {background-image:url('../images/ico/ico_msg_success.png');}
+.icoMsgInfo::after {background-image:url('../images/ico/ico_msg_info.png');}
+.msgBox i.icoMsgPhone {width:3.2rem; height:5rem;}
+.icoMsgPhone::after {background-image:url('../images/ico/ico_msg_phone.png');}
+
+.msgBox i::before {content:''; display:inline-block; position:absolute; top:50%; left:50%; width:10rem; height:10rem; border-radius:50%; background:#f5f5f5; transform:translate(-50%, -50%) scale(0); z-index:-1; animation:msgBoxBg .5s ease .6s both;}
+
+@keyframes msgBoxBg {
+  to {transform:translate(-50%,-50%) scale(1);}
+}
+@keyframes msgBoxIco {
+	0% {transform:scale(1);}
+	25% {transform:scale(1.2);}
+	50% {transform:scale(1);}
+	70% {transform:scale(1.1);}
+	100% {transform:scale(1);}
+}
+
+.msgBox .tit {margin-top:2rem; color:var(--font-color); font-size:1.5rem;}
+.msgBox .txt {margin-top:2rem; color:#666; font-size:1.4rem;}
+
+
+/* 차량 별 예약 */
+.infoBox .tit + .dlInfoBoxWrap {margin-top:1.5rem;}
+
+
+/* 일자 별 예약 */
+.calendarWrap.sked .monthlyCalendar {display:block;}
+.timeListWrap.sked {margin-top:1rem;}
+.timeDay {margin-bottom:1.5rem; color:var(--font-color); font-size:1.4rem; font-weight:bold;}
+
+
+/* 주니어 캠퍼스 예약 */
+.section > .slideWrap:first-child {margin-top:2rem;}
+.icoPackage {display:inline-block; width:1.7rem; height:1.7rem; margin-left:.7rem; background:url(../images/ico/ico_package.png) no-repeat center center / 100% auto; font-size:0; vertical-align:middle;}
+
+.section > .txtBox:first-child, .popCon > .txtBox:first-child {margin-top:2rem;}
+.txtBox .subTit {margin-bottom:1rem;}
+.txtBox .moreView {margin-top:1rem;}
+
+.txtBox + .calendarWrap {margin-top:1.5rem;}
+
+.accodianWrap {border-top:.1rem solid #dadada;}
+.accodian {border-bottom:.1rem solid #dadada;}
+.accodian.line {border-bottom:.1rem solid #dadada !important;}
+.accoTop {display:flex; align-items:center; position:relative; width:100%; min-height:5rem; padding:1rem 0; font-weight:bold; box-sizing:border-box; cursor:pointer;}
+.accoTop::after {content:''; display:inline-block; ;position:absolute; right:0; top:50%; width:1.2rem; height:.8rem; background:url('../images/ico/ico_accodian.png') no-repeat center center / 1.2rem auto; transform:translateY(-50%) rotate(0); transition:all .3s ease;}
+.accoCon {display:none; padding:1rem 0; border-top:.1rem solid #dadada;}
+.accoCon .timeListWrap {margin-top:0;}
+.accodian.on .accoCon {display:block;}
+.accodian.on .accoTop::after {transform:translateY(-50%) rotate(180deg);}
+
+.accodianWrap.ty2 {border-top:none;}
+.accodianWrap.ty2 .accodian {margin-top:.5rem; border-bottom:none;}
+.noFold .accoTop {padding-bottom:.5rem;}
+.noFold .accoTop::after {display:none;}
+.accoTop .subTit {margin-bottom:0;}
+.accoTop .btnR {margin-left:auto;}
+.accoNone + .accoCon {padding:0; border-top:none; border-bottom:none;}
+.accoCon > .dlInfoBox {border-top:none;}
+
+.accodianWrap .accodian.lineOn {border-bottom:none;}
+.accodianWrap .accodian.lineOn.on {border-bottom:0.1rem solid #dadada;}
+
+.accodianWrap .accodian.lineOff {border-bottom:0.1rem solid #dadada;}
+.accodianWrap .accodian.lineOff.on {border-bottom:none;}
+
+.bdTopTit {margin-bottom:.5rem; padding:1.1rem 1rem; border-top:.1rem solid #bbb; background:#f6f6f6; color:var(--font-color); font-size:1.4rem;}
+
+/* 패키지 할인 적용 안내 팝업 */
+.popCon > .bulletList:first-child, .popCon > .bulletList:first-child {margin-top:2rem;}
+.calendarWrap + .accodianWrap {margin-top:3rem;}
+
+.dlInfoBoxWrap + .txtBox, .tableWrap + .txtBox {margin-top:1.5rem;}
+.dlInfoBox dt > p + .fcGray666, .countNum + .fcGray666 {margin-top:.5rem;}
+.total {margin-top:1.5rem; font-size:1.6rem; text-align:right;} /* display:flex; justify-content:flex-end; align-items:center;  */
+.total .won {font-weight:bold;}
+
+.tableWrap {overflow:hidden;}
+table {width:calc(100% + .2rem); margin-left:-0.1rem;}
+/* table thead {border-top:.1rem solid #bbb;}
+table th, table td {padding:1rem .5rem; border-left:.1rem solid #dadada; border-bottom:.1rem solid #dadada; text-align:center; font-size:1.4rem;}
+table th {background:#f6f6f6; color:var(--font-color); font-weight:normal;}
+table td {color:#666;}
+table th:first-child, table td:first-child {border-left:none;} */
+table th, table td {padding:1rem .5rem; border:.1rem solid #dadada; text-align:center; font-size:1.4rem;}
+table th {border-top:.1rem solid #bbb;}
+table th {background:#f6f6f6; color:var(--font-color); font-weight:normal;}
+table td {color:#666;}
+
+.row table {border-top:.1rem solid #bbb;}
+.row table th, .row table td {padding:1.5rem 1rem; border-width:0 0 .1rem 0; word-break:keep-all;}
+.row table th {text-align:left;}
+.row table td {text-align:right;}
+
+
+.dlInfoBox.total {margin-top:1rem;}
+.dlInfoBox.total dt, .dlInfoBox.total dd {background:#262626; color:#fff;}
+.dlInfoBox.total dd {font-weight:bold;}
+
+
+/* 에디터 영역 */
+.editBox h1, .editBox h2, .editBox h3, .editBox h4, .editBox h5, .editBox h6 {font-weight:bold;}
+.editBox h1 {font-size:1.8rem;}
+.editBox h2 {font-size:1.7rem;}
+.editBox h3 {font-size:1.6rem;}
+.editBox h4 {font-size:1.5rem;}
+.editBox h5 {font-size:1.4rem;}
+.editBox h6 {font-size:1.4rem;}
+.editBox img {width:auto; max-width:100%;}
+
+
+/* 드라이빙_예약내역 확인 */
+.dlInfoList {padding-bottom:1rem; border-bottom:.1rem solid #dadada;}
+.dlInfoList dl {display:flex; margin-bottom:1rem;}
+.dlInfoList dt, .dlInfoList dd {width:50%; box-sizing:border-box;}
+.dlInfoList dt {display:flex; flex-direction:column; justify-content:center; flex-wrap:wrap; flex:0 0 auto; color:var(--font-color); text-align:left;} /* align-items:center; */ 
+.dlInfoList dd {align-self:center; text-align:right;}
+
+.formBoxWrap {margin-top:2rem;}
+.formBox {margin-top:1rem;}
+.formBox .tit {display:block; position:relative; margin-bottom:0.5rem; color:var(--font-color); font-size:1.4rem; text-align:left;}
+.ess {margin-left:.2rem; font-size:0 !important; vertical-align:middle;}
+.ess::after {content:"*"; font-size:1.3rem; color:#d20000;}
+
+.fellowBox {margin-top:1.5rem;}
+.fellowBox .fellow {display:none; justify-content:space-between; align-items:center; margin-top:1.5rem;}
+.fellowBox .fellow.on {display:flex;}
+
+.txtError {margin-top:.6rem; font-size:1.3rem; color:#d20000;}
+.formBox .txtError {display:none;}
+.formBox .txtError.on {display:block;}
+
+.agreePopCheckBox a {display:flex; align-items:center; position:relative; padding-right:1.5rem; font-size:1.4rem; color:#666;}
+.agreePopCheckBox a + a {margin-top:.8rem;}
+.agreePopCheckBox a .agree {display:inline-flex; justify-content:center; align-items:center; flex:0 0 auto; width:6.2rem; height:3.5rem; margin-right:1rem; border:.1rem solid #d1d4db; border-radius:.2rem; font-size:1.4rem;}
+.agreePopCheckBox a.on .agree {border-color:#3db014; color:#3db014;}
+.agreePopCheckBox a .agree::before {content:""; display:block; width:1.5rem; height:1.1rem; margin-right:.5rem; background:url(../images/ico/ico_agree_check.png) no-repeat center center/100% auto;}
+.agreePopCheckBox a.on .agree::before {
+	background-image:url(../images/ico/ico_agree_check_on.png);
+}
+.agreePopCheckBox a::after {content:""; display:inline-block; position:absolute; top:50%; right:0; width:.8rem; height:1.2rem; background:url(../images/ico/ico_arrow2.png) no-repeat center center/100% auto; transform:translateY(-50%);
+}
+
+/* 탑승 유의 사항 약관 동의 팝업 */
+.icoAgreeList {margin-bottom:2rem; padding-bottom:2.5rem; border-bottom:.1rem solid #dadada;}
+.icoAgreeList li {margin-top:2rem;}
+.icoAgreeList li .tit {font-size:1.6rem; font-weight:bold; color:var(--font-color);}
+.icoAgreeList li .tit::before {content:''; display:inline-block; width:2.5rem; height:2.5rem; margin-right:.5rem; vertical-align:middle; background-repeat:no-repeat; background-position:center center; background-size:100%;}
+.icoAgreeList li:first-child .tit::before {background-image:url('../images/ico/ico_agree1_1.png');}
+.icoAgreeList li:nth-child(2) .tit::before {background-image:url('../images/ico/ico_agree1_2.png');}
+.icoAgreeList li:last-child .tit::before {background-image:url('../images/ico/ico_agree1_3.png');}
+.icoAgreeList li .refMark {margin-left:3rem; color:var(--font-color); font-size:1.4rem;}
+.icoAgreeList li .txt {margin-left:3rem;}
+.icoAgreeList li .txtError {margin-left:3rem; padding-left:1.5rem;}
+
+.checkBox.fz15 label {font-size:1.5rem;}
+.checkBox.fz15 input[type=checkbox] + label::before {top:.2rem;}
+
+
+/* 드라이빙_결제내역 상세 */
+.accodian .payTit dt, .accodian .payTit dd {transition:all .3s ease;}
+.accodian.on .payTit dt, .accodian.on .payTit dd {color:var(--font-color); font-weight:bold;}
+
+.cashChoice {display:flex; flex-wrap:wrap; margin-bottom:2.5rem;}
+.cashChoice li {width:calc((100% - 1rem) / 2); margin-top:1rem;}
+.cashChoice li:nth-child(2n) {margin-left:1rem;}
+.cashChoice li:first-child, .cashChoice li:nth-child(2) {margin-top:0;}
+.cashChoice button {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%; height:4.8rem; padding:0 1.5rem; border:.1rem solid #bbb; border-radius:0.3rem; color:#666; font-size:1.4rem; text-align:right;}
+
+
+.cashChoice button::before {content:""; display:block; visibility:hidden; position:absolute; top:-0.1rem; left:-0.1rem; right:-0.1rem; bottom:-0.1rem; padding-right:2rem; border:.2rem solid #4d4d4d; border-radius:.3rem; box-sizing:border-box; opacity:0; transition:all .3s ease;}
+.cashChoice .on button {color:var(--font-color);}
+.cashChoice .on button::before {visibility:visible; opacity:1;}
+
+.cashChoice button i {display:inline-block; font-size:0; vertical-align:middle; transition: all .3s ease;}
+.icoCash1 {width:2.2rem; height:1.4rem; background:url('../images/ico/ico_cash1.png') no-repeat center center / 100% auto;}
+.icoCash2 {width:3.5rem; height:1.3rem; background:url('../images/ico/ico_cash2.png') no-repeat center center / 100% auto;}
+.icoCash3 {width:3.1rem; height:1.3rem; background:url('../images/ico/ico_cash3.png') no-repeat center center / 100% auto;}
+.icoCash4 {width:4.1rem; height:1.3rem; background:url('../images/ico/ico_cash4.png') no-repeat center center / 100% auto;}
+
+.on .icoCash1 {width:2.2rem; height:1.4rem; background:url('../images/ico/ico_cash1_on.png') no-repeat center center / 100% auto;}
+.on .icoCash2 {width:3.5rem; height:1.3rem; background:url('../images/ico/ico_cash2_on.png') no-repeat center center / 100% auto;}
+.on .icoCash3 {width:3.1rem; height:1.3rem; background:url('../images/ico/ico_cash3_on.png') no-repeat center center / 100% auto;}
+.on .icoCash4 {width:4.1rem; height:1.3rem; background:url('../images/ico/ico_cash4_on.png') no-repeat center center / 100% auto;}
+
+.accodianWrap + .subTit {margin-top:2rem;}
+
+.icoChkList {}
+.icoChkList li {position:relative; padding-left:2rem; margin-top:1rem;}
+.icoChkList li::before {content:''; display:inline-block; position:absolute; top:.6rem; left:0; width:1.1rem; height:.8rem; background:url('../images/ico/ico_check1.png') no-repeat center center / 100% auto;}
+
+.agreeList li {display:flex; position:relative; margin-top:.5rem; padding-right:3rem;}
+.agreeList li .checkBox {min-height:3rem;}
+.agreeList li > a {display:inline-block; position:absolute; top:0; right:-1.1rem; width:3rem; height:3rem; background:url('../images/ico/ico_arrow2.png') no-repeat center center / .8rem 1.2rem; font-size:0; text-indent:-999rem;}
+
+/* 할인 수단 적용 팝업 */
+.lineTab {margin-top:1.5rem;}
+.lineTab .tabTit {display:flex; border-bottom:.1rem solid #4d4d4d;}
+.lineTab .tabTit li {position:relative; flex:1; height:4.8rem; border-top:.1rem solid #bbb; border-right:.1rem solid #bbb;}
+.lineTab .tabTit li:first-child {border-left:.1rem solid #bbb;}
+.lineTab .tabTit li > a {position:absolute; top:0; left:0; display:flex; justify-content:center; align-items:center; width:100%; height:100%; margin:-0.1rem; border:.1rem solid rgba(0, 0, 0, 0); color:#666; text-align:center; transition:all .3s ease;}
+.lineTab .tabTit li.on > a {border-top:.1rem solid #4d4d4d; border-left:.1rem solid #4d4d4d; border-right:.1rem solid #4d4d4d; border-bottom:.1rem solid #fff; color:var(--font-color); font-weight:bold;}
+
+.lineTab + .tabConWrap .tabCon {padding-top:2rem;}
+
+.discountBoxWrap {padding:1.5rem; background:#f6f6f6;}
+.discountBox .tit {display:flex;}
+.discountBox .tit .left {margin-right:auto;}
+.discountBox .tit .left::before {content:''; display:inline-block; width:.3rem; height:.3rem; margin-right:.7rem; background:#262626; border-radius:50%; vertical-align:middle;}
+.discountBox .tit .right {margin-left:auto;}
+
+.popCon > .discountBoxWrap:first-child {margin-top:1.5rem;}
+.discountBox + .discountBox {margin-top:1.5rem; padding-top:1.5rem; border-top:.1rem solid #dadada;}
+
+.voucherBox {padding:1.5rem 0;}
+.voucherBox + .voucherBox {border-top:.1rem solid #dadada;}
+
+.voucherBox .selectContBox {margin-top:1rem;}
+.selectContBox {position:relative;}
+.selectContBox > a {display:block; position:relative; border:.1rem solid #bbb; border-radius: .3rem; padding:1.4rem 3rem 1.4rem 1rem; color:#888; align-items:center; font-size:1.4rem;}
+.selectContBox > a::before {content:''; display:block; position:absolute; top:50%; right:1.5rem; width:1.2rem; height:.8rem; background:url('../images/common/ico_select.png') no-repeat center center / 100%; transform:translateY(-50%); transition:all .3s ease;}
+.selectContBox > a.disabled {background:#f2f2f2;}
+.selectContBox > a .tit {color:var(--font-color);}
+
+.selectContBox .view {display:none; overflow:hidden auto; position:absolute; top:calc(100% + .6rem); left:0; width:100%; max-height:23.5rem; background:#fff; border:.1rem solid #bbb; border-radius:.3rem; box-sizing:border-box; z-index:10;}
+.selectContBox .view > a {display:block; padding:1rem .9rem;}
+.selectContBox .view > a p {color:var(--font-color); font-size:1.4rem;}
+.selectContBox p + p {margin-top:.3rem;}
+.selectContBox .view > a p.term {color:#888;}
+.selectContBox .view > a + a {border-top:.1rem solid #dadada;}
+.selectContBox .view > a.on {background:#d6d6d6;}
+
+.selectContBox .view > a.reset {padding:1.5rem 0.9rem;}
+
+.selectContBox .view > a.disabled {cursor:auto; background:#f2f2f2;}
+.selectContBox .view > a.disabled * {color:#888 !important;}
+.selectContBox.on > a::before {transform:translateY(-50%) rotate(180deg);}
+
+.colorBox {padding:1.5rem 1rem; background:#dde8f9;}
+
+.accoCon > .dlInfoBoxWrap + .dlInfoBoxWrap {margin-top:1.5rem;}
+
+.mapWrap {padding-top:.5rem;}
+.mapTit {margin-bottom:1rem; font-weight:bold;}
+.mapInfo .addr {margin-top:.5rem; font-weight:bold;}
+.mapInfo .moreView {margin-top:1rem;}
+
+
+/* 주니어캠퍼스_예약내역 확인 및 결제 */
+.toggleRadio {display:flex; height:4.8rem;}
+.toggleRadio input {position:absolute; opacity:0;}
+.toggleRadio label {display:flex; align-items: center; justify-content: center; flex:1 1 auto; width:50%; height:100%; border:.1rem solid #d1d4db; border-radius:.3rem; background:none; color:var(--font-color); font-size:1.4rem; transition:all .3s ease; cursor:pointer;}
+.toggleRadio label ~ label {margin-left:1rem;}
+.toggleRadio input:checked + label {border-color:#262626; color:#fff; background:#262626; z-index:1;}
+
+.toggleRadio.ty2 label {position:relative; background:#fff; color:#666;}
+.toggleRadio.ty2 label::before {content:''; display:block; position:absolute; top:-0.1rem; left:-0.1rem; right:-0.1rem; bottom:-0.1rem; border:.2rem solid #262626; border-radius:.3rem; opacity:0; transition:all .3s ease;}
+.toggleRadio.ty2 label ~ label {margin-left:.5rem;}
+.toggleRadio.ty2 input:checked + label {border-color:#d1d4db; color:var(--font-color); font-weight: normal; background:#fff;}
+.toggleRadio.ty2 input:checked + label::before {opacity:1;}
+
+.bdTopLine {border-top:.1rem solid #dadada;}
+.bdBotLine {border-bottom:.1rem solid #dadada;}
+
+
+/* 마이페이지 */
+.mypageInfoBox {margin:2rem 0; border:.2rem solid var(--main-color);}
+
+.mypageInfoBox .top {display:flex; align-items:center; padding:2rem;}
+.mypageInfoBox .top .img {display:flex; justify-content:center; align-items:center; flex:0 0 auto; width:7rem; height:7rem; background:#dde8f9;}
+.mypageInfoBox .top .img img {width:100%; height:100%; object-fit:contain;}
+.mypageInfoBox .top .txt {padding:0 2rem; color:var(--font-color); font-size:1.6rem;}
+
+.mypageInfoBox .bot {padding:2rem 0; background:#f5f5f5;}
+.mypageInfoBox .info {display:flex; align-items:center;}
+.mypageInfoBox .info li {position:relative; flex:1.3; text-align:center;}
+.mypageInfoBox .info li + li {flex:1;}
+.mypageInfoBox .info li + li::before {content:''; position:absolute; top:50%; left:0; width:.1rem; height:100%; background:#bbb; transform:translateY(-50%);}
+.mypageInfoBox .info li + li + li {flex:1;}
+.mypageInfoBox .info li > p {color:var(--font-color); font-size:1.3rem;}
+.mypageInfoBox .info li > p + p {margin-top:.5rem;}
+.mypageInfoBox .info li > p .moreView {margin-top:0;}
+
+
+.bannerBox {width:calc(100% + 4rem); margin-left:-2rem; margin-bottom:1rem;}
+
+.mypageMenuBox {padding:1.5rem 0 .5rem; border-bottom:.1rem solid #bbb;}
+.mypageMenuBox li {margin-bottom:1rem;}
+.mypageMenuBox li a {display:flex; align-items:center; position:relative; padding:.3rem 1.5rem .3rem 0; font-size:1.4rem; color:#666;}
+.mypageMenuBox li a::after {content:""; display:inline-block; position:absolute; top:50%; right:0; width:.8rem; height:1.2rem; background:url(../images/ico/ico_arrow2.png) no-repeat center center/100% auto; transform:translateY(-50%);
+}
+
+
+/* 마이페이지_예약내역 */
+.periodBox {margin-bottom:2rem;}
+.periodBox .directBox {display:none;}
+
+/* 날짜 선택 datepicker */
+.datepickerBox {display:flex;}
+.datepickerBox .inputBox {position:relative;}
+.datepickerBox .inputBox + .inputBox {margin-left:.5rem;}
+.datepickerBox .inputBox input {padding:0 3.5rem 0 1rem;}
+.datepickerBox .inputBox .ico_datepicker {position:absolute; top:50%; right:1rem; vertical-align:top; cursor:pointer; width:2.3rem; height:2.5rem; background:url('../images/ico/ico_datepicker.png') no-repeat center center / contain; border:none; outline:none; text-indent:-999rem; transform:translateY(-50%);}
+/* .ui-datepicker {display:none; padding:.3rem; background:#fff; border:.1rem solid #c5c5c5; border-radius:.3rem;}
+.ui-datepicker-trigger {position:absolute; top:50%; right:1rem; vertical-align:top; cursor:pointer; width:2.3rem; height:2.5rem; background:url('../images/ico/ico_datepicker.png') no-repeat center center / contain; border:none; outline:none; text-indent:-999rem; transform:translateY(-50%);}
+.datepickerBox .inputBox input:disabled + .ui-datepicker-trigger {opacity:.5;}
+.ui-datepicker .ui-datepicker-header {position:relative; padding:0.5rem 0; background:#e9e9e9; border:.1rem solid #ddd; border-radius:.3rem; color:#333;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position:absolute; top:50%; margin-top:-1rem; width:2rem; height:2rem; text-indent:-999rem;}
+.ui-datepicker .ui-datepicker-prev {left:.2rem;}
+.ui-datepicker .ui-datepicker-next {right:.2rem;}
+.ui-widget-header .ui-icon {overflow:hidden; display:block; position:absolute; top:50%; left:50%; width:1.6rem; height:1.6rem; margin-top:-.8rem; margin-left:-.8rem; background-image:url('../images/jqueryui/ui-icons_444444_256x240.png'); background-repeat:no-repeat;}
+.ui-icon-circle-triangle-w {background-position:-8rem -19.2rem;}
+.ui-icon-circle-triangle-e {background-position:-4.8rem -19.2rem;}
+.ui-datepicker .ui-datepicker-title {margin:0 2.5rem; font-size:1.3rem; text-align:center;}
+.ui-datepicker table {font-size:1.3rem;}
+.ui-datepicker thead {border-top:0;}
+.ui-datepicker th {width:2.5rem; padding:0.5rem 0.3rem; background:#fff; border:0; font-size:1.3rem; text-align:center;}
+.ui-datepicker td {border:0; padding:.1rem;}
+.ui-datepicker td > a {display:block; padding:.3rem .2rem; text-align:right; font-size:1.3rem; text-decoration:none;}
+.ui-datepicker .ui-state-default {background:#f6f6f6; border:.1rem solid #c5c5c5; color:#454545; font-weight:normal;} */
+
+
+.listTop {display:flex; align-items:center; padding:1.5rem 0 1rem; border-bottom:.1rem solid #bbb;}
+
+.orderList {padding:1.5rem 0; border-bottom:.1rem solid #bbb;}
+.orderList.topLine {border-top:.1rem solid #bbb;}
+.orderList .top {display:flex; align-items:center; margin-bottom:1.5rem;}
+.orderList .top .txtBox {margin-left:1.5rem;}
+.orderList .top .img {flex:0 0 auto; width:9.2rem; height:7rem; background:#efefef;}
+.orderList .top .img img {width:100%; height:100%; object-fit:cover;}
+
+.orderList .dlInfoList {padding-bottom:0; border-bottom:none;}
+.dlInfoList .moreView {margin-top:0;}
+.dlInfoList.ty2 dt {width:35%;}
+.dlInfoList.ty2 dd {width:75%;}
+
+
+/* 마이페이지_예약내역 상세 */
+.dlInfoBoxWrap.dimCancel {position:relative;}
+.dlInfoBoxWrap.dimCancel::after {content:"취소 완료"; display:flex; justify-content:center; align-items:center; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.7); color:#fff; font-size:1.4rem;}
+
+
+/* 프로그램 이수증 팝업 */
+.txtLogo {font-size:1.7rem; font-weight:bold; color:var(--font-color);}
+.ico_logo1 {display:inline-block; width:20rem; height:2.6rem; background:url('../images/ico/ico_bmw_logo1.png') no-repeat center center / contain; text-indent:-999rem;}
+.txtLogo .ico_logo1 {margin-right:.5rem; vertical-align:.2rem;}
+
+.signBox {display:flex; margin-top:3rem;}
+.signBox + .signBox {margin-top:1.5rem;}
+.signBox .info .tit {padding-bottom:.5rem; border-bottom:.1rem solid #dadada; font-size:1.4rem; font-weight:bold;}
+.signBox .info .txt {padding-top:.5rem;}
+.signBox .signImg {margin-left:2rem;}
+.signBox .signImg img {display:block; width:10rem; height:6.5rem; object-fit:contain;}
+
+
+/* Driving 배지 미션 */
+.myBadgeBox {margin:2rem 0; padding:2rem; border:.1rem solid #bbb;}
+.myBadgeBox .top {display:flex; align-items:center;}
+.myBadgeBox .top .img {display:flex; justify-content:center; align-items:center; flex:0 0 auto; width:7rem; height:7rem; background:#dde8f9;}
+.myBadgeBox .top .img img {width:100%; height:100%; object-fit:contain;}
+.myBadgeBox .top .txt {padding:0 2rem; color:var(--font-color); font-size:1.4rem;}
+.myBadgeBox > p {word-break:keep-all;}
+
+.badgeList {display:flex; flex-wrap:wrap; justify-content:space-between; } /* padding-bottom:1.5rem; border-bottom:0.1rem solid #bbb; */
+.badgeList li {flex:0 0 auto; width:calc((100% - 2rem) / 3); margin-top:1.5rem;}
+.badgeImg {overflow:hidden; display:block; position:relative; width:100%; height:0; margin-bottom:1rem; padding-top:100%; background:#efefef; border:.1rem solid #ddd;}
+.badgeImg::after {content:'미획득'; position:absolute; top:50%; left:50%; padding-top:3.5rem; background:url('../images/ico/ico_lock.png') no-repeat center top / 2.2rem 2.9rem; color:#999; text-align:center; transform:translate(-50%,-50%);}
+.badgeImg img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; transition:all .3s ease; z-index:1;}
+.badgeList .tit {text-align:center;}
+
+
+/* 배지 상세 */
+.badgeDetail {margin-top:5rem; text-align:center;}
+.badgeDetail .img {margin:0 auto; width:15rem; height:15rem; background:#dde8f9;}
+.badgeDetail .img img {width:100%; height:100%; object-fit:contain;}
+.badgeDetail .tit {margin-top:1.5rem; margin-bottom:8rem; font-size:1.6rem; font-weight:bold;}
+.badgeDetail .txt {line-height:2.5rem; word-break:keep-all;}
+
+
+/* BMW 바우처 */
+.voucherList {}
+.voucherList li {overflow:hidden; margin-top:1rem; border:.1rem solid #bbb; border-top-right-radius:1.5rem; border-bottom-left-radius:1.5rem;}
+.voucherList .voucherTit {display:flex; align-items:center; height:4.7rem; padding:0 0 0 1.5rem; background:#262626; color:#fff;}
+.voucherTit .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:.5rem; color:#fff; font-size:1.6rem; font-weight:bold;}
+.voucherTit .more {flex:0 0 auto; width:3rem; height:3rem; margin-left:auto;  margin-right:.4rem; background:url('../images/ico/ico_arrow4.png') no-repeat center center / .8rem 1.2rem; text-indent:-999rem;}
+.voucherTit .end {display:flex; justify-content:center; align-items:center; flex:0 0 auto; width:6.9rem; height:3.2rem; margin-left:auto; margin-right:1.5rem; background:#e6e6e6; border-radius:3rem; color:#444; font-size:1.2rem; font-weight:bold;}
+
+.voucherList .voucherCon {padding:1.5rem;}
+.voucherCon .dc {margin:.7rem 0; font-size:1.9rem; font-weight:bold;}
+.voucherCon > p {font-size:1.3rem;}
+.voucherCon > p + p {margin-top:.2rem;}
+
+
+/* 회원정보 수정 */
+.checkBoxWrap {display:flex; flex-wrap:wrap;}
+.checkBoxWrap .checkBox + .checkBox {margin-left:2.5rem;}
+
+.pwdBox .inputBox input {padding-right:5.5rem;}
+.pwdBox .inputBox {margin-top:.5rem;}
+.pwdBox .inputBox:first-child {margin-top:0;}
+.pwdBox .txtError.on + .inputBox {margin-top:1rem;}
+.btnPwdShow {position:absolute; top:0rem; right:0rem; width:5rem; height:100%; margin:0; background:url('../images/common/btn_pwdShow.png') no-repeat center center / 2.1rem 1.7rem; font-size:0; text-indent:-999rem; transition: all .3s ease;}
+.show .btnPwdShow {background:url('../images/common/btn_pwdHide.png') no-repeat center center / 2.1rem 1.7rem;}
+
+.pwChkList {}
+.pwChkList li {position:relative; padding-left:2rem; margin-top:.5rem; margin-left:.5rem; text-align:left; font-size:1.3rem;}
+.pwChkList li + li {}
+.pwChkList li::before {content:''; display:inline-block; position:absolute; top:.4rem; left:0; width:1.3rem; height:1rem; transition:all .3s ease;}
+.pwChkList li.success::before {background:url('../images/common/ico_pwChk.png') no-repeat center center / 1.3rem .9rem;}
+.pwChkList li.fail {color:#d20000;}
+.pwChkList li.fail::before {background:url('../images/common/ico_pwChk_fail.png') no-repeat center center / 1rem 1rem;}
+
+
+/* DC 서비스 해지 */
+.termsBox {max-height:30rem; overflow-y:auto; padding:1.5rem; background:#dfdfdf; box-sizing:border-box;}
+.termsBox h1, .termsBox h2, .termsBox h3, .termsBox h4, .termsBox h5, .termsBox h6 {font-weight:bold;}
+/* .termsBox h1 {font-size:1.8rem;}
+.termsBox h2 {font-size:1.7rem;}
+.termsBox h3 {font-size:1.6rem;}
+.termsBox h4 {font-size:1.5rem;}
+.termsBox h5 {font-size:1.4rem;}
+.termsBox h6 {font-size:1.4rem;} */
+
+
+/* 대관신청 */
+.checkBoxWrap.full {margin-top:1rem;}
+.checkBoxWrap.full .checkBox {width:100%;}
+.checkBoxWrap.full .checkBox + .checkBox {margin-left:0; margin-top:1.5rem;}
+
+
+/* tooltip */
+.tooltipWrap {display:inline-block; position:relative; vertical-align: middle;}
+.tooltipWrap .tooltip {overflow:hidden; display:block; width:2rem; height:2rem; font-size:0; background: url('../images/ico/ico_tooltip1.png') no-repeat center center / 100%;}
+.tooltipWrap .tooltip.ty2 {background-image:url('../images/ico/ico_tooltip2.png')}
+
+.tooltipWrap .tooltipPop {display:none; position:absolute; bottom:calc(100% + 1rem); left:0; width:0rem; padding:1rem 3rem 1rem 1rem; border:.1rem solid #dddddd; border-radius:.3rem; font-size:1.3rem; color:#666666; background:#fff; z-index:10; text-align:left; box-sizing:border-box;}
+.tooltipWrap .tooltipPop::before {content:''; display:block; position:absolute; bottom:-.5rem; left:var(--tip-left); width:.5rem; height:.5rem; border:.1rem solid #dddddd; border-color:#dddddd transparent transparent #dddddd; transform: rotate(225deg); background:#fff;}
+.tooltipWrap .tooltipPop .btnClose {display:block; position:absolute; top:1rem; right:1rem; width:2rem; height:2rem; font-size:0;}
+.tooltipWrap .tooltipPop .btnClose::before {content:''; display:block; position:absolute; top:50%; left:50%; width:.2rem; height:1.5rem; background:#262626; transform-origin:50% 50%; transform:translate(-50%, -50%) rotate(45deg);}
+.tooltipWrap .tooltipPop .btnClose::after {content:''; display:block; position:absolute; top:50%; left:50%; width:1.5rem; height:.2rem; background:#262626; transform-origin:50% 50%; transform:translate(-50%, -50%) rotate(45deg);}
+.tooltipWrap .tooltipPop.popup {position:fixed; top:50%; left:50% !important; right:auto !important; z-index:150; transform: translate(-50%,-50%);}
+.tooltipWrap .tooltipPop.popup::before {display:none;}
+
+
+/* faq */
+.faqBox .accoTop {flex-wrap:wrap; padding:1.5rem 2rem 1.5rem 0;}
+.faqBox .accoTop > p {width:100%;}
+.faqBox .accoTop .cate {color:#666; font-size:1.3rem; font-weight:normal;}
+.faqBox .accoTop .tit {font-size:1.5rem;}
+.faqBox .accoCon {padding:1.5rem 1rem; background:#efefef;}
+.faqBox .accoCon .txt {color:#666;}
+
+.fileBox {display:flex; width:100%; margin-top:2rem;}
+.fileBox .file {flex:0 0 auto; position:relative; padding-right:1rem;}
+.fileBox .file::after {content:''; display:block; position:absolute; top:.5rem; right:0; width:.1rem; height:1rem; background:#666;}
+.fileBox .fileGroup {padding-left:1rem;}
+.fileBox .fileGroup a {overflow:hidden; position:relative; min-height:1.5rem; padding-right:2rem; text-decoration:underline; box-sizing:border-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; text-overflow:ellipsis; word-break:break-all;}
+.fileBox .fileGroup a::after {content:''; display:inline-block; position:absolute; right:0; top:50%; width:1.5rem; height:1.5rem; background:url('../images/ico/ico_file.png') no-repeat center center / contain; transform:translateY(-50%);}
+.fileBox .fileGroup a + a {margin-top:1rem;}
+/* .fileBox .fileGroup i {display:inline-block; position:absolute; right:0; top:50%; width:1.5rem; height:1.5rem; background:url('../images/ico/ico_file.png') no-repeat center center / contain; transform:translateY(-50%);} */
+
+
+/* 뉴스 */
+.newsBox {padding-bottom:1rem; border-bottom:.1rem solid #dadada;}
+.newsBox .news {margin-top:1rem;}
+.newsBox .imgBox {margin-bottom:0; padding-top:68.25%;} /* 비율 640*430 */
+.newsBox .imgBox img.imgDefault {object-fit:none; background:#dfdfdf;}
+.news .tit {margin-top:1rem; font-size:1.5rem; font-weight:bold;}
+.news .date {margin-top:.5rem; font-size:1.3rem; color:#666;}
+
+/* 뉴스_상세 */
+.boardDetailBox .top {padding:1.5rem 0; border-bottom:.1rem solid #bbb;}
+.boardDetailBox .top .tit {font-size:1.6rem; font-weight:bold;}
+.boardDetailBox .top .date {margin-top:.5rem; color:#666; font-size:1.4rem;}
+.boardDetailBox .editBox {padding:1.5rem 0; color:#666;}
+.boardDetailBox .fileBox {margin-top:1.5rem;}
+
+
+/* 로그인 */
+.loginBox {display:flex; flex-direction:column; min-height:calc(100vh - 6rem); background:#151515; box-sizing:border-box;}
+.loginBox .greet {margin:0 auto; padding:6rem 0;}
+.greet .tit {color:#fff; font-size:2rem; font-weight:bold;}
+.greet .icoTxt {position:relative; margin:3rem 0; padding-left:2.5rem; color:#fff; font-size:1.5rem;}
+.greet .icoTxt::before {content:''; display:inline-block; position:absolute; top:.4rem; left:0; width:1.8rem; height:1.2rem; background:url('../images/common/ico_bmw_color.png') no-repeat center center / contain;}
+.greet .icoChkList li {padding-left:2.5rem; margin-top:2rem; color:#999;}
+.greet .icoChkList li::before {top:.4rem; width:1.5rem; height:1.1rem; background:url('../images/ico/ico_check2.png') no-repeat center center / 100% auto;}
+
+.loginBox .btnWrap {flex-flow:column;}
+.loginBox .btnWrap .btn {height:4.8rem;}
+.loginBox .btnWrap .btn + .btn {margin-top:1rem;}
+
+
+/* DC 서비스 이용 동의 */
+.txtBox .ico_logo1 {width:16.6rem; height:2.1rem; margin-bottom:1rem;}
+.agreeAll {margin:2rem 0 1.5rem; padding:1.5rem; border:.1rem solid #bbb; border-radius:.3rem;}
+
+.borderBox {border:.1rem solid #bbb; border-radius:.3rem;}
+
+/* DC 서비스 이용 내역 통합 */
+.msgBox .refMark {display:block;}
+.tooltipWrap + .moreView {margin-top:0;}
+
+
+/* 메인 */
+#container #headerWrap {position:absolute; width:100%;}
+#container #header {background:none;}
+
+.visualSlide {position:relative; padding:0 !important;}
+.visualSlide .swiper-pagination {width:auto; bottom:3rem; left:2rem;}
+.visualSlide .swiper-pagination-bullet {width:.5rem; height:.5rem; background:#a2a2a2; opacity:1; transition:all .3s ease;}
+.visualSlide .swiper-pagination-bullet-active {width:.8rem; height:.8rem; background:#fff;}
+.visualSlide .swiper-slide .visualImg.imgBox {margin-bottom:0; padding-top:138.89%; background:#fff;}
+.visualSlide .swiper-slide .visualImg img {width:100%; height:100%; object-fit:cover; animation:visualMotion 5s linear infinite alternate;}/* size 720*1000 */
+.visualSlide .swiper-slide .visualCon {position:absolute; bottom:13.5rem; left:2rem; color:#fff; font-size:2.6rem; transform:translateY(1rem); opacity:0; transition:all .5s ease; text-shadow:0 0 0.7rem #000;}
+.visualSlide .swiper-slide.swiper-slide-active .visualCon {transform: translateY(0rem); opacity:1;}
+.visualSlide .swiper-slide .btn {position:absolute; bottom:6rem; left:2rem; width:20.8rem; height:4.9rem; margin-top:2.5rem; border-width:.2rem; font-size:1.5rem; opacity:0; transition:all .5s ease;}
+.visualSlide .swiper-slide.swiper-slide-active .btn {opacity:1;}
+
+@keyframes visualMotion {
+	0% {transform: scale(1) translateZ(0);}
+	100% {transform: scale(1.05) translateZ(0.01rem);}
+}
+
+.sec01 {padding:2rem;}
+.reservationBox {padding:2.5rem 0 3rem; border:.1rem solid #dadada; box-shadow:0 0 0.75rem rgba(0,0,0,.15);}
+
+.sectTit {margin-bottom:1.5rem; font-size:1.9rem; font-weight:bold;}
+.sectTit > a::after {content:''; display:inline-block; width:.8rem; height:1.3rem; margin-left:1rem; background:url('../images/ico/ico_arrow5.png') no-repeat center center / contain;}
+
+.reservationBox .sectTit {text-align:center;}
+
+.reservationList {display:flex; justify-content:space-between; margin-top:1.3rem; padding:0 4rem;}
+.reservationList li {text-align:center;}
+.reservationList li a {display:flex; align-items:center; flex-direction:column;}
+.reservationList li a::before {content:''; display:inline-block; width:5.1rem; height:5.1rem; margin-bottom:.7rem; background-repeat:no-repeat; background-position:center center; background-size:contain; background-image:url('../images/main/ico_reservation1.png');}
+.reservationList li + li a::before {background-image:url('../images/main/ico_reservation2.png');}
+.reservationList li + li + li a::before {background-image:url('../images/main/ico_reservation3.png');}
+
+.sec02 {padding-bottom:2.5rem;}
+.programSlide .swiper-slide .imgBox {margin-bottom:0; padding-top:63.16%; background:#fff;}
+.programSlide .swiper-slide .imgBox img {width:100%; height:100%; object-fit:cover; animation:visualMotion 4s linear infinite alternate;}/* size 380*240 */
+
+.programSlide .swiper-slide .slideCon {height:8.6rem;}
+.programSlide .swiper-slide .slideCon .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin:1rem 0; font-size:1.6rem; font-weight:bold;}
+.programSlide .swiper-slide .slideCon .txt {-webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; overflow:hidden; text-overflow:ellipsis;}
+
+/* .programSlide .swiper-slide .btn {height:4.8rem; font-size:1.5rem;} */
+
+.sec03, .sec04, .sec05 {padding:2.5rem 2rem; border-top:1rem solid #efefef;}
+
+.sec03 .carInfo .imgBox {margin-bottom:1rem;}
+.specBox {margin-top:1.5rem;}
+.specBox li {display:flex; align-items:center; margin-top:.8rem;}
+.specBox li .left {position:relative; padding-left:1.1rem; flex:0 0 auto;}
+.specBox li .left:before {content: ""; display:block; position:absolute; top:50%; left:0; width:.3rem; height:.3rem; background:#262626; border-radius:50%; transform:translateY(-50%);}
+.specBox li .right {margin-left:auto; color:#666; text-align:right;}
+
+/* .specBox .dlInfoList {padding-bottom:0; border-bottom:none;}
+.specBox .dlInfoList dt {position:relative; width:40%; padding-left:1.5rem;}
+.specBox .dlInfoList dt::before {content:''; display:inline-block; position:absolute; top:50%; left:0; width:.3rem; height:.3rem; background:#262626; border-radius:50%;}
+.specBox .dlInfoList dd {width:60%;} */
+
+.sec03 .btnWrap {margin-top:1.5rem;}
+.sec03 .btnWrap .btn + .btn {margin-left:1rem;}
+/* .sec03 .btn {height:4.8rem; font-size:1.5rem;} */
+
+.sponsorList {display:flex; flex-wrap:wrap;}
+.sponsorList li {width:calc((100% - 2rem) / 3); margin-top:1rem; margin-right:1rem; border:.1rem solid #dadada; box-sizing:border-box;}
+.sponsorList li:first-child, .sponsorList li:nth-child(2), .sponsorList li:nth-child(3) {margin-top:0;}
+.sponsorList li:nth-child(3n) {margin-right:0;}
+.sponsorList li .imgBox {margin-bottom:0; padding-top:100%;}
+.sponsorList li .imgBox img {width:100%; height:100%; object-fit:contain;}
+
+/* .sec04 .accoTop {padding-left:1rem;}
+.sec04 .accoTop::after {right:1rem;} */
+.sec04 .accodianWrap, .sec04 .accodian {border-color:#bbb;}
+.sec04 .accoCon {padding:0; border-color:#bbb;}
+.mainInfoList li {padding:1.5rem 0.5rem;}
+.mainInfoList li + li {border-top:.1rem solid #dadada;}
+.mainInfoList li > a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+#footerWrap {padding:0 2rem 6rem 2rem; background:#000;}
+#footerWrap .footCon {padding:2rem 0; color:#999;}
+#footerWrap .footCon + .footCon {border-top:.1rem solid #222;}
+#footerWrap .footTit {color:#fff; font-size:1.5rem;}
+
+.linkBox + .linkBox {margin-top:3rem;}
+.linkList {margin-top:2rem;}
+.linkList li {margin-top:1.5rem;}
+.linkList li a {color:#999; font-size:1.3rem;}
+
+.snsLink {display:flex; align-items:center; margin-left:auto;}
+.snsLink li {margin-left:1rem;}
+.snsLink i {display:inline-block; background-repeat:no-repeat; background-position:center center; background-size:contain; text-indent:-999rem;}
+.ico_sns1 {width:2.5rem; height:1.8rem; background-image:url('../images/main/ico_sns1.png');}
+.ico_sns2 {width:2.2rem; height:2.2rem; background-image:url('../images/main/ico_sns2.png');}
+.ico_sns3 {width:2.3rem; height:2.3rem; background-image:url('../images/main/ico_sns3.png');}
+
+.infobox {margin-top:2rem;}
+.infobox p {margin-top:.5rem; color:#999; font-size:1.3rem;}
+.infobox p a {color:#fff; text-decoration:underline;}
+
+#footerWrap .copy {font-size:1.2rem; color:#666;}
+.policyList {display:flex; flex-wrap:wrap; margin-top:.5rem;}
+.policyList li + li::before {content:''; display:inline-block; width:.1rem; height:1rem; margin:0 .6rem; background:#666;}
+.policyList li a {font-size:1.2rem; color:#999;}
+
+
+/* 이용약관 팝업 */
+.termsWarp {padding-top:1.5rem;}
+.termsWarp .selectBox {}
+.termsWarp .selectBox + .termsCon {margin-top:1rem;}
+
+
+/* 모바일 티켓 */
+.ticketWrap {position:relative; background:#000;}/* height:calc(100vh - 6rem); */ 
+.ticketWrap::before {content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:-1;}
+
+/* 티켓 슬라이드 */
+.ticketInfo {flex:1 1 auto;}
+.slideWrap.ticketInfo .swiper-pagination {top:9rem; transform:translateY(-50%);}
+.slideWrap.ticketInfo .swiper-pagination-bullet-active {background:#fff;}
+
+.ticketInfoTxt {height:9rem; padding-top:2rem; text-align:center; box-sizing:border-box;}
+.ticketInfoTxt .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#fff; font-size:1.9rem; font-weight:bold;}
+.ticketInfoTxt .txt {margin-top:1rem; color:#bbb;}
+.bar::before {content:''; display:inline-block; width:.1rem; height:1.1rem; margin:0 .5rem; background:#666;}
+
+.ticketInfoTxt .tit, .ticketInfoTxt .txt, .shareInfo .state, .shareInfo .info, .ticketInfoBox dt, .ticketInfoBox dd {transform:translateY(1rem); opacity:0; transition:all .7s ease .1s;}
+.ticketInfoTxt .txt, .slideWrap.ticketInfo .swiper-slide-active .shareInfo .info, .ticketInfoBox dd {transition:all .7s ease .2s;}
+.slideWrap.ticketInfo .swiper-slide-active .tit,
+.slideWrap.ticketInfo .swiper-slide-active .txt,
+.slideWrap.ticketInfo .swiper-slide-active .shareInfo .state,
+.slideWrap.ticketInfo .swiper-slide-active .shareInfo .info,
+.slideWrap.ticketInfo .swiper-slide-active  .ticketInfoBox dt,
+.slideWrap.ticketInfo .swiper-slide-active .ticketInfoBox dd
+{transform:translateY(0); opacity:1;}
+.slideWrap.ticketInfo .swiper-slide-active .ticketInfoBox {opacity:1;}
+
+.ticketBox {display:flex; position:relative; margin-top:2rem; background:#fff; border-radius:1rem; z-index:0;}
+.ticketBox::before, .ticketBox::after {content:''; display:inline-block; position:absolute; left:60%; width:0; height:0; border:1rem solid #000; transform:translateX(-50%); z-index:1;}
+.ticketBox::before {top:-.1rem; border-color:#000 transparent transparent transparent;}
+.ticketBox::after {bottom:-.1rem; border-color:transparent transparent #000 transparent;}
+
+.ticketBox .left {width:60%; padding:2.5rem 0; border-top-left-radius:1rem; border-bottom-left-radius:1rem;}
+.qrBox {display:flex; justify-content:center; align-items:center; position:relative; width:14.5rem; height:14.5rem; margin:0 auto; background:#fff;} /* padding:1.5rem; border:.2rem solid var(--main-color); */
+.qrBox > i {display:inline-block; position:absolute; width:1.5rem; height:1.5rem; border:.2rem solid var(--main-color);}
+.qrBox.none > i {border-color:#bbb;}
+.qrBox > i:nth-child(1) {top:0; left:0; border-bottom:0; border-right:0;}
+.qrBox > i:nth-child(2) {top:0; right:0; border-bottom:0; border-left:0;}
+.qrBox > i:nth-child(3) {bottom:0; right:0; border-top:0; border-left:0;}
+.qrBox > i:nth-child(4) {bottom:0; left:0; border-top:0; border-right:0;}
+
+.qrBox .qrImg {width:11rem; height:11rem;}
+.qrBox .qrImg img {width:100%; height:100%; object-fit:contain;}
+
+.qrBox .qrNone {text-align:center;}
+.qrBox .qrNone i {display:block; width:3.9rem; height:3.9rem; margin:0 auto; background:url('../images/ico/ico_qr_none.png') no-repeat center center / contain;}
+.qrBox .qrNone p {margin-top:1rem; color:#999;}
+
+.ticketBox .right {display:flex; justify-content:center; flex-direction:column; align-items:center; width:40%; background:#efefef; border-top-right-radius:1rem; border-bottom-right-radius:1rem;}
+
+.shareBox {padding:1.5rem 0;}
+.shareBox > a {display:flex; flex-direction:column; align-items:center;}
+.shareBox > a span {margin-top:1rem; color:#666;}
+.shareBox.off > a span {color:#8e8e8e;}
+.shareBox i {display:inline-block; width:2.7rem; height:2.7rem;}
+.icoShare {background:url('../images/ico/ico_share_on.png') no-repeat center center / 2.5rem 2.2rem;}
+.shareBox.off .icoShare {background:url('../images/ico/ico_share_off.png') no-repeat center center / 2.5rem 2.2rem;}
+.icoShareCancle {background:url('../images/ico/ico_share_cancle.png') no-repeat center center / 2rem 2rem;}
+.icoShareDone {background:url('../images/ico/ico_share_done.png') no-repeat center center / 2.6rem 1.8rem;}
+.icoNotice {background:url('../images/ico/ico_notice.png') no-repeat center center / 2.7rem 2.7rem;}
+
+.ticketInfoBox {margin-top:2rem; background:#262626; padding:2.5rem 2rem; border-radius:1rem; opacity:0; transition:all .3s ease;}
+.ticketInfoBox dl {display:flex;}
+.ticketInfoBox dl + dl {margin-top:1.5rem;}
+.ticketInfoBox dt {flex:0 0 auto; color:#bbb;}  /* width:6rem; */
+.ticketInfoBox dd {padding-left:1rem; color:#fff;}
+
+.shareInfo {margin-top:2rem; text-align:center;}
+.shareInfo .state {color:#fff;}
+.shareInfo .state::before {content:''; display:inline-block; width:1.3rem; height:.7rem; margin-right:.8rem; border:.2rem solid #3db014; border-top:0; border-right:0; transform:translateY(-.3rem) rotate(-45deg);}
+.shareInfo .info {margin-top:.7rem; color:#bbb;}
+
+/* 롤링 텍스트 */
+.marqueeBox {position:fixed; bottom:2.5rem; width:calc(100% + 4rem); margin-left:-2rem;}
+.marquee {overflow:hidden; display:flex; flex:0 0 auto; white-space:nowrap;} /* transition:all .3s ease; */
+.marqueeTxt {padding:0 .5rem; color:#ffad1f; animation:marquee 3s linear infinite;}
+
+@keyframes marquee {
+	0% {transform:translateX(0%);}
+	100% {transform:translateX(-100%);}
+}
+
+
+/* BMW Handover Experience */
+.txtInfo {position:relative; min-height:2.1rem; padding-left:3rem; font-size:1.4rem;}
+.txtInfo > i {position:absolute; top:0; left:0;}
+.icoInfo1, .icoInfo2, .icoInfo3 {display:inline-block; width:2.1rem; height:2.1rem; font-size:0;}
+.icoInfo1 {background:url('../images/ico/ico_info1.png') no-repeat center center / contain;}
+.icoInfo2 {background:url('../images/ico/ico_info2.png') no-repeat center center / contain;}
+.icoInfo3 {background:url('../images/ico/ico_info3.png') no-repeat center center / 1.9rem auto;}
+
+.txtInfo > a {text-decoration:underline;}
+
+
+.turnList {display:flex; flex-wrap:wrap;}
+.turnList li {width:50%; margin-bottom:.5rem; box-sizing:border-box;}
+.turnList li:nth-child(2n) {padding-left:.5rem;}
+.turnList li:nth-child(2n-1) {padding-right:.5rem;}

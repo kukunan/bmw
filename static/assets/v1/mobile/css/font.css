@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+@font-face {
+  font-family: 'bmwTypeNextWeb';
+  src: url("../fonts/en/BMWTypeNext-Thin.woff2") format("woff2"),
+    url("../fonts/en/BMWTypeNextTT-Thin.woff") format("woff");
+  font-display: swap;
+  font-weight: 300
+}
+@font-face {
+  font-family: 'bmwTypeNextWeb';
+  src: url("../fonts/en/BMWTypeNext-Regular.woff2") format("woff2"),
+    url("../fonts/en/BMWTypeNextTT-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'bmwTypeNextWeb';
+  src: url("../fonts/en/BMWTypeNext-Bold.woff2") format("woff2"),
+    url("../fonts/en/BMWTypeNextTT-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'bmwTypeNextKr';
+  src: url("../fonts/kr/BMWTypeNextKr-Thin.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300
+}
+@font-face {
+  font-family: 'bmwTypeNextKr';
+  src: url("../fonts/kr/BMWTypeNextKr-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'bmwTypeNextKr';
+  src: url("../fonts/kr/BMWTypeNextKr-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: bold;
+}
